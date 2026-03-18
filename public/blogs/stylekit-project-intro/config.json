@@ -1,0 +1,13 @@
+{
+  "title": "StyleKit：把 UI 风格做成一个能被 AI 调用的设计系统",
+  "tags": [
+    "StyleKit",
+    "AI",
+    "设计系统",
+    "产品"
+  ],
+  "date": "2026-03-18T23:58",
+  "summary": "介绍我最近在做的 StyleKit：一个围绕设计风格数据构建的网站、API、CLI、MCP 和可复用 core 包。",
+  "hidden": false,
+  "category": "产品"
+}

@@ -31,6 +31,7 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 	const [localProject, setLocalProject] = useState(project)
 	const [showImageDialog, setShowImageDialog] = useState(false)
 	const [imageItem, setImageItem] = useState<ImageItem | null>(null)
+	const isFeaturedProject = localProject.name.toLowerCase() === 'stylekit'
 
 	const handleFieldChange = (field: keyof Project, value: any) => {
 		const updated = { ...localProject, [field]: value }
@@ -66,7 +67,12 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 		<motion.div
 			initial={{ opacity: 0, scale: 0.9 }}
 			{...(maxSM ? { animate: { opacity: 1, scale: 1 } } : { whileInView: { opacity: 1, scale: 1 } })}
-			className='card relative flex flex-col gap-4'>
+			className={cn('card relative flex flex-col gap-4', isFeaturedProject && 'ring-brand/18 ring-2')}>
+			{isFeaturedProject && !isEditMode && (
+				<div className='text-brand absolute top-3 left-3 rounded-full border bg-white/80 px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase'>
+					推荐项目
+				</div>
+			)}
 			{isEditMode && (
 				<div className='absolute top-3 right-3 z-10 flex gap-2'>
 					{isEditing ? (

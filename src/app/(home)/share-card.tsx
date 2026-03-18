@@ -6,6 +6,7 @@ import { useCenterStore } from '@/hooks/use-center'
 import { useConfigStore } from './stores/config-store'
 import { CARD_SPACING } from '@/consts'
 import shareList from '@/app/share/list.json'
+import projectList from '@/app/projects/list.json'
 import Link from 'next/link'
 import { HomeDraggableLayer } from './home-draggable-layer'
 
@@ -18,20 +19,53 @@ type ShareItem = {
 	stars: number
 }
 
+type ProjectItem = {
+	name: string
+	url: string
+	image: string
+	description: string
+	tags: string[]
+}
+
+type FeaturedItem =
+	| { kind: 'share'; title: string; href: string; image: string; description: string }
+	| { kind: 'project'; title: string; href: string; image: string; description: string }
+
 export default function ShareCard() {
 	const center = useCenterStore()
 	const { cardStyles, siteContent } = useConfigStore()
-	const [randomItem, setRandomItem] = useState<ShareItem | null>(null)
+	const [featuredItem, setFeaturedItem] = useState<FeaturedItem | null>(null)
 	const styles = cardStyles.shareCard
 	const hiCardStyles = cardStyles.hiCard
 	const socialButtonsStyles = cardStyles.socialButtons
 
 	useEffect(() => {
+		const projects = projectList as ProjectItem[]
+		const stylekitProject = projects.find(project => project.name.toLowerCase() === 'stylekit') || projects[0]
+
+		if (stylekitProject) {
+			setFeaturedItem({
+				kind: 'project',
+				title: stylekitProject.name,
+				href: '/projects',
+				image: stylekitProject.image,
+				description: stylekitProject.description
+			})
+			return
+		}
+
 		const randomIndex = Math.floor(Math.random() * shareList.length)
-		setRandomItem(shareList[randomIndex])
+		const randomItem = (shareList as ShareItem[])[randomIndex]
+		setFeaturedItem({
+			kind: 'share',
+			title: randomItem.name,
+			href: '/share',
+			image: randomItem.logo,
+			description: randomItem.description
+		})
 	}, [])
 
-	if (!randomItem) {
+	if (!featuredItem) {
 		return null
 	}
 
@@ -52,17 +86,20 @@ export default function ShareCard() {
 					</>
 				)}
 
-				<h2 className='text-secondary text-sm'>随机推荐</h2>
+				<h2 className='text-secondary text-sm'>{featuredItem.kind === 'project' ? '近期项目' : '随机推荐'}</h2>
 
-				<Link href='/share' className='mt-2 block space-y-2'>
+				<Link href={featuredItem.href} className='mt-2 block space-y-2'>
 					<div className='flex items-center'>
 						<div className='relative mr-3 h-12 w-12 shrink-0 overflow-hidden rounded-xl'>
-							<img src={randomItem.logo} alt={randomItem.name} className='h-full w-full object-contain' />
+							<img src={featuredItem.image} alt={featuredItem.title} className='h-full w-full object-contain' />
 						</div>
-						<h3 className='text-sm font-medium'>{randomItem.name}</h3>
+						<div>
+							<h3 className='text-sm font-medium'>{featuredItem.title}</h3>
+							{featuredItem.kind === 'project' && <div className='text-brand mt-1 text-[10px] font-medium'>Featured</div>}
+						</div>
 					</div>
 
-					<p className='text-secondary line-clamp-3 text-xs'>{randomItem.description}</p>
+					<p className='text-secondary line-clamp-3 text-xs'>{featuredItem.description}</p>
 				</Link>
 			</Card>
 		</HomeDraggableLayer>

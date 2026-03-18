@@ -1,4 +1,4 @@
-# 2025 Blog
+# Anx Journal
 
 > 最新引导说明：https://www.yysuni.com/blog/readme
 
@@ -11,7 +11,7 @@
 ```ts
 export const GITHUB_CONFIG = {
 	OWNER: process.env.NEXT_PUBLIC_GITHUB_OWNER || 'yysuni',
-	REPO: process.env.NEXT_PUBLIC_GITHUB_REPO || '2025-blog-public',
+	REPO: process.env.NEXT_PUBLIC_GITHUB_REPO || 'anx-journal',
 	BRANCH: process.env.NEXT_PUBLIC_GITHUB_BRANCH || 'main',
 	APP_ID: process.env.NEXT_PUBLIC_GITHUB_APP_ID || '-'
 } as const
@@ -29,7 +29,7 @@ export const GITHUB_CONFIG = {
 
 ![](https://www.yysuni.com/blogs/readme/95dee9a69154d0d0.png)
 
-大约 60 秒会部署完成，有一个直接 vercel 域名，如：https://2025-blog-public.vercel.app/
+大约 60 秒会部署完成，有一个直接 vercel 域名，如：https://anx-journal.vercel.app/
 
 到这里部署网站已经完成了，下一步创建 Github App
 
@@ -155,10 +155,10 @@ tg 群：1月1号，才创建的 tg 群 https://t.me/public_blog_2025
 
 ## Star History
 
-<a href="https://www.star-history.com/#YYsuni/2025-blog-public&type=date&legend=top-left">
+<a href="https://www.star-history.com/#AnxForever/anx-journal&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=YYsuni/2025-blog-public&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=YYsuni/2025-blog-public&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=YYsuni/2025-blog-public&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=AnxForever/anx-journal&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=AnxForever/anx-journal&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=AnxForever/anx-journal&type=date&legend=top-left" />
  </picture>
 </a>
