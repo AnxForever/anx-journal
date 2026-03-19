@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { toast } from 'sonner'
 import { ProjectCard, type Project } from './components/project-card'
-import { CommentsSection } from '@/components/comments-section'
 import CreateDialog from './components/create-dialog'
 import { pushProjects } from './services/push-projects'
 import { useAuthStore } from '@/hooks/use-auth'
@@ -138,23 +137,6 @@ export default function Page() {
 					{projects.map((project, index) => (
 						<ProjectCard key={project.url} project={project} isEditMode={isEditMode} onUpdate={handleUpdate} onDelete={() => handleDelete(project)} />
 					))}
-				</div>
-
-				<div className='mt-8 w-full max-w-[1200px]'>
-					<div className='card bg-article static mb-6 rounded-xl p-8'>
-						<div className='text-secondary text-[11px] tracking-[0.2em] uppercase'>Project Board</div>
-						<h2 className='mt-3 text-2xl font-semibold'>项目留言</h2>
-						<p className='text-secondary mt-3 text-sm leading-6'>这里用来聊项目本身，比如反馈、合作想法、工具建议。文章内容的讨论仍然放在文章页评论区里。</p>
-					</div>
-					<CommentsSection
-						slug='projects-hub'
-						title='项目讨论'
-						description='如果你想聊项目反馈、合作意向，或者对 StyleKit 等项目有建议，可以留在这里。新留言需要经过审核后显示。'
-						listTitle='项目留言'
-						emptyLabel='还没有项目相关留言。'
-						submitLabel='提交留言'
-						textareaPlaceholder='聊聊项目想法、合作方向或使用反馈...'
-					/>
 				</div>
 			</div>
 
