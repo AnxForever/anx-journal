@@ -3,7 +3,7 @@
     "name": "StyleKit",
     "year": 2026,
     "description": "一个面向 AI 时代的设计系统平台。它把 UI 风格、设计 token、组件 recipes、Prompt、Lint、CLI 和 MCP 能力整合到一起，让设计灵感不只是“看起来好看”，而是可以直接进入开发工作流。",
-    "image": "/images/stylekit-logo-dark.svg",
+    "image": "/images/stylekit-icon.svg",
     "url": "https://stylekit.top",
     "tags": [
       "AI",

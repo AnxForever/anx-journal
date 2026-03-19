@@ -73,17 +73,17 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 		event.stopPropagation()
 	}
 
-	return (
-		<motion.div
-			initial={{ opacity: 0, scale: 0.9 }}
-			{...(maxSM ? { animate: { opacity: 1, scale: 1 } } : { whileInView: { opacity: 1, scale: 1 } })}
-			className={cn('card relative flex flex-col gap-4', isFeaturedProject && 'ring-brand/18 ring-2', canOpenProject && 'cursor-pointer')}
-			onClick={handleCardClick}>
-			{isFeaturedProject && !isEditMode && (
-				<div className='text-brand absolute top-3 left-3 rounded-full border bg-white/80 px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase'>
-					推荐项目
-				</div>
-			)}
+		return (
+			<motion.div
+				initial={{ opacity: 0, scale: 0.9 }}
+				{...(maxSM ? { animate: { opacity: 1, scale: 1 } } : { whileInView: { opacity: 1, scale: 1 } })}
+				className={cn('card relative flex flex-col gap-4', isFeaturedProject && 'ring-brand/18 ring-2', canOpenProject && 'cursor-pointer')}
+				onClick={handleCardClick}>
+				{isFeaturedProject && !isEditMode && (
+					<div className='text-brand rounded-full border bg-white/80 px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase self-start'>
+						推荐项目
+					</div>
+				)}
 			{isEditMode && (
 				<div className='absolute top-3 right-3 z-10 flex gap-2'>
 					{isEditing ? (
@@ -120,15 +120,15 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 				</div>
 			)}
 
-			<div className='flex items-start gap-4'>
-				<div className='group relative'>
-					<img
-						src={localProject.image}
-						alt={localProject.name}
-						className={cn('h-16 w-16 shrink-0 rounded-xl border bg-white/75 p-2 object-contain', canEdit && 'cursor-pointer')}
-						onClick={event => {
-							if (!canEdit) return
-							stopPropagation(event)
+				<div className='flex items-start gap-4'>
+					<div className='group relative'>
+						<img
+							src={localProject.image}
+							alt={localProject.name}
+							className={cn('h-18 w-18 shrink-0 rounded-2xl border bg-white/78 p-2.5 object-contain', canEdit && 'cursor-pointer')}
+							onClick={event => {
+								if (!canEdit) return
+								stopPropagation(event)
 							setShowImageDialog(true)
 						}}
 					/>
