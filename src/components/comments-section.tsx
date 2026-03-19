@@ -68,11 +68,13 @@ export function CommentsSection({ slug }: { slug: string }) {
 				throw new Error(data.error || '提交失败')
 			}
 
-			setComments(prev => [data.comment, ...prev])
 			setNickname('')
 			setWebsite('')
 			setContent('')
-			toast.success('评论已发布')
+			toast.success(data.pending ? '评论已提交，等待审核' : '评论已发布')
+			if (!data.pending && data.comment) {
+				setComments(prev => [data.comment, ...prev])
+			}
 		} catch (error: any) {
 			toast.error(error?.message || '评论失败')
 		} finally {
@@ -85,7 +87,7 @@ export function CommentsSection({ slug }: { slug: string }) {
 			<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className='card bg-article static space-y-6 rounded-xl p-8'>
 				<div>
 					<h2 className='text-2xl font-semibold'>评论</h2>
-					<p className='text-secondary mt-2 text-sm'>欢迎留下你的看法。</p>
+					<p className='text-secondary mt-2 text-sm'>欢迎留下你的看法。新评论需要经过审核后显示。</p>
 				</div>
 
 				<form onSubmit={handleSubmit} className='space-y-4'>

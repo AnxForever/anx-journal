@@ -65,11 +65,13 @@ export function GuestbookSection() {
 				throw new Error(data.error || '提交失败')
 			}
 
-			setEntries(prev => [data.entry, ...prev])
 			setNickname('')
 			setWebsite('')
 			setContent('')
-			toast.success('留言成功')
+			toast.success(data.pending ? '留言已提交，等待审核' : '留言成功')
+			if (!data.pending && data.entry) {
+				setEntries(prev => [data.entry, ...prev])
+			}
 		} catch (error: any) {
 			toast.error(error?.message || '留言失败')
 		} finally {
@@ -82,7 +84,7 @@ export function GuestbookSection() {
 			<motion.section initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className='card bg-article static rounded-xl p-8'>
 				<div className='mb-6'>
 					<h2 className='text-3xl font-semibold'>留言板</h2>
-					<p className='text-secondary mt-3 text-sm leading-6'>如果你路过这里，欢迎留下几句话。可以是打招呼，也可以是建议，或者只是一个简短的足迹。</p>
+					<p className='text-secondary mt-3 text-sm leading-6'>如果你路过这里，欢迎留下几句话。可以是打招呼，也可以是建议，或者只是一个简短的足迹。新留言需要经过审核后显示。</p>
 				</div>
 
 				<form onSubmit={handleSubmit} className='space-y-4'>

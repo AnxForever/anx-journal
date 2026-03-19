@@ -3,6 +3,7 @@ import mysql from 'mysql2/promise'
 import { createHash } from 'node:crypto'
 
 const app = Fastify({ logger: true })
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || ''
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST || '127.0.0.1',
@@ -42,6 +43,26 @@ function normalizeWebsite(value) {
 
 function hashIp(ip = 'unknown') {
   return createHash('sha256').update(ip).digest('hex')
+}
+
+function getAdminToken(request) {
+  const value = request.headers['x-admin-token']
+  if (Array.isArray(value)) return value[0] || ''
+  return String(value || '').trim()
+}
+
+function ensureAdmin(request, reply) {
+  if (!ADMIN_TOKEN) {
+    reply.code(503).send({ error: 'Admin token not configured' })
+    return false
+  }
+
+  if (getAdminToken(request) !== ADMIN_TOKEN) {
+    reply.code(401).send({ error: 'Unauthorized' })
+    return false
+  }
+
+  return true
 }
 
 function validatePayload(body) {
@@ -151,7 +172,7 @@ app.post('/comments/:slug', async (request, reply) => {
 
   const [result] = await pool.query(
     `INSERT INTO comments (post_slug, nickname, content, email, website, status, ip_hash)
-     VALUES (?, ?, ?, ?, ?, 'approved', ?)`,
+     VALUES (?, ?, ?, ?, ?, 'pending', ?)`,
     [slug, payload.nickname, payload.content, payload.email, payload.website, ipHash]
   )
 
@@ -171,8 +192,42 @@ app.post('/comments/:slug', async (request, reply) => {
       content: String(comment.content),
       website: comment.website ? String(comment.website) : null,
       createdAt: String(comment.createdAt)
-    }
+    },
+    pending: true
   }
+})
+
+app.get('/admin/comments', async (request, reply) => {
+  if (!ensureAdmin(request, reply)) return
+
+  const status = ['approved', 'pending', 'rejected'].includes(String(request.query.status || 'pending'))
+    ? String(request.query.status || 'pending')
+    : 'pending'
+
+  const [rows] = await pool.query(
+    `SELECT id, post_slug AS postSlug, nickname, content, email, website, status, DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%s') AS createdAt
+     FROM comments
+     WHERE status = ?
+     ORDER BY created_at DESC
+     LIMIT 200`,
+    [status]
+  )
+
+  return { comments: rows }
+})
+
+app.patch('/admin/comments/:id', async (request, reply) => {
+  if (!ensureAdmin(request, reply)) return
+
+  const id = Number(request.params.id)
+  const status = String(request.body?.status || '')
+
+  if (!Number.isInteger(id) || id <= 0 || !['approved', 'rejected', 'pending'].includes(status)) {
+    return reply.code(400).send({ error: 'Invalid payload' })
+  }
+
+  await pool.query(`UPDATE comments SET status = ? WHERE id = ?`, [status, id])
+  return { ok: true }
 })
 
 app.get('/guestbook', async () => {
@@ -215,7 +270,7 @@ app.post('/guestbook', async (request, reply) => {
 
   const [result] = await pool.query(
     `INSERT INTO guestbook_entries (nickname, content, email, website, status, ip_hash)
-     VALUES (?, ?, ?, ?, 'approved', ?)`,
+     VALUES (?, ?, ?, ?, 'pending', ?)`,
     [payload.nickname, payload.content, payload.email, payload.website, ipHash]
   )
 
@@ -235,8 +290,42 @@ app.post('/guestbook', async (request, reply) => {
       content: String(entry.content),
       website: entry.website ? String(entry.website) : null,
       createdAt: String(entry.createdAt)
-    }
+    },
+    pending: true
   }
+})
+
+app.get('/admin/guestbook', async (request, reply) => {
+  if (!ensureAdmin(request, reply)) return
+
+  const status = ['approved', 'pending', 'rejected'].includes(String(request.query.status || 'pending'))
+    ? String(request.query.status || 'pending')
+    : 'pending'
+
+  const [rows] = await pool.query(
+    `SELECT id, nickname, content, email, website, status, DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%s') AS createdAt
+     FROM guestbook_entries
+     WHERE status = ?
+     ORDER BY created_at DESC
+     LIMIT 200`,
+    [status]
+  )
+
+  return { entries: rows }
+})
+
+app.patch('/admin/guestbook/:id', async (request, reply) => {
+  if (!ensureAdmin(request, reply)) return
+
+  const id = Number(request.params.id)
+  const status = String(request.body?.status || '')
+
+  if (!Number.isInteger(id) || id <= 0 || !['approved', 'rejected', 'pending'].includes(status)) {
+    return reply.code(400).send({ error: 'Invalid payload' })
+  }
+
+  await pool.query(`UPDATE guestbook_entries SET status = ? WHERE id = ?`, [status, id])
+  return { ok: true }
 })
 
 const port = Number(process.env.PORT || 8787)
