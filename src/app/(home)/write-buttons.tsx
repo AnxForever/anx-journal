@@ -25,7 +25,6 @@ export default function WriteButton() {
 	}, [styles.order])
 
 	if (maxSM) return null
-	if (siteContent.hideEditButton) return null
 
 	if (!show) return null
 
