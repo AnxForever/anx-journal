@@ -1,13 +1,15 @@
 {
-  "title": "StyleKit：把 UI 风格做成一个能被 AI 调用的设计系统",
+  "title": "StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统",
   "tags": [
     "StyleKit",
-    "AI",
-    "设计系统",
-    "产品"
+    "AI 编码",
+    "UI 设计系统",
+    "设计风格",
+    "Prompt"
   ],
   "date": "2026-03-18T23:58",
-  "summary": "介绍我最近在做的 StyleKit：一个围绕设计风格数据构建的网站、API、CLI、MCP 和可复用 core 包。",
+  "summary": "StyleKit 是一个面向 AI 编码工作流的 UI 风格设计系统，提供风格目录、设计 token、组件 recipes、Prompt 与风格规则，帮助开发者把灵感真正落进产品界面。",
+  "cover": "/blogs/stylekit-project-intro/cover.png",
   "hidden": false,
   "category": "产品"
 }
