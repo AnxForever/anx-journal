@@ -13,7 +13,6 @@ type LikeButtonProps = {
 
 export default function LikeButton({ slug = 'anxforever', delay, className }: LikeButtonProps) {
 	const resolvedSlug = useMemo(() => BLOG_SLUG_KEY + slug, [slug])
-	const storageKey = useMemo(() => `codex-like:${resolvedSlug}`, [resolvedSlug])
 	const [liked, setLiked] = useState(false)
 	const [count, setCount] = useState<number | null>(null)
 	const [show, setShow] = useState(false)
@@ -26,21 +25,29 @@ export default function LikeButton({ slug = 'anxforever', delay, className }: Li
 	}, [delay])
 
 	useEffect(() => {
-		if (typeof window === 'undefined') return
-		const saved = window.localStorage.getItem(storageKey)
-		if (!saved) {
-			setCount(0)
-			return
+		let cancelled = false
+
+		const run = async () => {
+			try {
+				const res = await fetch(`/api/likes/${encodeURIComponent(resolvedSlug)}`, {
+					method: 'GET',
+					credentials: 'same-origin',
+					cache: 'no-store'
+				})
+				const data = await res.json().catch(() => ({}))
+				if (cancelled) return
+				setLiked(Boolean(data.liked))
+				setCount(typeof data.count === 'number' ? data.count : 0)
+			} catch {
+				if (!cancelled) setCount(0)
+			}
 		}
 
-		try {
-			const parsed = JSON.parse(saved) as { liked?: boolean; count?: number }
-			setLiked(Boolean(parsed.liked))
-			setCount(typeof parsed.count === 'number' ? parsed.count : Number(Boolean(parsed.liked)))
-		} catch {
-			setCount(0)
+		run()
+		return () => {
+			cancelled = true
 		}
-	}, [storageKey])
+	}, [resolvedSlug])
 
 	useEffect(() => {
 		if (!justLiked) return
@@ -48,7 +55,7 @@ export default function LikeButton({ slug = 'anxforever', delay, className }: Li
 		return () => clearTimeout(timer)
 	}, [justLiked])
 
-	const handleLike = () => {
+	const handleLike = async () => {
 		setJustLiked(true)
 
 		const newParticles = Array.from({ length: 6 }, (_, i) => ({
@@ -61,10 +68,20 @@ export default function LikeButton({ slug = 'anxforever', delay, className }: Li
 
 		if (liked) return
 
-		setLiked(true)
-		setCount(1)
-		if (typeof window !== 'undefined') {
-			window.localStorage.setItem(storageKey, JSON.stringify({ liked: true, count: 1 }))
+		try {
+			const res = await fetch(`/api/likes/${encodeURIComponent(resolvedSlug)}`, {
+				method: 'POST',
+				credentials: 'same-origin'
+			})
+			const data = await res.json().catch(() => ({}))
+			if (!res.ok) {
+				throw new Error(data.error || '点赞失败')
+			}
+			setLiked(Boolean(data.liked))
+			setCount(typeof data.count === 'number' ? data.count : 1)
+		} catch {
+			setLiked(true)
+			setCount(prev => (typeof prev === 'number' ? prev + 1 : 1))
 		}
 	}
 

@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import dayjs from 'dayjs'
 import { motion } from 'motion/react'
 import { BlogPreview } from '@/components/blog-preview'
+import { CommentsSection } from '@/components/comments-section'
 import { loadBlog, type BlogConfig } from '@/lib/load-blog'
 import { useReadArticles } from '@/hooks/use-read-articles'
 import LiquidGrass from '@/components/liquid-grass'
@@ -68,7 +69,7 @@ export default function Page() {
 		return <div className='text-secondary flex h-full items-center justify-center text-sm'>文章不存在</div>
 	}
 
-	return (
+		return (
 		<>
 			<BlogPreview
 				markdown={blog.markdown}
@@ -79,6 +80,8 @@ export default function Page() {
 				cover={blog.cover ? (blog.cover.startsWith('http') ? blog.cover : `${origin}${blog.cover}`) : undefined}
 				slug={slug}
 			/>
+
+			<CommentsSection slug={slug} />
 
 			<motion.button
 				initial={{ opacity: 0, scale: 0.6 }}
