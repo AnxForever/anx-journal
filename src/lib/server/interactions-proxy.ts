@@ -1,6 +1,6 @@
 import 'server-only'
 
-const DEFAULT_INTERACTIONS_PROXY_ORIGIN = 'https://anxforever.fun/anx-journal-api'
+const DEFAULT_INTERACTIONS_PROXY_ORIGIN = 'http://59.110.91.219/anx-journal-api'
 
 export function getInteractionsProxyOrigin(): string {
 	return (process.env.INTERACTIONS_PROXY_ORIGIN || DEFAULT_INTERACTIONS_PROXY_ORIGIN).replace(/\/$/, '')
