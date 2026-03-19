@@ -65,6 +65,8 @@ const list = [
 ]
 
 const extraSize = 8
+const fullListGap = 8
+const fullChromeHeight = 142
 
 export default function NavCard() {
 	const pathname = usePathname()
@@ -96,11 +98,15 @@ export default function NavCard() {
 	const iconsGap = maxSM ? 18 : 24
 	const outerGap = maxSM ? 16 : 24
 	const iconsRowWidth = list.length * itemHeight + (list.length - 1) * iconsGap
+	const fullCardHeight = useMemo(() => {
+		const listHeight = list.length * 52 + (list.length - 1) * fullListGap
+		return Math.max(styles.height, fullChromeHeight + listHeight)
+	}, [styles.height])
 
 	let position = useMemo(() => {
 		if (form === 'full') {
 			const x = styles.offsetX !== null ? center.x + styles.offsetX : center.x - hiCardStyles.width / 2 - styles.width - CARD_SPACING
-			const y = styles.offsetY !== null ? center.y + styles.offsetY : center.y + hiCardStyles.height / 2 - styles.height
+			const y = styles.offsetY !== null ? center.y + styles.offsetY : center.y + hiCardStyles.height / 2 - fullCardHeight
 			return { x, y }
 		}
 
@@ -108,13 +114,13 @@ export default function NavCard() {
 			x: 24,
 			y: 16
 		}
-	}, [form, center, styles, hiCardStyles])
+	}, [form, center, styles, hiCardStyles, fullCardHeight])
 
 	const size = useMemo(() => {
 		if (form === 'mini') return { width: 64, height: 64 }
 		else if (form === 'icons') return { width: 24 + 40 + outerGap + iconsRowWidth, height: 64 }
-		else return { width: styles.width, height: styles.height }
-	}, [form, styles, outerGap, iconsRowWidth])
+		else return { width: styles.width, height: fullCardHeight }
+	}, [form, styles, outerGap, iconsRowWidth, fullCardHeight])
 
 	useEffect(() => {
 		if (form === 'icons' && activeIndex !== undefined && hoveredIndex !== activeIndex) {
