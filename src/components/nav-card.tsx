@@ -86,13 +86,16 @@ export default function NavCard() {
 	}, [])
 
 	let form = useMemo(() => {
-		if (pathname == '/') return 'full'
-		else if (pathname == '/write') return 'mini'
-		else return 'icons'
+	if (pathname == '/') return 'full'
+	else if (pathname == '/write') return 'mini'
+	else return 'icons'
 	}, [pathname])
 	if (maxSM) form = 'icons'
 
 	const itemHeight = form === 'full' ? 52 : 28
+	const iconsGap = maxSM ? 18 : 24
+	const outerGap = maxSM ? 16 : 24
+	const iconsRowWidth = list.length * itemHeight + (list.length - 1) * iconsGap
 
 	let position = useMemo(() => {
 		if (form === 'full') {
@@ -109,9 +112,9 @@ export default function NavCard() {
 
 	const size = useMemo(() => {
 		if (form === 'mini') return { width: 64, height: 64 }
-		else if (form === 'icons') return { width: 340, height: 64 }
+		else if (form === 'icons') return { width: 24 + 40 + outerGap + iconsRowWidth, height: 64 }
 		else return { width: styles.width, height: styles.height }
-	}, [form, styles])
+	}, [form, styles, outerGap, iconsRowWidth])
 
 	useEffect(() => {
 		if (form === 'icons' && activeIndex !== undefined && hoveredIndex !== activeIndex) {
@@ -126,14 +129,19 @@ export default function NavCard() {
 
 	if (show)
 		return (
-			<HomeDraggableLayer cardKey='navCard' x={position.x} y={position.y} width={styles.width} height={styles.height}>
+			<HomeDraggableLayer cardKey='navCard' x={position.x} y={position.y} width={size.width} height={size.height}>
 				<Card
 					order={styles.order}
 					width={size.width}
 					height={size.height}
 					x={position.x}
 					y={position.y}
-					className={clsx(form != 'full' && 'overflow-hidden', form === 'mini' && 'p-3', form === 'icons' && 'flex items-center gap-6 p-3')}>
+					className={clsx(
+						form != 'full' && 'overflow-hidden',
+						form === 'mini' && 'p-3',
+						form === 'icons' && 'flex items-center p-3',
+						form === 'icons' && (maxSM ? 'gap-4' : 'gap-6')
+					)}>
 					{form === 'full' && siteContent.enableChristmas && (
 						<>
 							<img
@@ -145,7 +153,7 @@ export default function NavCard() {
 						</>
 					)}
 
-					<Link className='flex items-center gap-3' href='/'>
+					<Link className='shrink-0 flex items-center gap-3' href='/' title='返回主页'>
 						<Image src='/images/avatar.jpg' alt='avatar' width={40} height={40} style={{ boxShadow: ' 0 12px 20px -5px #E2D9CE' }} className='rounded-full' />
 						{form === 'full' && <span className='font-averia mt-1 text-2xl leading-none font-medium'>{siteContent.meta.title}</span>}
 						{form === 'full' && <span className='text-brand mt-2 text-xs font-medium'>(开发中)</span>}
@@ -155,7 +163,7 @@ export default function NavCard() {
 						<>
 							{form !== 'icons' && <div className='text-secondary mt-6 text-sm uppercase'>General</div>}
 
-							<div className={cn('relative mt-2 space-y-2', form === 'icons' && 'mt-0 flex items-center gap-6 space-y-0')}>
+							<div className={cn('relative mt-2 space-y-2', form === 'icons' && 'mt-0 flex shrink-0 items-center space-y-0', form === 'icons' && (maxSM ? 'gap-[18px]' : 'gap-6'))}>
 								<motion.div
 									className='absolute max-w-[230px] rounded-full border'
 									layoutId='nav-hover'
@@ -163,7 +171,7 @@ export default function NavCard() {
 									animate={
 										form === 'icons'
 											? {
-													left: hoveredIndex * (itemHeight + 24) - extraSize,
+													left: hoveredIndex * (itemHeight + iconsGap) - extraSize,
 													top: -extraSize,
 													width: itemHeight + extraSize * 2,
 													height: itemHeight + extraSize * 2
@@ -178,12 +186,12 @@ export default function NavCard() {
 									style={{ backgroundImage: 'linear-gradient(to right bottom, var(--color-border) 60%, var(--color-card) 100%)' }}
 								/>
 
-								{list.map((item, index) => (
-									<Link
-										key={item.href}
-										href={item.href}
-										className={cn('text-secondary text-md relative z-10 flex items-center gap-3 rounded-full px-5 py-3', form === 'icons' && 'p-0')}
-										onMouseEnter={() => setHoveredIndex(index)}>
+									{list.map((item, index) => (
+										<Link
+											key={item.href}
+											href={item.href}
+											className={cn('text-secondary text-md relative z-10 flex items-center gap-3 rounded-full px-5 py-3', form === 'icons' && 'h-7 w-7 shrink-0 p-0')}
+											onMouseEnter={() => setHoveredIndex(index)}>
 										<div className='flex h-7 w-7 items-center justify-center'>
 											{hoveredIndex == index ? <item.iconActive className='text-brand absolute h-7 w-7' /> : <item.icon className='absolute h-7 w-7' />}
 										</div>
