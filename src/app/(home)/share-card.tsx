@@ -86,20 +86,22 @@ export default function ShareCard() {
 					</>
 				)}
 
-				<h2 className='text-secondary text-sm'>{featuredItem.kind === 'project' ? '近期项目' : '随机推荐'}</h2>
+				<Link href={featuredItem.href} className='block h-full transition-opacity hover:opacity-80'>
+					<h2 className='text-secondary text-sm'>{featuredItem.kind === 'project' ? '近期项目' : '随机推荐'}</h2>
 
-				<Link href={featuredItem.href} className='mt-2 block space-y-2'>
-					<div className='flex items-center'>
-						<div className='relative mr-3 h-12 w-12 shrink-0 overflow-hidden rounded-xl'>
-							<img src={featuredItem.image} alt={featuredItem.title} className='h-full w-full object-contain' />
+					<div className='mt-2 space-y-2'>
+						<div className='flex items-center'>
+							<div className='relative mr-3 h-12 w-12 shrink-0 overflow-hidden rounded-xl'>
+								<img src={featuredItem.image} alt={featuredItem.title} className='h-full w-full object-contain' />
+							</div>
+							<div>
+								<h3 className='text-sm font-medium'>{featuredItem.title}</h3>
+								{featuredItem.kind === 'project' && <div className='text-brand mt-1 text-[10px] font-medium'>Featured</div>}
+							</div>
 						</div>
-						<div>
-							<h3 className='text-sm font-medium'>{featuredItem.title}</h3>
-							{featuredItem.kind === 'project' && <div className='text-brand mt-1 text-[10px] font-medium'>Featured</div>}
-						</div>
+
+						<p className='text-secondary line-clamp-3 text-xs'>{featuredItem.description}</p>
 					</div>
-
-					<p className='text-secondary line-clamp-3 text-xs'>{featuredItem.description}</p>
 				</Link>
 			</Card>
 		</HomeDraggableLayer>

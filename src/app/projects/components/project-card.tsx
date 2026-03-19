@@ -62,12 +62,23 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 	}
 
 	const canEdit = isEditMode && isEditing
+	const canOpenProject = !isEditMode
+
+	const handleCardClick = () => {
+		if (!canOpenProject) return
+		window.open(localProject.url, '_blank', 'noopener,noreferrer')
+	}
+
+	const stopPropagation: React.MouseEventHandler<HTMLElement> = event => {
+		event.stopPropagation()
+	}
 
 	return (
 		<motion.div
 			initial={{ opacity: 0, scale: 0.9 }}
 			{...(maxSM ? { animate: { opacity: 1, scale: 1 } } : { whileInView: { opacity: 1, scale: 1 } })}
-			className={cn('card relative flex flex-col gap-4', isFeaturedProject && 'ring-brand/18 ring-2')}>
+			className={cn('card relative flex flex-col gap-4', isFeaturedProject && 'ring-brand/18 ring-2', canOpenProject && 'cursor-pointer')}
+			onClick={handleCardClick}>
 			{isFeaturedProject && !isEditMode && (
 				<div className='text-brand absolute top-3 left-3 rounded-full border bg-white/80 px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase'>
 					推荐项目
@@ -77,19 +88,31 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 				<div className='absolute top-3 right-3 z-10 flex gap-2'>
 					{isEditing ? (
 						<>
-							<button onClick={handleCancel} className='rounded-lg px-2 py-1.5 text-xs text-gray-400 transition-colors hover:text-gray-600'>
+							<button onClick={event => {
+								stopPropagation(event)
+								handleCancel()
+							}} className='rounded-lg px-2 py-1.5 text-xs text-gray-400 transition-colors hover:text-gray-600'>
 								取消
 							</button>
-							<button onClick={() => setIsEditing(false)} className='rounded-lg px-2 py-1.5 text-xs text-blue-400 transition-colors hover:text-blue-600'>
+							<button onClick={event => {
+								stopPropagation(event)
+								setIsEditing(false)
+							}} className='rounded-lg px-2 py-1.5 text-xs text-blue-400 transition-colors hover:text-blue-600'>
 								完成
 							</button>
 						</>
 					) : (
 						<>
-							<button onClick={() => setIsEditing(true)} className='rounded-lg px-2 py-1.5 text-xs text-blue-400 transition-colors hover:text-blue-600'>
+							<button onClick={event => {
+								stopPropagation(event)
+								setIsEditing(true)
+							}} className='rounded-lg px-2 py-1.5 text-xs text-blue-400 transition-colors hover:text-blue-600'>
 								编辑
 							</button>
-							<button onClick={onDelete} className='rounded-lg px-2 py-1.5 text-xs text-red-400 transition-colors hover:text-red-600'>
+							<button onClick={event => {
+								stopPropagation(event)
+								onDelete?.()
+							}} className='rounded-lg px-2 py-1.5 text-xs text-red-400 transition-colors hover:text-red-600'>
 								删除
 							</button>
 						</>
@@ -102,8 +125,12 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 					<img
 						src={localProject.image}
 						alt={localProject.name}
-						className={cn('h-16 w-16 shrink-0 rounded-xl object-cover', canEdit && 'cursor-pointer')}
-						onClick={() => canEdit && setShowImageDialog(true)}
+						className={cn('h-16 w-16 shrink-0 rounded-xl border bg-white/75 p-2 object-contain', canEdit && 'cursor-pointer')}
+						onClick={event => {
+							if (!canEdit) return
+							stopPropagation(event)
+							setShowImageDialog(true)
+						}}
 					/>
 					{canEdit && (
 						<div className='pointer-events-none absolute inset-0 flex items-center justify-center rounded-xl bg-black/40 opacity-0 transition-opacity group-hover:opacity-100'>
@@ -190,6 +217,7 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 							href={localProject.url}
 							target='_blank'
 							rel='noopener noreferrer'
+							onClick={stopPropagation}
 							className='bg-card hover:bg-bg rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors'>
 							Website
 						</Link>
@@ -198,6 +226,7 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 								href={localProject.github}
 								target='_blank'
 								rel='noopener noreferrer'
+								onClick={stopPropagation}
 								className='bg-card hover:bg-bg rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors'>
 								GitHub
 							</Link>
@@ -207,6 +236,7 @@ export function ProjectCard({ project, isEditMode = false, onUpdate, onDelete }:
 								href={localProject.npm}
 								target='_blank'
 								rel='noopener noreferrer'
+								onClick={stopPropagation}
 								className='bg-card hover:bg-bg rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors'>
 								NPM
 							</Link>
