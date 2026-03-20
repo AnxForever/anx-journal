@@ -34,7 +34,6 @@ export function CommentsSection({
 }: CommentsSectionProps) {
 	const [open, setOpen] = useState(false)
 	const [comments, setComments] = useState<CommentItem[]>([])
-	const [commentsFetched, setCommentsFetched] = useState(false)
 	const [loading, setLoading] = useState(false)
 	const [submitting, setSubmitting] = useState(false)
 	const [nickname, setNickname] = useState('')
@@ -44,7 +43,6 @@ export function CommentsSection({
 	useEffect(() => {
 		setOpen(false)
 		setComments([])
-		setCommentsFetched(false)
 		setLoading(false)
 		setNickname('')
 		setWebsite('')
