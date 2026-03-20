@@ -14,6 +14,19 @@ import { useSize } from '@/hooks/use-size'
 
 const MUSIC_FILES = ['/music/Refrain.mp3']
 
+/** One HTMLAudioElement for the whole SPA so route changes / remounts do not reset playback */
+let sharedAudio: HTMLAudioElement | null = null
+/** Avoid re-assigning `src` when the same track is already loaded (remount / client navigations) */
+let lastLoadedTrackIndex: number | null = null
+
+function getSharedAudio(): HTMLAudioElement | null {
+	if (typeof window === 'undefined') return null
+	if (!sharedAudio) {
+		sharedAudio = new Audio()
+	}
+	return sharedAudio
+}
+
 export default function MusicCard() {
 	const pathname = usePathname()
 	const { maxLG } = useSize()
@@ -27,13 +40,13 @@ export default function MusicCard() {
 	const [isPlaying, setIsPlaying] = useState(false)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [progress, setProgress] = useState(0)
-	const audioRef = useRef<HTMLAudioElement | null>(null)
 	const currentIndexRef = useRef(0)
+	/** Skip the first play/pause effect so we sync React state from the real audio element instead of pausing on mount */
+	const playPauseSyncedRef = useRef(false)
 
 	const isHomePage = pathname === '/'
 
 	const position = useMemo(() => {
-		// If not on home page, always position at bottom-right corner when playing
 		if (!isHomePage) {
 			return {
 				x: center.width - styles.width - 16,
@@ -41,7 +54,6 @@ export default function MusicCard() {
 			}
 		}
 
-		// Default position on home page
 		return {
 			x: styles.offsetX !== null ? center.x + styles.offsetX : center.x + CARD_SPACING + hiCardStyles.width / 2 - styles.offset,
 			y: styles.offsetY !== null ? center.y + styles.offsetY : center.y - clockCardStyles.offset + CARD_SPACING + calendarCardStyles.height + CARD_SPACING
@@ -50,13 +62,9 @@ export default function MusicCard() {
 
 	const { x, y } = position
 
-	// Initialize audio element
 	useEffect(() => {
-		if (!audioRef.current) {
-			audioRef.current = new Audio()
-		}
-
-		const audio = audioRef.current
+		const audio = getSharedAudio()
+		if (!audio) return
 
 		const updateProgress = () => {
 			if (audio.duration) {
@@ -90,48 +98,48 @@ export default function MusicCard() {
 		}
 	}, [])
 
-	// Handle currentIndex change - load new audio
 	useEffect(() => {
-		currentIndexRef.current = currentIndex
-		if (audioRef.current) {
-			const wasPlaying = !audioRef.current.paused
-			audioRef.current.pause()
-			audioRef.current.src = MUSIC_FILES[currentIndex]
-			audioRef.current.loop = false
-			setProgress(0)
+		const audio = getSharedAudio()
+		if (!audio) return
 
-			if (wasPlaying) {
-				audioRef.current.play().catch(console.error)
-			}
+		currentIndexRef.current = currentIndex
+		if (lastLoadedTrackIndex === currentIndex && audio.src) {
+			return
+		}
+
+		lastLoadedTrackIndex = currentIndex
+		const wasPlaying = !audio.paused
+		audio.pause()
+		audio.src = MUSIC_FILES[currentIndex]
+		audio.loop = false
+		setProgress(0)
+
+		if (wasPlaying) {
+			audio.play().catch(console.error)
 		}
 	}, [currentIndex])
 
-	// Handle play/pause state change
 	useEffect(() => {
-		if (!audioRef.current) return
+		const audio = getSharedAudio()
+		if (!audio) return
+
+		if (!playPauseSyncedRef.current) {
+			playPauseSyncedRef.current = true
+			setIsPlaying(!audio.paused)
+			return
+		}
 
 		if (isPlaying) {
-			audioRef.current.play().catch(console.error)
+			audio.play().catch(console.error)
 		} else {
-			audioRef.current.pause()
+			audio.pause()
 		}
 	}, [isPlaying])
-
-	// Cleanup on unmount
-	useEffect(() => {
-		return () => {
-			if (audioRef.current) {
-				audioRef.current.pause()
-				audioRef.current.src = ''
-			}
-		}
-	}, [])
 
 	const togglePlayPause = () => {
 		setIsPlaying(!isPlaying)
 	}
 
-	// Hide component if not on home page and not playing
 	if (!isHomePage && !isPlaying) {
 		return null
 	}
