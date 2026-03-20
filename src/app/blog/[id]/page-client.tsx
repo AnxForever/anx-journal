@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import dayjs from 'dayjs'
 import { motion } from 'motion/react'
@@ -30,6 +30,11 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 	const [blog, setBlog] = useState<LoadedBlog | null>(null)
 	const [error, setError] = useState<string | null>(null)
 	const [loading, setLoading] = useState<boolean>(true)
+	const [articleReady, setArticleReady] = useState(false)
+
+	const handleArticleBodyReady = useCallback(() => {
+		setArticleReady(true)
+	}, [])
 
 	useEffect(() => {
 		let cancelled = false
@@ -37,6 +42,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 			if (!slug) return
 			try {
 				setLoading(true)
+				setArticleReady(false)
 				setError(null)
 				setBlog(null)
 				const blogData = await loadBlog(slug)
@@ -50,6 +56,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 				if (!cancelled) {
 					setError(e?.message || '加载失败')
 					setBlog(null)
+					setArticleReady(false)
 				}
 			} finally {
 				if (!cancelled) setLoading(false)
@@ -110,9 +117,10 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 				summary={blog.config.summary}
 				cover={coverUrl}
 				slug={slug}
+				onBodyReady={handleArticleBodyReady}
 			/>
 
-			<CommentsSection slug={slug} />
+			{articleReady && <CommentsSection slug={slug} />}
 
 			<motion.button
 				initial={{ opacity: 0, scale: 0.6 }}

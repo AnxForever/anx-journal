@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
-import { INIT_DELAY } from '@/consts'
+import { useEffect, useRef } from 'react'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
 import { useSize } from '@/hooks/use-size'
 import { BlogSidebar } from '@/components/blog-sidebar'
@@ -15,13 +14,27 @@ type BlogPreviewProps = {
 	summary?: string
 	cover?: string
 	slug?: string
+	/** Fired once markdown body has finished rendering (no opacity delay — avoids comments flash on mobile). */
+	onBodyReady?: () => void
 }
 
-export function BlogPreview({ markdown, title, tags, date, summary, cover, slug }: BlogPreviewProps) {
+export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, onBodyReady }: BlogPreviewProps) {
 	const { maxSM: isMobile } = useSize()
 	const { content, toc, loading } = useMarkdownRender(markdown)
 	const { siteContent } = useConfigStore()
 	const summaryInContent = siteContent.summaryInContent ?? false
+	const notifiedMarkdown = useRef<string | null>(null)
+
+	useEffect(() => {
+		notifiedMarkdown.current = null
+	}, [markdown])
+
+	useEffect(() => {
+		if (loading || !onBodyReady) return
+		if (notifiedMarkdown.current === markdown) return
+		notifiedMarkdown.current = markdown
+		onBodyReady()
+	}, [loading, markdown, onBodyReady])
 
 	if (loading) {
 		return <div className='text-secondary flex min-h-[40dvh] items-center justify-center px-4 text-sm'>渲染中...</div>
@@ -29,11 +42,7 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug 
 
 	return (
 		<div className='mx-auto flex w-full min-w-0 max-w-[1140px] flex-1 justify-center gap-6 px-6 pt-28 pb-12 max-sm:px-3'>
-			<motion.article
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: INIT_DELAY }}
-				className='card bg-article static max-sm:min-h-0 flex min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:overflow-visible sm:p-8'>
+			<article className='card bg-article static max-sm:min-h-0 flex min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:overflow-visible sm:p-8'>
 				<div className='min-w-0'>
 					<div className='text-center text-2xl font-semibold'>{title}</div>
 
@@ -49,7 +58,7 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug 
 
 					<div className='prose mt-6 max-w-none min-w-0 cursor-text'>{content}</div>
 				</div>
-			</motion.article>
+			</article>
 
 			{!isMobile && <BlogSidebar cover={cover} summary={summary} toc={toc} slug={slug} />}
 		</div>
