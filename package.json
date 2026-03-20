@@ -2,6 +2,9 @@
   "name": "anx-journal",
   "version": "0.1.0",
   "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp", "workerd"]
+  },
   "scripts": {
     "dev": "next dev --turbopack -p 2025",
     "svg": "node scripts/gen-svgs-index.js",
@@ -50,5 +53,8 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^4.53.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp", "workerd"]
   }
 }

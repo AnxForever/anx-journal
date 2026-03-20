@@ -88,8 +88,8 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 	}
 
 	return (
-		<div className='mx-auto flex w-full max-w-[1140px] min-w-0 flex-1 justify-center gap-6 px-6 pt-28 pb-12 max-sm:px-3'>
-			<article className='card bg-article static flex min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-visible max-sm:[backdrop-filter:none] sm:p-8'>
+		<div className='mx-auto flex min-h-0 w-full max-w-[1140px] min-w-0 flex-1 flex-col gap-8 px-6 pt-28 pb-12 max-sm:px-3 lg:flex-row lg:items-start lg:justify-center lg:gap-6'>
+			<article className='card bg-article static flex w-full min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-visible max-sm:[backdrop-filter:none] sm:p-8 lg:min-w-0'>
 				<div className='min-w-0'>
 					<div className='text-center text-2xl font-semibold'>{title}</div>
 

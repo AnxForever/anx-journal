@@ -17,9 +17,9 @@ interface Props {
 }
 
 export default function Card({ children, order, width, height, x, y, className }: Props) {
-	const { maxSM, init } = useSize()
+	const { maxLG, init } = useSize()
 	let [show, setShow] = useState(false)
-	if (maxSM && init) order = 0
+	if (maxLG && init) order = 0
 
 	useEffect(() => {
 		if (show) return
@@ -33,12 +33,12 @@ export default function Card({ children, order, width, height, x, y, className }
 	}, [x, y, show])
 
 	if (show) {
-		const reduceTapHover = maxSM && init
+		const reduceTapHover = maxLG && init
 		return (
 			<motion.div
 				className={cn(
 					'card squircle',
-					reduceTapHover && 'max-sm:active:scale-[0.98] max-sm:transition-transform',
+					reduceTapHover && 'max-lg:active:scale-[0.98] max-lg:transition-transform',
 					className
 				)}
 				initial={{ opacity: 0, scale: reduceTapHover ? 1 : 0.6, left: x, top: y, width, height }}

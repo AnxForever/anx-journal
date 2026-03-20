@@ -51,11 +51,11 @@ interface SocialButtonConfig {
 export default function SocialButtons() {
 	const center = useCenterStore()
 	const { cardStyles, siteContent } = useConfigStore()
-	const { maxSM, init } = useSize()
+	const { maxLG, init } = useSize()
 	const styles = cardStyles.socialButtons
 	const hiCardStyles = cardStyles.hiCard
-	const order = maxSM && init ? 0 : styles.order
-	const delay = maxSM && init ? 0 : 100
+	const order = maxLG && init ? 0 : styles.order
+	const delay = maxLG && init ? 0 : 100
 
 	const sortedButtons = useMemo(() => {
 		const buttons = (siteContent.socialButtons || []) as SocialButtonConfig[]
@@ -260,8 +260,8 @@ export default function SocialButtons() {
 
 	return (
 		<HomeDraggableLayer cardKey='socialButtons' x={x} y={y} width={styles.width} height={styles.height}>
-			<motion.div className='absolute max-sm:static' animate={{ left: x, top: y }} initial={{ left: x, top: y }}>
-				<div className='absolute top-0 left-0 flex flex-row-reverse items-center gap-3 max-sm:static' style={{ width: styles.width }}>
+			<motion.div className='absolute max-lg:static' animate={{ left: x, top: y }} initial={{ left: x, top: y }}>
+				<div className='absolute top-0 left-0 flex flex-row-reverse items-center gap-3 max-lg:static' style={{ width: styles.width }}>
 					{sortedButtons.map(button => renderButton(button))}
 				</div>
 			</motion.div>

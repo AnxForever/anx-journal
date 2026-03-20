@@ -12,7 +12,7 @@ import { HomeDraggableLayer } from './home-draggable-layer'
 export default function WriteButton() {
 	const center = useCenterStore()
 	const { cardStyles, setConfigDialogOpen, siteContent } = useConfigStore()
-	const { maxSM } = useSize()
+	const { maxLG } = useSize()
 	const router = useRouter()
 	const styles = cardStyles.writeButtons
 	const hiCardStyles = cardStyles.hiCard
@@ -24,7 +24,7 @@ export default function WriteButton() {
 		setTimeout(() => setShow(true), styles.order * ANIMATION_DELAY * 1000)
 	}, [styles.order])
 
-	if (maxSM) return null
+	if (maxLG) return null
 
 	if (!show) return null
 

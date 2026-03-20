@@ -72,7 +72,7 @@ export default function NavCard() {
 	const pathname = usePathname()
 	const center = useCenterStore()
 	const [show, setShow] = useState(false)
-	const { maxSM } = useSize()
+	const { maxLG } = useSize()
 	const [hoveredIndex, setHoveredIndex] = useState<number>(0)
 	const { siteContent, cardStyles } = useConfigStore()
 	const styles = cardStyles.navCard
@@ -92,11 +92,11 @@ export default function NavCard() {
 	else if (pathname == '/write') return 'mini'
 	else return 'icons'
 	}, [pathname])
-	if (maxSM) form = 'icons'
+	if (maxLG) form = 'icons'
 
 	const itemHeight = form === 'full' ? 52 : 28
-	const iconsGap = maxSM ? 18 : 24
-	const outerGap = maxSM ? 16 : 24
+	const iconsGap = maxLG ? 18 : 24
+	const outerGap = maxLG ? 16 : 24
 	const iconsRowWidth = list.length * itemHeight + (list.length - 1) * iconsGap
 	const fullCardHeight = useMemo(() => {
 		const listHeight = list.length * 52 + (list.length - 1) * fullListGap
@@ -131,7 +131,7 @@ export default function NavCard() {
 		}
 	}, [hoveredIndex, activeIndex, form])
 
-	if (maxSM) position = { x: center.x - size.width / 2, y: 16 }
+	if (maxLG) position = { x: center.x - size.width / 2, y: 16 }
 
 	if (show)
 		return (
@@ -147,7 +147,7 @@ export default function NavCard() {
 						form != 'full' && 'overflow-hidden',
 						form === 'mini' && 'p-3',
 						form === 'icons' && 'flex items-center p-3',
-						form === 'icons' && (maxSM ? 'gap-4' : 'gap-6')
+						form === 'icons' && (maxLG ? 'gap-4' : 'gap-6')
 					)}>
 					{form === 'full' && siteContent.enableChristmas && (
 						<>
@@ -170,7 +170,7 @@ export default function NavCard() {
 						<>
 							{form !== 'icons' && <div className='text-secondary mt-6 text-sm uppercase'>General</div>}
 
-							<div className={cn('relative mt-2 space-y-2', form === 'icons' && 'mt-0 flex shrink-0 items-center space-y-0', form === 'icons' && (maxSM ? 'gap-[18px]' : 'gap-6'))}>
+							<div className={cn('relative mt-2 space-y-2', form === 'icons' && 'mt-0 flex shrink-0 items-center space-y-0', form === 'icons' && (maxLG ? 'gap-[18px]' : 'gap-6'))}>
 								<motion.div
 									className='absolute max-w-[230px] rounded-full border'
 									layoutId='nav-hover'
