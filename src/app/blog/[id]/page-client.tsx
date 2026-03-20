@@ -47,6 +47,15 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 	const date = useMemo(() => dayjs(blog?.config.date).format('YYYY年 M月 D日'), [blog?.config.date])
 	const tags = blog?.config.tags || []
 
+	const coverUrl = useMemo(() => {
+		const c = blog?.cover
+		if (!c) return undefined
+		if (/^https?:\/\//i.test(c)) return c
+		const base = typeof window !== 'undefined' ? window.location.origin : ''
+		const path = c.startsWith('/') ? c : `/${c}`
+		return base ? `${base}${path}` : path
+	}, [blog?.cover])
+
 	const handleEdit = () => {
 		router.push(`/write/${slug}`)
 	}
@@ -75,7 +84,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
 				tags={tags}
 				date={date}
 				summary={blog.config.summary}
-				cover={blog.cover ? (blog.cover.startsWith('http') ? blog.cover : `${origin}${blog.cover}`) : undefined}
+				cover={coverUrl}
 				slug={slug}
 			/>
 
