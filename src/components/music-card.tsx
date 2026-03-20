@@ -6,9 +6,8 @@ import { useCenterStore } from '@/hooks/use-center'
 import { useConfigStore } from '../app/(home)/stores/config-store'
 import { CARD_SPACING } from '@/consts'
 import MusicSVG from '@/svgs/music.svg'
-import PlaySVG from '@/svgs/play.svg'
 import { HomeDraggableLayer } from '../app/(home)/home-draggable-layer'
-import { Pause } from 'lucide-react'
+import { Pause, Play } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useSize } from '@/hooks/use-size'
@@ -145,7 +144,7 @@ export default function MusicCard() {
 				aria-label={isPlaying ? '暂停音乐' : '播放音乐'}
 				className='border-brand/30 bg-card/95 text-brand shadow-brand/10 fixed left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border shadow-md backdrop-blur-sm transition-opacity hover:opacity-90'
 				style={{ bottom: 'max(2rem, env(safe-area-inset-bottom, 0px))' }}>
-				{isPlaying ? <Pause className='h-5 w-5' /> : <PlaySVG className='ml-0.5 h-5 w-5' />}
+				{isPlaying ? <Pause className='h-5 w-5' /> : <Play className='h-5 w-5' />}
 			</button>
 		)
 	}
@@ -187,7 +186,7 @@ export default function MusicCard() {
 				</div>
 
 				<button onClick={togglePlayPause} className='flex h-10 w-10 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-80'>
-					{isPlaying ? <Pause className='text-brand h-4 w-4' /> : <PlaySVG className='text-brand ml-1 h-4 w-4' />}
+					{isPlaying ? <Pause className='text-brand h-4 w-4' /> : <Play className='text-brand h-4 w-4' />}
 				</button>
 			</Card>
 		</HomeDraggableLayer>
