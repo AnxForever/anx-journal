@@ -32,17 +32,23 @@ export default function Card({ children, order, width, height, x, y, className }
 		)
 	}, [x, y, show])
 
-	if (show)
+	if (show) {
+		const reduceTapHover = maxSM && init
 		return (
 			<motion.div
-				className={cn('card squircle', className)}
-				initial={{ opacity: 0, scale: 0.6, left: x, top: y, width, height }}
+				className={cn(
+					'card squircle',
+					reduceTapHover && 'max-sm:active:scale-[0.98] max-sm:transition-transform',
+					className
+				)}
+				initial={{ opacity: 0, scale: reduceTapHover ? 1 : 0.6, left: x, top: y, width, height }}
 				animate={{ opacity: 1, scale: 1, left: x, top: y, width, height }}
-				whileHover={{ scale: 1.05 }}
-				whileTap={{ scale: 0.95 }}>
+				whileHover={reduceTapHover ? undefined : { scale: 1.05 }}
+				whileTap={reduceTapHover ? undefined : { scale: 0.95 }}>
 				{children}
 			</motion.div>
 		)
+	}
 
 	return null
 }

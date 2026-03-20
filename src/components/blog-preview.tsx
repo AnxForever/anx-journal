@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useMemo, useRef } from 'react'
+import { startTransition, useEffect, useRef, useState } from 'react'
+import type { ReactElement } from 'react'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
 import { BlogSidebar } from '@/components/blog-sidebar'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
@@ -21,13 +22,34 @@ type BlogPreviewProps = {
 	onBodyReady?: () => void
 }
 
+function BlogBodySkeleton() {
+	const lines = [100, 94, 88, 96, 72, 100, 68, 92, 86] as const
+	return (
+		<div className='space-y-3 pt-2' aria-hidden>
+			{lines.map((w, i) => (
+				<div
+					key={i}
+					className='bg-secondary/15 h-3.5 max-w-full rounded-md animate-pulse'
+					style={{ width: `${w}%` }}
+				/>
+			))}
+			<div className='bg-secondary/10 mt-6 h-24 w-full rounded-xl animate-pulse' />
+			<div className='bg-secondary/15 h-3.5 w-[80%] max-w-full rounded-md animate-pulse' />
+			<div className='bg-secondary/15 h-3.5 w-full max-w-[92%] rounded-md animate-pulse' />
+		</div>
+	)
+}
+
 export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, renderedHtml, toc, onBodyReady }: BlogPreviewProps) {
 	const markdownToRender = markdown ?? ''
-	const renderedContent = useMemo(() => (renderedHtml ? renderMarkdownHtmlToReact(renderedHtml) : null), [renderedHtml])
+	const [htmlBody, setHtmlBody] = useState<ReactElement | null>(null)
+	const htmlParseGen = useRef(0)
 	const markdownResult = useMarkdownRender(renderedHtml ? '' : markdownToRender)
-	const content = renderedHtml ? renderedContent : markdownResult.content
+	const content = renderedHtml ? htmlBody : markdownResult.content
 	const finalToc = renderedHtml ? (toc ?? []) : markdownResult.toc
-	const loading = renderedHtml ? false : markdownResult.loading
+	const markdownLoading = !renderedHtml && markdownResult.loading
+	const htmlBodyLoading = Boolean(renderedHtml && htmlBody === null)
+	const loading = markdownLoading
 	const { siteContent } = useConfigStore()
 	const summaryInContent = siteContent.summaryInContent ?? false
 	const notifiedMarkdown = useRef<string | null>(null)
@@ -37,12 +59,29 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 	}, [markdownToRender, renderedHtml])
 
 	useEffect(() => {
+		if (!renderedHtml) {
+			htmlParseGen.current += 1
+			setHtmlBody(null)
+			return
+		}
+		setHtmlBody(null)
+		const gen = ++htmlParseGen.current
+		const html = renderedHtml
+		startTransition(() => {
+			const el = renderMarkdownHtmlToReact(html)
+			if (gen !== htmlParseGen.current) return
+			setHtmlBody(el)
+		})
+	}, [renderedHtml])
+
+	useEffect(() => {
 		if (loading || !onBodyReady) return
+		if (renderedHtml && htmlBody === null) return
 		const currentRenderKey = renderedHtml ?? markdownToRender
 		if (notifiedMarkdown.current === currentRenderKey) return
 		notifiedMarkdown.current = currentRenderKey
 		onBodyReady()
-	}, [loading, markdownToRender, onBodyReady, renderedHtml])
+	}, [loading, markdownToRender, onBodyReady, renderedHtml, htmlBody])
 
 	if (loading) {
 		return <div className='text-secondary flex min-h-[40dvh] items-center justify-center px-4 text-sm'>渲染中...</div>
@@ -50,7 +89,7 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 
 	return (
 		<div className='mx-auto flex w-full max-w-[1140px] min-w-0 flex-1 justify-center gap-6 px-6 pt-28 pb-12 max-sm:px-3'>
-			<article className='card bg-article static flex min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-visible sm:p-8'>
+			<article className='card bg-article static flex min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-visible max-sm:[backdrop-filter:none] sm:p-8'>
 				<div className='min-w-0'>
 					<div className='text-center text-2xl font-semibold'>{title}</div>
 
@@ -64,7 +103,9 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 
 					{summary && summaryInContent && <div className='text-secondary mt-6 cursor-text text-center text-sm'>“{summary}”</div>}
 
-					<div className='prose mt-6 max-w-none min-w-0 cursor-text'>{content}</div>
+					<div className='prose mt-6 max-w-none min-w-0 cursor-text'>
+						{htmlBodyLoading ? <BlogBodySkeleton /> : content}
+					</div>
 				</div>
 			</article>
 

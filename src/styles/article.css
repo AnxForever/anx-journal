@@ -8,6 +8,14 @@
 	overflow: hidden;
 }
 
+/* Long prose + overflow:hidden hurts touch scrolling / compositing on iOS; keep horizontal clamp only on small screens */
+@media (max-width: 639px) {
+	.prose {
+		overflow-x: hidden;
+		overflow-y: visible;
+	}
+}
+
 /* Headings */
 .prose h1,
 .prose h2,
