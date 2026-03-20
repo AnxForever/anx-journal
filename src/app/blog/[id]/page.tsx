@@ -131,6 +131,13 @@ export default async function Page({ params }: PageProps) {
 	const slug = normalizeSlug(id)
 	const config = await readBlogConfig(slug)
 	const blog = await readBlog(slug)
+	const clientBlog = blog
+		? {
+				slug: blog.slug,
+				config: blog.config,
+				cover: blog.cover
+			}
+		: null
 	const title = blog?.config.title || slug
 	const previewMarkdown = blog ? stripLeadingH1WhenMatchesTitle(blog.markdown, title) : ''
 	const renderedArticle = previewMarkdown ? await renderMarkdown(previewMarkdown) : null
@@ -161,7 +168,7 @@ export default async function Page({ params }: PageProps) {
 	return (
 		<>
 			{articleJsonLd && <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />}
-			<BlogPostClient key={slug} slug={slug} blog={blog} renderedHtml={renderedArticle?.html} toc={renderedArticle?.toc} />
+			<BlogPostClient key={slug} slug={slug} blog={clientBlog} renderedHtml={renderedArticle?.html} toc={renderedArticle?.toc} />
 		</>
 	)
 }

@@ -8,12 +8,18 @@ import { BlogPreview } from '@/components/blog-preview'
 import { CommentsSection } from '@/components/comments-section'
 import { useReadArticles } from '@/hooks/use-read-articles'
 import LiquidGrass from '@/components/liquid-grass'
-import type { LoadedBlog } from '@/lib/load-blog'
+import type { BlogConfig } from '@/app/blog/types'
 import type { TocItem } from '@/lib/markdown-renderer'
+
+type BlogViewData = {
+	slug: string
+	config: BlogConfig
+	cover?: string
+}
 
 type BlogPostClientProps = {
 	slug: string
-	blog: LoadedBlog | null
+	blog: BlogViewData | null
 	renderedHtml?: string
 	toc?: TocItem[]
 }
