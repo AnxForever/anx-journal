@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import Card from '@/components/card'
 import { useCenterStore } from '@/hooks/use-center'
 import { useConfigStore } from '../app/(home)/stores/config-store'
@@ -11,38 +11,18 @@ import { Pause, Play } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { useSize } from '@/hooks/use-size'
-
-const MUSIC_FILES = ['/music/Refrain.mp3']
-
-/** One HTMLAudioElement for the whole SPA so route changes / remounts do not reset playback */
-let sharedAudio: HTMLAudioElement | null = null
-/** Avoid re-assigning `src` when the same track is already loaded (remount / client navigations) */
-let lastLoadedTrackIndex: number | null = null
-
-function getSharedAudio(): HTMLAudioElement | null {
-	if (typeof window === 'undefined') return null
-	if (!sharedAudio) {
-		sharedAudio = new Audio()
-	}
-	return sharedAudio
-}
+import { useMusicPlayer } from '@/components/music-player-context'
 
 export default function MusicCard() {
 	const pathname = usePathname()
 	const { maxLG } = useSize()
+	const { isPlaying, progress, togglePlayPause } = useMusicPlayer()
 	const center = useCenterStore()
 	const { cardStyles, siteContent } = useConfigStore()
 	const styles = cardStyles.musicCard
 	const hiCardStyles = cardStyles.hiCard
 	const clockCardStyles = cardStyles.clockCard
 	const calendarCardStyles = cardStyles.calendarCard
-
-	const [isPlaying, setIsPlaying] = useState(false)
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const [progress, setProgress] = useState(0)
-	const currentIndexRef = useRef(0)
-	/** Skip the first play/pause effect so we sync React state from the real audio element instead of pausing on mount */
-	const playPauseSyncedRef = useRef(false)
 
 	const isHomePage = pathname === '/'
 
@@ -58,89 +38,16 @@ export default function MusicCard() {
 			x: styles.offsetX !== null ? center.x + styles.offsetX : center.x + CARD_SPACING + hiCardStyles.width / 2 - styles.offset,
 			y: styles.offsetY !== null ? center.y + styles.offsetY : center.y - clockCardStyles.offset + CARD_SPACING + calendarCardStyles.height + CARD_SPACING
 		}
-	}, [isPlaying, isHomePage, center, styles, hiCardStyles, clockCardStyles, calendarCardStyles])
+	}, [isHomePage, center, styles, hiCardStyles, clockCardStyles, calendarCardStyles])
 
 	const { x, y } = position
 
-	useEffect(() => {
-		const audio = getSharedAudio()
-		if (!audio) return
-
-		const updateProgress = () => {
-			if (audio.duration) {
-				setProgress((audio.currentTime / audio.duration) * 100)
-			}
-		}
-
-		const handleEnded = () => {
-			const nextIndex = (currentIndexRef.current + 1) % MUSIC_FILES.length
-			currentIndexRef.current = nextIndex
-			setCurrentIndex(nextIndex)
-			setProgress(0)
-		}
-
-		const handleTimeUpdate = () => {
-			updateProgress()
-		}
-
-		const handleLoadedMetadata = () => {
-			updateProgress()
-		}
-
-		audio.addEventListener('timeupdate', handleTimeUpdate)
-		audio.addEventListener('ended', handleEnded)
-		audio.addEventListener('loadedmetadata', handleLoadedMetadata)
-
-		return () => {
-			audio.removeEventListener('timeupdate', handleTimeUpdate)
-			audio.removeEventListener('ended', handleEnded)
-			audio.removeEventListener('loadedmetadata', handleLoadedMetadata)
-		}
-	}, [])
-
-	useEffect(() => {
-		const audio = getSharedAudio()
-		if (!audio) return
-
-		currentIndexRef.current = currentIndex
-		if (lastLoadedTrackIndex === currentIndex && audio.src) {
-			return
-		}
-
-		lastLoadedTrackIndex = currentIndex
-		const wasPlaying = !audio.paused
-		audio.pause()
-		audio.src = MUSIC_FILES[currentIndex]
-		audio.loop = false
-		setProgress(0)
-
-		if (wasPlaying) {
-			audio.play().catch(console.error)
-		}
-	}, [currentIndex])
-
-	useEffect(() => {
-		const audio = getSharedAudio()
-		if (!audio) return
-
-		if (!playPauseSyncedRef.current) {
-			playPauseSyncedRef.current = true
-			setIsPlaying(!audio.paused)
-			return
-		}
-
-		if (isPlaying) {
-			audio.play().catch(console.error)
-		} else {
-			audio.pause()
-		}
-	}, [isPlaying])
-
-	const togglePlayPause = () => {
-		setIsPlaying(!isPlaying)
+	// 首页：音乐在点赞旁内联，此处不渲染（移动端小屏亦同）
+	if (isHomePage) {
+		return null
 	}
 
-	if (!isHomePage && !isPlaying) {
+	if (!isPlaying) {
 		return null
 	}
 
@@ -165,7 +72,7 @@ export default function MusicCard() {
 				height={styles.height}
 				x={x}
 				y={y}
-				className={clsx('z-20 flex items-center gap-3', !isHomePage && 'fixed')}>
+				className={clsx('z-20 flex items-center gap-3', 'fixed')}>
 				{siteContent.enableChristmas && (
 					<>
 						<img

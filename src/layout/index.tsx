@@ -9,12 +9,14 @@ import { useSize, useSizeInit } from '@/hooks/use-size'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
 import { ScrollTopButton } from '@/components/scroll-top-button'
 import MusicCard from '@/components/music-card'
+import { MusicPlayerProvider } from '@/components/music-player-context'
 
 export default function Layout({ children }: PropsWithChildren) {
 	useCenterInit()
 	useSizeInit()
 	const { cardStyles, siteContent, regenerateKey } = useConfigStore()
 	const { maxLG, init } = useSize()
+	const musicEnabled = cardStyles.musicCard?.enabled !== false
 
 	const backgroundImages = (siteContent.backgroundImages ?? []) as Array<{ id: string; url: string }>
 	const currentBackgroundImageId = siteContent.currentBackgroundImageId
@@ -52,14 +54,16 @@ export default function Layout({ children }: PropsWithChildren) {
 			)}
 			<BlurredBubblesBackground colors={siteContent.backgroundColors} regenerateKey={regenerateKey} />
 
-			<main className='relative z-10 h-full min-h-dvh'>
-				{children}
-				<NavCard />
+			<MusicPlayerProvider enabled={musicEnabled}>
+				<main className='relative z-10 h-full min-h-dvh'>
+					{children}
+					<NavCard />
 
-				{init && cardStyles.musicCard?.enabled !== false && <MusicCard />}
-			</main>
+					{init && musicEnabled && <MusicCard />}
+				</main>
 
-			{maxLG && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
+				{maxLG && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
+			</MusicPlayerProvider>
 		</>
 	)
 }
