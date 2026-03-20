@@ -143,6 +143,7 @@ export default function NavCard() {
 					x={position.x}
 					y={position.y}
 					className={clsx(
+						'z-20',
 						form != 'full' && 'overflow-hidden',
 						form === 'mini' && 'p-3',
 						form === 'icons' && 'flex items-center p-3',

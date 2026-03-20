@@ -52,11 +52,11 @@ export default function Layout({ children }: PropsWithChildren) {
 			)}
 			<BlurredBubblesBackground colors={siteContent.backgroundColors} regenerateKey={regenerateKey} />
 
-			<main className='relative z-10 min-h-dvh h-full'>
+			<main className='relative z-10 h-full min-h-dvh'>
 				{children}
 				<NavCard />
 
-				{!maxSM && cardStyles.musicCard?.enabled !== false && <MusicCard />}
+				{init && !maxSM && cardStyles.musicCard?.enabled !== false && <MusicCard />}
 			</main>
 
 			{maxSM && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
