@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { create } from 'zustand'
 
 type SizeState = {
@@ -47,7 +47,7 @@ export const useSizeStore = create<SizeState>(set => ({
 }))
 
 export function useSizeInit() {
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const update = () => useSizeStore.getState().recalc()
 		update()
 		window.addEventListener('resize', update)

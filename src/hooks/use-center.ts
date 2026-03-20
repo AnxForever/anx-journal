@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { create } from 'zustand'
 
 type CenterState = {
@@ -45,7 +45,7 @@ export const useCenterStore = create<CenterState>(set => ({
 }))
 
 export function useCenterInit() {
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const update = () => useCenterStore.getState().recalc()
 		update()
 		window.addEventListener('resize', update)

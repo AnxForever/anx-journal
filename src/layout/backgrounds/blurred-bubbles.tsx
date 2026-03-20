@@ -313,7 +313,7 @@ export default function BlurredBubblesBackground({
 			animate={{ opacity: 1 }}
 			initial={{ opacity: 0 }}
 			transition={{ duration: 1 }}
-			className='fixed inset-0 z-0 overflow-hidden'
+			className='pointer-events-none fixed inset-0 z-0 overflow-hidden'
 			style={{ filter: 'blur(50px)' }}>
 			<canvas ref={ref} className='h-full w-full' style={{ display: 'block' }} />
 		</motion.div>

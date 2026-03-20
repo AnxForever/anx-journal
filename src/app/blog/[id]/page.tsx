@@ -114,7 +114,7 @@ export default async function Page({ params }: PageProps) {
 	return (
 		<>
 			{articleJsonLd && <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />}
-			<BlogPostClient slug={slug} />
+			<BlogPostClient key={slug} slug={slug} />
 		</>
 	)
 }
