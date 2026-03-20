@@ -11,11 +11,13 @@ import { HomeDraggableLayer } from '../app/(home)/home-draggable-layer'
 import { Pause } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import { useSize } from '@/hooks/use-size'
 
 const MUSIC_FILES = ['/music/Refrain.mp3']
 
 export default function MusicCard() {
 	const pathname = usePathname()
+	const { maxLG } = useSize()
 	const center = useCenterStore()
 	const { cardStyles, siteContent } = useConfigStore()
 	const styles = cardStyles.musicCard
@@ -133,6 +135,19 @@ export default function MusicCard() {
 	// Hide component if not on home page and not playing
 	if (!isHomePage && !isPlaying) {
 		return null
+	}
+
+	if (maxLG) {
+		return (
+			<button
+				type='button'
+				onClick={togglePlayPause}
+				aria-label={isPlaying ? '暂停音乐' : '播放音乐'}
+				className='border-brand/30 bg-card/95 text-brand shadow-brand/10 fixed left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border shadow-md backdrop-blur-sm transition-opacity hover:opacity-90'
+				style={{ bottom: 'max(2rem, env(safe-area-inset-bottom, 0px))' }}>
+				{isPlaying ? <Pause className='h-5 w-5' /> : <PlaySVG className='ml-0.5 h-5 w-5' />}
+			</button>
+		)
 	}
 
 	return (

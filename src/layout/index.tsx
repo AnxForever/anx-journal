@@ -56,7 +56,7 @@ export default function Layout({ children }: PropsWithChildren) {
 				{children}
 				<NavCard />
 
-				{init && !maxLG && cardStyles.musicCard?.enabled !== false && <MusicCard />}
+				{init && cardStyles.musicCard?.enabled !== false && <MusicCard />}
 			</main>
 
 			{maxLG && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
