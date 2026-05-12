@@ -16,23 +16,12 @@ type CommentModerationItem = {
 	createdAt: string
 }
 
-type GuestbookModerationItem = {
-	id: number
-	nickname: string
-	content: string
-	email?: string | null
-	website?: string | null
-	status: ModerationStatus
-	createdAt: string
-}
-
 const TOKEN_STORAGE_KEY = 'anx-journal-admin-token'
 
 export function ModerationPanel() {
 	const [token, setToken] = useState('')
 	const [connected, setConnected] = useState(false)
 	const [comments, setComments] = useState<CommentModerationItem[]>([])
-	const [guestbookEntries, setGuestbookEntries] = useState<GuestbookModerationItem[]>([])
 	const [loading, setLoading] = useState(false)
 
 	useEffect(() => {
@@ -45,26 +34,18 @@ export function ModerationPanel() {
 	const loadData = async (adminToken: string) => {
 		setLoading(true)
 		try {
-			const [commentsRes, guestbookRes] = await Promise.all([
-				fetch('/api/admin/comments?status=pending', {
-					headers: { 'x-admin-token': adminToken },
-					cache: 'no-store'
-				}),
-				fetch('/api/admin/guestbook?status=pending', {
-					headers: { 'x-admin-token': adminToken },
-					cache: 'no-store'
-				})
-			])
+			const commentsRes = await fetch('/api/admin/comments?status=pending', {
+				headers: { 'x-admin-token': adminToken },
+				cache: 'no-store'
+			})
 
-			if (commentsRes.status === 401 || guestbookRes.status === 401) {
+			if (commentsRes.status === 401) {
 				throw new Error('管理令牌无效')
 			}
 
 			const commentsData = await commentsRes.json().catch(() => ({}))
-			const guestbookData = await guestbookRes.json().catch(() => ({}))
 
 			setComments(Array.isArray(commentsData.comments) ? commentsData.comments : [])
-			setGuestbookEntries(Array.isArray(guestbookData.entries) ? guestbookData.entries : [])
 			setConnected(true)
 			window.sessionStorage.setItem(TOKEN_STORAGE_KEY, adminToken)
 		} catch (error: any) {
@@ -84,9 +65,9 @@ export function ModerationPanel() {
 		await loadData(token.trim())
 	}
 
-	const handleModerate = async (type: 'comments' | 'guestbook', id: number, status: 'approved' | 'rejected') => {
+	const handleModerate = async (id: number, status: 'approved' | 'rejected') => {
 		try {
-			const res = await fetch(`/api/admin/${type}/${id}`, {
+			const res = await fetch(`/api/admin/comments/${id}`, {
 				method: 'PATCH',
 				headers: {
 					'content-type': 'application/json',
@@ -99,11 +80,7 @@ export function ModerationPanel() {
 				throw new Error(data.error || '审核失败')
 			}
 
-			if (type === 'comments') {
-				setComments(prev => prev.filter(item => item.id !== id))
-			} else {
-				setGuestbookEntries(prev => prev.filter(item => item.id !== id))
-			}
+			setComments(prev => prev.filter(item => item.id !== id))
 			toast.success(status === 'approved' ? '已通过' : '已拒绝')
 		} catch (error: any) {
 			toast.error(error?.message || '审核失败')
@@ -114,7 +91,6 @@ export function ModerationPanel() {
 		window.sessionStorage.removeItem(TOKEN_STORAGE_KEY)
 		setConnected(false)
 		setComments([])
-		setGuestbookEntries([])
 		setToken('')
 	}
 
@@ -123,7 +99,7 @@ export function ModerationPanel() {
 			<div className='card bg-article static space-y-6 rounded-xl p-8'>
 				<div>
 					<h1 className='text-3xl font-semibold'>审核台</h1>
-					<p className='text-secondary mt-3 text-sm leading-6'>这里只处理待审核的评论和留言。页面本身不公开入口，使用管理令牌进入。</p>
+				<p className='text-secondary mt-3 text-sm leading-6'>这里只处理待审核的文章评论。页面本身不公开入口，使用管理令牌进入。</p>
 				</div>
 
 				<form onSubmit={handleConnect} className='flex flex-col gap-4 md:flex-row'>
@@ -146,7 +122,7 @@ export function ModerationPanel() {
 			</div>
 
 			{connected && (
-				<div className='mt-6 grid gap-6 lg:grid-cols-2'>
+				<div className='mt-6 grid gap-6'>
 					<section className='card bg-article static rounded-xl p-8'>
 						<div className='mb-5 flex items-center justify-between gap-4'>
 							<h2 className='text-xl font-semibold'>待审核评论</h2>
@@ -165,40 +141,10 @@ export function ModerationPanel() {
 										</div>
 										<p className='mt-3 text-sm leading-7'>{item.content}</p>
 										<div className='mt-4 flex gap-3'>
-											<button onClick={() => handleModerate('comments', item.id, 'approved')} className='brand-btn px-4 py-2 text-xs'>
+											<button onClick={() => handleModerate(item.id, 'approved')} className='brand-btn px-4 py-2 text-xs'>
 												通过
 											</button>
-											<button onClick={() => handleModerate('comments', item.id, 'rejected')} className='rounded-xl border bg-white/70 px-4 py-2 text-xs'>
-												拒绝
-											</button>
-										</div>
-									</div>
-								))}
-							</div>
-						)}
-					</section>
-
-					<section className='card bg-article static rounded-xl p-8'>
-						<div className='mb-5 flex items-center justify-between gap-4'>
-							<h2 className='text-xl font-semibold'>待审核留言</h2>
-							<span className='text-secondary text-sm'>{guestbookEntries.length} 条</span>
-						</div>
-						{guestbookEntries.length === 0 ? (
-							<div className='text-secondary text-sm'>当前没有待审核留言。</div>
-						) : (
-							<div className='space-y-4'>
-								{guestbookEntries.map(item => (
-									<div key={item.id} className='rounded-2xl border bg-white/65 p-4'>
-										<div className='flex flex-wrap gap-3 text-xs text-secondary'>
-											<span>{item.nickname}</span>
-											<span>{item.createdAt}</span>
-										</div>
-										<p className='mt-3 text-sm leading-7'>{item.content}</p>
-										<div className='mt-4 flex gap-3'>
-											<button onClick={() => handleModerate('guestbook', item.id, 'approved')} className='brand-btn px-4 py-2 text-xs'>
-												通过
-											</button>
-											<button onClick={() => handleModerate('guestbook', item.id, 'rejected')} className='rounded-xl border bg-white/70 px-4 py-2 text-xs'>
+											<button onClick={() => handleModerate(item.id, 'rejected')} className='rounded-xl border bg-white/70 px-4 py-2 text-xs'>
 												拒绝
 											</button>
 										</div>

@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import Layout from '@/layout'
 import Head from '@/layout/head'
@@ -10,6 +10,10 @@ const {
 	meta: { title, description },
 	theme
 } = siteContent
+
+export const viewport: Viewport = {
+	viewportFit: 'cover'
+}
 
 export const metadata: Metadata = {
 	title,

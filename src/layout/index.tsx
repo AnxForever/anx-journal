@@ -62,7 +62,7 @@ export default function Layout({ children }: PropsWithChildren) {
 					{init && musicEnabled && <MusicCard />}
 				</main>
 
-				{maxLG && init && <ScrollTopButton className='bg-brand/20 fixed right-6 bottom-8 z-50 shadow-md' />}
+				{maxLG && init && <ScrollTopButton className='bg-brand/20 fixed right-6 z-50 shadow-md' style={{ bottom: 'max(2rem, env(safe-area-inset-bottom, 0px))' }} />}
 			</MusicPlayerProvider>
 		</>
 	)

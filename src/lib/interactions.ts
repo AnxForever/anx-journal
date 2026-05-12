@@ -11,14 +11,6 @@ export type PublicComment = {
 	createdAt: string
 }
 
-export type PublicGuestbookEntry = {
-	id: number
-	nickname: string
-	content: string
-	website?: string | null
-	createdAt: string
-}
-
 export function sanitizeSlug(value: string): string {
 	return value.trim().toLowerCase()
 }

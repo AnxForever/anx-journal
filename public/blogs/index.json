@@ -1,5 +1,103 @@
 [
   {
+    "slug": "ai-tool-handbook",
+    "title": "AI 编程工具手册：给国内开发者的阅读路线",
+    "tags": [
+      "AI 编程",
+      "Codex",
+      "Claude Code",
+      "MCP",
+      "Skills"
+    ],
+    "date": "2026-05-12T22:30",
+    "summary": "把 Codex、Claude Code、MCP、Skills 和国内接入方式整理成一条可执行的学习路线，适合作为整套手册的入口。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-codex",
+    "title": "Codex 入门：App、IDE 扩展和 CLI 怎么选",
+    "tags": [
+      "Codex",
+      "AI 编程",
+      "CLI",
+      "IDE"
+    ],
+    "date": "2026-05-12T22:20",
+    "summary": "面向第一次使用 Codex 的开发者，说明桌面 App、IDE 扩展和命令行三种入口的差异、安装方式和第一个任务流程。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-codex-network",
+    "title": "不用订阅账号也能用 Codex：API Key、中转站与国内模型配置",
+    "tags": [
+      "Codex",
+      "API Key",
+      "中转站",
+      "国内模型"
+    ],
+    "date": "2026-05-12T22:10",
+    "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-claude-code",
+    "title": "Claude Code 入门：安装、登录和 CLAUDE.md",
+    "tags": [
+      "Claude Code",
+      "AI 编程",
+      "CLAUDE.md"
+    ],
+    "date": "2026-05-12T22:00",
+    "summary": "介绍 Claude Code 的定位、安装登录方式、最小练习任务，以及如何用 CLAUDE.md 固化项目规则。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-mcp",
+    "title": "MCP 入门：把文件、GitHub 和数据库接给 AI",
+    "tags": [
+      "MCP",
+      "AI Agent",
+      "工具调用",
+      "安全边界"
+    ],
+    "date": "2026-05-12T21:50",
+    "summary": "用 filesystem、GitHub 和只读数据库三个例子说明 MCP 解决什么问题、怎么配置第一个 Server，以及安全边界怎么设。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-skills",
+    "title": "Skills 入门：把重复提示词沉淀成工作流",
+    "tags": [
+      "Skills",
+      "Prompt",
+      "工作流",
+      "AI 编程"
+    ],
+    "date": "2026-05-12T21:40",
+    "summary": "说明 Skill 和 AGENTS.md、CLAUDE.md、MCP 的区别，并给出中文文档写作、代码审查和脚本型 Skill 范例。",
+    "hidden": false,
+    "category": "AI 工具"
+  },
+  {
+    "slug": "ai-tool-handbook-deploy-cn",
+    "title": "这份手册应该部署在哪：国内访问优先的方案",
+    "tags": [
+      "部署",
+      "国内访问",
+      "博客",
+      "静态站"
+    ],
+    "date": "2026-05-12T21:30",
+    "summary": "如果手册要优先保证国内访问，不一定要做成独立网站；可以并入博客、同步到国内文档平台，或部署到国内云厂商的静态站/CDN。",
+    "hidden": true,
+    "category": "AI 工具"
+  },
+  {
     "slug": "stylekit-project-intro",
     "title": "StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统",
     "tags": [

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import dayjs from 'dayjs'
 import { motion } from 'motion/react'
 import { BlogPreview } from '@/components/blog-preview'
-import { CommentsSection } from '@/components/comments-section'
+import { BlogSeriesNav } from '@/components/blog-series-nav'
 import { useReadArticles } from '@/hooks/use-read-articles'
 import LiquidGrass from '@/components/liquid-grass'
 import type { BlogConfig } from '@/app/blog/types'
@@ -51,9 +51,17 @@ export default function BlogPostClient({ slug, blog, renderedHtml, toc }: BlogPo
 
 	return (
 		<div className='relative z-10 w-full min-w-0'>
-			<BlogPreview title={title} tags={tags} date={date} summary={blog.config.summary} cover={blog.cover} slug={slug} renderedHtml={renderedHtml} toc={toc} />
-
-			<CommentsSection slug={slug} />
+			<BlogPreview
+				title={title}
+				tags={tags}
+				date={date}
+				summary={blog.config.summary}
+				cover={blog.cover}
+				slug={slug}
+				renderedHtml={renderedHtml}
+				toc={toc}
+				footer={<BlogSeriesNav slug={slug} />}
+			/>
 
 			<motion.button
 				initial={{ opacity: 0, scale: 0.6 }}

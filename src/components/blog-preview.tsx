@@ -1,7 +1,7 @@
 'use client'
 
 import { startTransition, useEffect, useRef, useState } from 'react'
-import type { ReactElement } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
 import { BlogSidebar } from '@/components/blog-sidebar'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
@@ -18,7 +18,8 @@ type BlogPreviewProps = {
 	slug?: string
 	renderedHtml?: string
 	toc?: TocItem[]
-	/** Fired once markdown body has finished rendering (no opacity delay — avoids comments flash on mobile). */
+	footer?: ReactNode
+	/** Fired once markdown body has finished rendering. */
 	onBodyReady?: () => void
 }
 
@@ -40,7 +41,7 @@ function BlogBodySkeleton() {
 	)
 }
 
-export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, renderedHtml, toc, onBodyReady }: BlogPreviewProps) {
+export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, renderedHtml, toc, footer, onBodyReady }: BlogPreviewProps) {
 	const markdownToRender = markdown ?? ''
 	const [htmlBody, setHtmlBody] = useState<ReactElement | null>(null)
 	const htmlParseGen = useRef(0)
@@ -88,10 +89,10 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 	}
 
 	return (
-		<div className='mx-auto flex min-h-0 w-full max-w-[1140px] min-w-0 flex-1 flex-col gap-8 px-6 pt-28 pb-12 max-sm:px-3 lg:flex-row lg:items-start lg:justify-center lg:gap-6'>
-			<article className='card bg-article static flex w-full min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-visible max-sm:[backdrop-filter:none] sm:p-8 lg:min-w-0'>
-				<div className='min-w-0'>
-					<div className='text-center text-2xl font-semibold'>{title}</div>
+		<div className='mx-auto flex min-h-0 w-full max-w-[1140px] min-w-0 flex-1 flex-col gap-8 overflow-x-hidden px-6 pt-28 pb-12 max-sm:px-3 lg:flex-row lg:items-start lg:justify-center lg:gap-6'>
+			<article className='card bg-article static flex w-full min-w-0 flex-1 overflow-auto rounded-xl p-6 max-sm:min-h-0 max-sm:overflow-x-hidden max-sm:overflow-y-visible max-sm:[backdrop-filter:none] sm:p-8 lg:min-w-0'>
+				<div className='w-full min-w-0 max-w-full'>
+					<div className='break-words px-1 text-center text-xl leading-snug font-semibold sm:text-2xl'>{title}</div>
 
 					<div className='text-secondary mt-4 flex flex-wrap items-center justify-center gap-3 px-2 text-center text-sm sm:px-8'>
 						{tags.map(t => (
@@ -106,6 +107,7 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 					<div className='prose mt-6 max-w-none min-w-0 cursor-text'>
 						{htmlBodyLoading ? <BlogBodySkeleton /> : content}
 					</div>
+					{!htmlBodyLoading && footer}
 				</div>
 			</article>
 

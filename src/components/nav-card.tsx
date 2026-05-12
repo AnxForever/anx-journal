@@ -17,7 +17,6 @@ import ShareFilledSVG from '@/svgs/share-filled.svg'
 import ShareOutlineSVG from '@/svgs/share-outline.svg'
 import WebsiteFilledSVG from '@/svgs/website-filled.svg'
 import WebsiteOutlineSVG from '@/svgs/website-outline.svg'
-import PenSVG from '@/svgs/pen.svg'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { cn } from '@/lib/utils'
@@ -49,12 +48,6 @@ const list = [
 		iconActive: ShareFilledSVG,
 		label: '推荐分享',
 		href: '/share'
-	},
-	{
-		icon: PenSVG,
-		iconActive: PenSVG,
-		label: '留言板',
-		href: '/guestbook'
 	},
 	{
 		icon: WebsiteOutlineSVG,

@@ -1,0 +1,13 @@
+{
+  "title": "MCP 入门：把文件、GitHub 和数据库接给 AI",
+  "tags": [
+    "MCP",
+    "AI Agent",
+    "工具调用",
+    "安全边界"
+  ],
+  "date": "2026-05-12T21:50",
+  "summary": "用 filesystem、GitHub 和只读数据库三个例子说明 MCP 解决什么问题、怎么配置第一个 Server，以及安全边界怎么设。",
+  "hidden": false,
+  "category": "AI 工具"
+}

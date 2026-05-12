@@ -2,6 +2,7 @@
 	line-height: 1.8;
 	color: inherit;
 	word-break: break-word;
+	overflow-wrap: anywhere;
 	letter-spacing: 0.03em;
 	font-size: 15px;
 	width: 100%;
@@ -79,6 +80,7 @@
 	text-underline-offset: 2px;
 	color: var(--color-blue-500);
 	font-weight: 500;
+	overflow-wrap: anywhere;
 }
 .prose a:hover {
 	opacity: 0.9;
@@ -174,6 +176,13 @@
 	opacity: 1;
 }
 
+/* Touch devices cannot hover — always show copy button */
+@media (hover: none) {
+	.prose .code-block-copy-btn {
+		opacity: 0.7;
+	}
+}
+
 .prose .code-block-copy-btn:hover {
 	background: rgba(255, 255, 255, 1);
 	border-color: rgba(0, 0, 0, 0.15);
@@ -213,15 +222,21 @@
 /* Tables */
 .prose table {
 	width: 100%;
+	max-width: 100%;
 	border-collapse: collapse;
 	font-size: 0.95em;
 	margin: 1em 0;
+	display: block;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .prose th,
 .prose td {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	padding: 0.5em 0.6em;
 	text-align: left;
+	vertical-align: top;
+	white-space: normal;
 }
 .prose thead th {
 	font-weight: 600;

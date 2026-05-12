@@ -1,0 +1,13 @@
+{
+  "title": "Skills 入门：把重复提示词沉淀成工作流",
+  "tags": [
+    "Skills",
+    "Prompt",
+    "工作流",
+    "AI 编程"
+  ],
+  "date": "2026-05-12T21:40",
+  "summary": "说明 Skill 和 AGENTS.md、CLAUDE.md、MCP 的区别，并给出中文文档写作、代码审查和脚本型 Skill 范例。",
+  "hidden": false,
+  "category": "AI 工具"
+}
