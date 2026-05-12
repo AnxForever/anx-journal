@@ -46,3 +46,8 @@ next-env.d.ts
 
 #vscode
 .history/
+
+# local agent/tooling notes
+.claude/
+.codex
+CLAUDE.md
