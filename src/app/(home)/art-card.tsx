@@ -1,14 +1,15 @@
+import Image from 'next/image'
 import Card from '@/components/card'
 import { useCenterStore } from '@/hooks/use-center'
 import { useConfigStore } from './stores/config-store'
 import { CARD_SPACING } from '@/consts'
-import { useRouter } from 'next/navigation'
 import { HomeDraggableLayer } from './home-draggable-layer'
+import Link from 'next/link'
 
 export default function ArtCard() {
 	const center = useCenterStore()
-	const { cardStyles, siteContent } = useConfigStore()
-	const router = useRouter()
+	const cardStyles = useConfigStore(s => s.cardStyles)
+	const siteContent = useConfigStore(s => s.siteContent)
 	const styles = cardStyles.artCard
 	const hiCardStyles = cardStyles.hiCard
 
@@ -34,7 +35,9 @@ export default function ArtCard() {
 					</>
 				)}
 
-				<img onClick={() => router.push('/pictures')} src={artUrl} alt='wall art' className='h-full w-full rounded-[32px] object-cover' />
+				<Link href='/pictures' prefetch className='relative block h-full w-full rounded-[32px]'>
+					<Image src={artUrl} alt='wall art' fill priority className='rounded-[32px] object-cover' unoptimized sizes='300px' />
+				</Link>
 			</Card>
 		</HomeDraggableLayer>
 	)

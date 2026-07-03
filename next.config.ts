@@ -6,11 +6,9 @@ const nextConfig: NextConfig = {
 	reactStrictMode: false,
 	reactCompiler: true,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-	typescript: {
-		ignoreBuildErrors: true
-	},
 	experimental: {
-		scrollRestoration: false
+		scrollRestoration: false,
+		optimizePackageImports: ['lucide-react', 'motion']
 	},
 	turbopack: {
 		rules: {
@@ -45,6 +43,38 @@ const nextConfig: NextConfig = {
 				source: '/en',
 				destination: '/',
 				permanent: true
+			}
+		]
+	},
+
+	async headers() {
+		return [
+			{
+				source: '/blogs/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=86400, stale-while-revalidate=604800'
+					}
+				]
+			},
+			{
+				source: '/music/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=2592000, stale-while-revalidate=604800'
+					}
+				]
+			},
+			{
+				source: '/images/:path*',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=86400, stale-while-revalidate=604800'
+					}
+				]
 			}
 		]
 	}

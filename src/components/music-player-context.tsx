@@ -2,7 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 
-const MUSIC_FILES = ['/music/Refrain.mp3']
+const MUSIC_FILES = ['/music/Refrain.m4a']
 
 let sharedAudio: HTMLAudioElement | null = null
 let lastLoadedTrackIndex: number | null = null
