@@ -11,6 +11,8 @@ function getSharedAudio(): HTMLAudioElement | null {
 	if (typeof window === 'undefined') return null
 	if (!sharedAudio) {
 		sharedAudio = new Audio()
+		// 服务器出口带宽仅 ~3.5Mbps，进站即预取 11MB 音频会挤占首屏所有资源
+		sharedAudio.preload = 'none'
 	}
 	return sharedAudio
 }
@@ -78,6 +80,10 @@ export function MusicPlayerProvider({ children, enabled }: MusicPlayerProviderPr
 		if (!audio) return
 
 		currentIndexRef.current = currentIndex
+		// 用户从未点过播放时不加载任何曲目，src 留空，首次播放时再加载
+		if (lastLoadedTrackIndex === null) {
+			return
+		}
 		if (lastLoadedTrackIndex === currentIndex && audio.src) {
 			return
 		}
@@ -106,6 +112,11 @@ export function MusicPlayerProvider({ children, enabled }: MusicPlayerProviderPr
 		}
 
 		if (isPlaying) {
+			if (!audio.src) {
+				lastLoadedTrackIndex = currentIndexRef.current
+				audio.src = MUSIC_FILES[currentIndexRef.current]
+				audio.loop = false
+			}
 			audio.play().catch(console.error)
 		} else {
 			audio.pause()
