@@ -62,7 +62,7 @@ export default function BlogPage() {
 				const pa = CATEGORY_PRIORITY[a.category || ''] ?? 99
 				const pb = CATEGORY_PRIORITY[b.category || ''] ?? 99
 				if (pa !== pb) return pa - pb
-				return new Date(a.date).getTime() - new Date(b.date).getTime()
+				return new Date(b.date).getTime() - new Date(a.date).getTime()
 			})
 
 		const grouped = sorted.reduce(
@@ -338,11 +338,11 @@ export default function BlogPage() {
 						animate={{ opacity: 1, scale: 1 }}
 						className='card btn-rounded relative mx-auto flex items-center gap-1 p-1 max-sm:hidden'>
 						{[
+							{ value: 'category', label: '分类' },
 							{ value: 'day', label: '日' },
 							{ value: 'week', label: '周' },
 							{ value: 'month', label: '月' },
 							{ value: 'year', label: '年' },
-							...(enableCategories ? ([{ value: 'category', label: '分类' }] as const) : [])
 						].map(option => (
 							<motion.button
 								key={option.value}
