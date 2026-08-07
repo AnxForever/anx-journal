@@ -8,14 +8,11 @@
 
 ## 注册 ChatGPT（无需手机号）
 
-打开 https://chatgpt.com/auth/login ，两种方式：
-
-- **Continue with Google**：Gmail 一键注册，最省事
-- **Email address → Continue**：填邮箱 → 设密码 → 收验证邮件 → 完成
+打开 https://chatgpt.com/auth/login ，输入邮箱注册：
 
 ![ChatGPT 登录注册页](/blogs/ai-tool-handbook-codex-account/chatgpt-login.jpg)
 
-全程不涉及手机号。注册完登录确认账号正常即可。
+填邮箱 → 设密码 → 收验证邮件 → 完成。QQ 邮箱、Gmail、Outlook 都可以。全程不涉及手机号，注册完登录确认账号正常即可。
 
 ## 登录 Codex 时的手机号验证
 
@@ -29,11 +26,7 @@
 
 直接用 [美国实卡接码](https://pay.ldxp.cn/shop/CG7LQ4AR)——长效号码、真实 SIM 卡，专门给 Codex 验证用。比临时虚拟号靠谱，不怕号码过期后二次验证失联。
 
-验证界面就是选国家区号 + 填手机号：
-
-![手机号验证界面](/blogs/ai-tool-handbook-codex-account/chatgpt-phone-signup.jpg)
-
-![手机号确认与密码](/blogs/ai-tool-handbook-codex-account/chatgpt-password-page.jpg)
+⚠️ **验证时选 SMS 短信，不要选 WhatsApp**，否则验证码发到 WhatsApp 上接码平台收不到。
 
 ## 避坑
 
