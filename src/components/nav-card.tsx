@@ -165,13 +165,12 @@ export default function NavCard() {
 					<Link
 						className={cn('relative z-20 flex shrink-0 items-center gap-3 rounded-full', form === 'icons' ? 'h-11 w-11 justify-center' : 'min-h-11')}
 						href='/'
-						prefetch
 						title='返回主页'
 						aria-label='返回主页'
 						onClick={handleNavigate('/')}
 						onMouseEnter={() => router.prefetch('/')}>
 						<Image
-							src='/images/avatar.jpg'
+							src='/images/avatar.webp'
 							alt='avatar'
 							width={40}
 							height={40}
@@ -216,7 +215,7 @@ export default function NavCard() {
 									<Link
 										key={item.href}
 										href={item.href}
-										prefetch
+										prefetch={false}
 										title={item.label}
 										aria-label={item.label}
 										className={cn(
