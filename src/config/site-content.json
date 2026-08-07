@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "AnxForever",
-		"description": "AnxForever 的个人博客",
+		"description": "AnxForever 的前端设计与 AI 编程博客，分享 UI 设计风格、网页设计提示词、设计系统、Cursor、Claude Code、Codex 与 StyleKit 实践。",
 		"username": "AnxForever"
 	},
 	"theme": {
@@ -46,14 +46,20 @@
 			"type": "github",
 			"value": "https://github.com/AnxForever",
 			"label": "Github",
-			"order": 2
+			"order": 0
+		},
+		{
+			"id": "xiaohongshu",
+			"type": "xiaohongshu",
+			"value": "https://www.xiaohongshu.com/user/profile/644c7bfb0000000010024171",
+			"order": 1
 		},
 		{
 			"id": "email",
 			"type": "email",
 			"value": "anxforever@qq.com",
 			"label": "",
-			"order": 1
+			"order": 2
 		}
 	],
 	"clockShowSeconds": false,
