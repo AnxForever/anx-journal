@@ -24,7 +24,7 @@ const handbookSeries: SeriesItem[] = [
 	{
 		slug: 'ai-tool-handbook-codex-network',
 		kicker: '第三章',
-		title: 'API Key 与网络配置'
+		title: 'CC Switch 配置 API Key'
 	},
 	{
 		slug: 'ai-tool-handbook-claude-code',
