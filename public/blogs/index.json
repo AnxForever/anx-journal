@@ -1,19 +1,5 @@
 [
  {
-  "slug": "ai-tool-handbook-codex",
-  "title": "Codex 零基础教程（一）：从微软商店下载 Codex 客户端",
-  "tags": [
-   "Codex",
-   "AI 编程",
-   "新手教程",
-   "ChatGPT"
-  ],
-  "date": "2026-08-07T14:35",
-  "summary": "面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。",
-  "hidden": false,
-  "category": "AI 工具"
- },
- {
   "slug": "ai-tool-handbook-codex-account",
   "title": "Codex 零基础教程（二）：注册 ChatGPT 账号与手机号验证",
   "tags": [
@@ -22,8 +8,22 @@
    "注册教程",
    "手机号验证"
   ],
-  "date": "2026-08-07T14:34",
+  "date": "2026-08-07T14:38",
   "summary": "Codex 系列第二篇：邮箱注册 ChatGPT 不需要手机号，验证发生在登录 Codex 时。含充值会员跳过验证、接码平台（短效卡）操作步骤和常见问题。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-codex",
+  "title": "Codex 零基础教程（一）：从微软商店下载 Codex 客户端",
+  "tags": [
+   "Codex",
+   "AI 编程",
+   "新手教程",
+   "ChatGPT"
+  ],
+  "date": "2026-08-07T14:37",
+  "summary": "面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。",
   "hidden": false,
   "category": "AI 工具"
  },

@@ -1,6 +1,6 @@
 # Codex 零基础教程（一）：从微软商店下载 Codex 客户端
 
-Codex 是 OpenAI 推出的 AI 编程助手。它和 ChatGPT 是同一个应用：**Codex 内嵌在 ChatGPT 桌面应用里**，微软商店里没有单独的「Codex App」，这一点很多人第一次都会找错，下文会详细说明。
+Codex 是 [OpenAI](https://openai.com/codex/) 推出的 AI 编程助手。它和 ChatGPT 是同一个应用：**Codex 内嵌在 ChatGPT 桌面应用里**，微软商店里没有单独的「Codex App」，这一点很多人第一次都会找错，下文会详细说明。
 
 本教程面向完全没接触过的新手，从下载安装开始，一步一步来。
 
@@ -75,7 +75,3 @@ Codex 是 OpenAI 推出的 AI 编程助手。它和 ChatGPT 是同一个应用�
 2. 登录并找到 Codex 入口
 3. 用 Codex 开始你的第一个编程任务
 
-## 参考来源
-
-- 微软商店 ChatGPT 应用页：https://apps.microsoft.com/detail/9plm9xgg6vks
-- OpenAI Codex 官网：https://openai.com/codex/
