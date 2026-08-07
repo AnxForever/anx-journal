@@ -23,7 +23,7 @@ export default function GithubCard() {
 	const clockCardStyles = cardStyles.clockCard
 
 	const { data } = useSWR<ContributionData>(
-		`https://contribkit.app/api/contributions?user=${GITHUB_USER}`,
+		'/api/github',
 		fetcher,
 		{ revalidateOnFocus: false, dedupingInterval: 3600000 }
 	)
