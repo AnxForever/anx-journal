@@ -84,3 +84,5 @@ Codex 免费额度有限，API Key 按量计费。中转站一般几块钱就能
 
 - CC Switch 下载：https://github.com/farion1231/cc-switch/releases
 - Codex 官方配置文档：https://developers.openai.com/codex/config
+
+> 有问题来抖音群聊交流：**248636512581**

@@ -75,3 +75,5 @@ Codex 是 [OpenAI](https://openai.com/codex/) 推出的 AI 编程助手。它和
 2. 登录并找到 Codex 入口
 3. 用 Codex 开始你的第一个编程任务
 
+
+> 有问题来抖音群聊交流：**248636512581**
