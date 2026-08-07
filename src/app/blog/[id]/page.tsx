@@ -4,6 +4,9 @@ import path from 'node:path'
 import { cache } from 'react'
 import BlogPostClient from './page-client'
 import { renderMarkdown } from '@/lib/markdown-renderer'
+import { renderMarkdownHtmlToReact } from '@/lib/markdown-html'
+import { getSiteOrigin } from '@/lib/site-url'
+import type { ReactElement } from 'react'
 import type { LoadedBlog } from '@/lib/load-blog'
 
 type PageProps = {
@@ -19,7 +22,7 @@ type BlogConfig = {
 	category?: string
 }
 
-const SITE_ORIGIN = (process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://anxforever.cn').replace(/\/$/, '')
+const SITE_ORIGIN = getSiteOrigin()
 
 const readBlogConfig = cache(async (slug: string): Promise<BlogConfig | null> => {
 	if (!slug) return null
@@ -126,6 +129,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 	}
 }
 
+export async function generateStaticParams() {
+	const indexPath = path.join(process.cwd(), 'public', 'blogs', 'index.json')
+	try {
+		const raw = await fs.readFile(indexPath, 'utf8')
+		const indexData = JSON.parse(raw)
+		return (indexData || []).map((item: { slug: string }) => ({ id: item.slug }))
+	} catch {
+		return []
+	}
+}
+
 export default async function Page({ params }: PageProps) {
 	const { id } = await params
 	const slug = normalizeSlug(id)
@@ -141,12 +155,18 @@ export default async function Page({ params }: PageProps) {
 	const title = blog?.config.title || slug
 	const previewMarkdown = blog ? stripLeadingH1WhenMatchesTitle(blog.markdown, title) : ''
 	const renderedArticle = previewMarkdown ? await renderMarkdown(previewMarkdown) : null
+	const coverPreloadHref = blog?.cover
+	let serverContent: ReactElement | null = null
+	if (renderedArticle?.html) {
+		serverContent = renderMarkdownHtmlToReact(renderedArticle.html)
+	}
 
 	const articleJsonLd =
 		slug && config
 			? {
 					'@context': 'https://schema.org',
-					'@type': 'Article',
+					'@type': 'TechArticle',
+					'@id': `${SITE_ORIGIN}/blog/${slug}#article`,
 					headline: config.title || slug,
 					description: config.summary || '',
 					datePublished: config.date,
@@ -154,21 +174,44 @@ export default async function Page({ params }: PageProps) {
 					mainEntityOfPage: `${SITE_ORIGIN}/blog/${slug}`,
 					author: {
 						'@type': 'Person',
-						name: 'AnxForever'
+						'@id': `${SITE_ORIGIN}/#person`,
+						name: 'AnxForever',
+						url: SITE_ORIGIN
 					},
 					publisher: {
 						'@type': 'Person',
+						'@id': `${SITE_ORIGIN}/#person`,
 						name: 'AnxForever'
+					},
+					inLanguage: 'zh-CN',
+					isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
+					about: ['前端设计', 'UI 设计风格', 'AI 前端提示词', 'StyleKit'],
+					mentions: {
+						'@type': 'SoftwareApplication',
+						'@id': 'https://stylekit.top/#softwareapplication',
+						name: 'StyleKit',
+						url: 'https://stylekit.top'
 					},
 					image: absoluteCoverUrl(config.cover),
 					keywords: config.tags?.join(', ')
 				}
 			: null
+	const breadcrumbJsonLd = slug && config ? {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'AnxForever', item: SITE_ORIGIN },
+			{ '@type': 'ListItem', position: 2, name: '文章', item: `${SITE_ORIGIN}/blog` },
+			{ '@type': 'ListItem', position: 3, name: config.title || slug, item: `${SITE_ORIGIN}/blog/${slug}` }
+		]
+	} : null
 
 	return (
 		<>
+			{coverPreloadHref && <link rel='preload' as='image' href={coverPreloadHref} />}
 			{articleJsonLd && <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />}
-			<BlogPostClient key={slug} slug={slug} blog={clientBlog} renderedHtml={renderedArticle?.html} toc={renderedArticle?.toc} />
+			{breadcrumbJsonLd && <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />}
+			<BlogPostClient key={slug} slug={slug} blog={clientBlog} serverContent={serverContent} toc={renderedArticle?.toc} />
 		</>
 	)
 }

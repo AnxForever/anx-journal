@@ -4,23 +4,10 @@ import { forwardInteractionsRequest } from '@/lib/server/interactions-proxy'
 
 export const runtime = 'nodejs'
 
-export async function GET(request: NextRequest, context: { params: Promise<{ slug: string }> }) {
-	const { slug: rawSlug } = await context.params
-	const slug = sanitizeSlug(rawSlug || '')
+type LikeMethod = 'GET' | 'POST'
 
-	if (!slug) {
-		return NextResponse.json({ error: 'Invalid slug' }, { status: 400 })
-	}
-
-	const { visitorId, created } = getOrCreateVisitorId(request)
-	const proxied = await forwardInteractionsRequest(`/likes/${encodeURIComponent(slug)}`, {
-		method: 'GET',
-		headers: {
-			'x-visitor-id': visitorId
-		}
-	})
-	const data = await proxied.json().catch(() => ({}))
-	const response = NextResponse.json(data, { status: proxied.status })
+function createLikeResponse(data: unknown, status: number, created: boolean, visitorId: string) {
+	const response = NextResponse.json(data, { status })
 
 	if (created) {
 		attachVisitorCookie(response, visitorId)
@@ -29,7 +16,20 @@ export async function GET(request: NextRequest, context: { params: Promise<{ slu
 	return response
 }
 
-export async function POST(request: NextRequest, context: { params: Promise<{ slug: string }> }) {
+function createUnavailableResponse(method: LikeMethod, created: boolean, visitorId: string) {
+	return createLikeResponse(
+		{
+			liked: method === 'POST',
+			count: method === 'POST' ? 1 : 0,
+			unavailable: true
+		},
+		method === 'POST' ? 202 : 200,
+		created,
+		visitorId
+	)
+}
+
+async function handleLikeRequest(request: NextRequest, context: { params: Promise<{ slug: string }> }, method: LikeMethod) {
 	const { slug: rawSlug } = await context.params
 	const slug = sanitizeSlug(rawSlug || '')
 
@@ -38,18 +38,26 @@ export async function POST(request: NextRequest, context: { params: Promise<{ sl
 	}
 
 	const { visitorId, created } = getOrCreateVisitorId(request)
-	const proxied = await forwardInteractionsRequest(`/likes/${encodeURIComponent(slug)}`, {
-		method: 'POST',
-		headers: {
-			'x-visitor-id': visitorId
-		}
-	})
-	const data = await proxied.json().catch(() => ({}))
-	const response = NextResponse.json(data, { status: proxied.status })
-
-	if (created) {
-		attachVisitorCookie(response, visitorId)
+	try {
+		const proxied = await forwardInteractionsRequest(`/likes/${encodeURIComponent(slug)}`, {
+			method,
+			headers: {
+				'x-visitor-id': visitorId
+			}
+		})
+		const data = await proxied.json().catch(() => ({}))
+		return createLikeResponse(data, proxied.status, created, visitorId)
+	} catch (error) {
+		const message = error instanceof Error ? error.message : String(error)
+		console.warn(`[likes] Interactions backend unavailable for ${slug}: ${message}`)
+		return createUnavailableResponse(method, created, visitorId)
 	}
+}
 
-	return response
+export async function GET(request: NextRequest, context: { params: Promise<{ slug: string }> }) {
+	return handleLikeRequest(request, context, 'GET')
+}
+
+export async function POST(request: NextRequest, context: { params: Promise<{ slug: string }> }) {
+	return handleLikeRequest(request, context, 'POST')
 }

@@ -1,15 +1,18 @@
 'use client'
 
 import { useEffect, useMemo } from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/navigation'
 import dayjs from 'dayjs'
 import { motion } from 'motion/react'
 import { BlogPreview } from '@/components/blog-preview'
 import { BlogSeriesNav } from '@/components/blog-series-nav'
 import { useReadArticles } from '@/hooks/use-read-articles'
-import LiquidGrass from '@/components/liquid-grass'
 import type { BlogConfig } from '@/app/blog/types'
 import type { TocItem } from '@/lib/markdown-renderer'
+import type { ReactElement } from 'react'
+
+const LiquidGrass = dynamic(() => import('@/components/liquid-grass'), { ssr: false })
 
 type BlogViewData = {
 	slug: string
@@ -20,11 +23,11 @@ type BlogViewData = {
 type BlogPostClientProps = {
 	slug: string
 	blog: BlogViewData | null
-	renderedHtml?: string
+	serverContent?: ReactElement | null
 	toc?: TocItem[]
 }
 
-export default function BlogPostClient({ slug, blog, renderedHtml, toc }: BlogPostClientProps) {
+export default function BlogPostClient({ slug, blog, serverContent, toc }: BlogPostClientProps) {
 	const router = useRouter()
 	const { markAsRead } = useReadArticles()
 
@@ -58,7 +61,7 @@ export default function BlogPostClient({ slug, blog, renderedHtml, toc }: BlogPo
 				summary={blog.config.summary}
 				cover={blog.cover}
 				slug={slug}
-				renderedHtml={renderedHtml}
+				serverContent={serverContent}
 				toc={toc}
 				footer={<BlogSeriesNav slug={slug} />}
 			/>

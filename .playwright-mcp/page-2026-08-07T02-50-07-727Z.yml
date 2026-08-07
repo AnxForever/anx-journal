@@ -1,0 +1,438 @@
+- generic [ref=f4e2]:
+  - banner [ref=f4e5]:
+    - navigation [ref=f4e6]:
+      - generic [ref=f4e8]:
+        - button "跳转到主要内容" [ref=f4e10] [cursor=pointer]
+        - generic [ref=f4e12]:
+          - generic [ref=f4e13]:
+            - link "通用 Microsoft 网站" [ref=f4e14] [cursor=pointer]:
+              - /url: https://microsoft.com
+              - img "通用 Microsoft 网站" [ref=f4e15]
+            - link "Microsoft Store 主页" [ref=f4e16] [cursor=pointer]:
+              - /url: /home?hl=zh-CN&gl=CN
+              - img "Microsoft Store 主页" [ref=f4e17]
+          - group [ref=f4e19]:
+            - link "已选择“主页”" [ref=f4e21] [cursor=pointer]:
+              - /url: /home?hl=zh-CN&gl=CN
+              - generic "已选择“主页”" [ref=f4e23]: 主页
+            - link "应用" [ref=f4e25] [cursor=pointer]:
+              - /url: /apps?hl=zh-CN&gl=CN
+              - generic "应用" [ref=f4e27]
+            - link "游戏" [ref=f4e29] [cursor=pointer]:
+              - /url: /games?hl=zh-CN&gl=CN
+              - generic "游戏" [ref=f4e31]
+            - link "腾讯应用宝" [ref=f4e33] [cursor=pointer]:
+              - /url: /tencent?hl=zh-CN&gl=CN
+              - generic "腾讯应用宝" [ref=f4e42]
+            - link "主题" [ref=f4e44] [cursor=pointer]:
+              - /url: /themes?hl=zh-CN&gl=CN
+              - generic "主题" [ref=f4e46]
+            - link "关于" [ref=f4e48] [cursor=pointer]:
+              - /url: /about?hl=zh-CN&gl=CN
+              - generic "关于" [ref=f4e50]
+        - generic [ref=f4e52]:
+          - generic [ref=f4e54]:
+            - generic "搜索" [ref=f4e55]:
+              - textbox [ref=f4e61]:
+                - /placeholder: 搜索应用、游戏等
+            - status [ref=f4e62]
+          - generic [ref=f4e63]:
+            - generic "多应用安装" [ref=f4e64]:
+              - link "多应用安装" [ref=f4e65] [cursor=pointer]:
+                - /url: /apppack?ocid=pack-nav&hl=zh-CN&gl=CN
+            - generic [ref=f4e76] [cursor=pointer]:
+              - generic [ref=f4e77]: 登录
+              - generic "登录按钮" [ref=f4e78]:
+                - button "登录按钮" [ref=f4e79]
+  - main [ref=f4e83]:
+    - generic [ref=f4e86]:
+      - generic [ref=f4e91]:
+        - generic [ref=f4e94]:
+          - heading "ChatGPT" [level=1] [ref=f4e95]
+          - generic [ref=f4e97]:
+            - paragraph [ref=f4e98]:
+              - link "OpenAI" [ref=f4e100] [cursor=pointer]:
+                - /url: /search/publisher?name=OpenAI&hl=zh-CN&gl=CN
+            - generic [ref=f4e102]:
+              - paragraph [ref=f4e104]:
+                - generic "平均评分 3.8" [ref=f4e105]: "3.8"
+                - slider "Rating" [ref=f4e107]
+              - separator [ref=f4e110]
+              - paragraph [ref=f4e112]:
+                - generic [ref=f4e113]: 501 个评级
+              - separator [ref=f4e114]
+              - paragraph [ref=f4e116]:
+                - link "开发人员工具" [ref=f4e118] [cursor=pointer]:
+                  - /url: /collections/computed/apps/TopFree?category=%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%B7%A5%E5%85%B7&hl=zh-CN&gl=CN
+        - generic [ref=f4e124]:
+          - img "Lottie animation" [ref=f4e127]
+          - generic [ref=f4e155]: 使用 AI 功能
+        - paragraph [ref=f4e156]: Bring ChatGPT to your desktop with ChatGPT Work and Codex, plus context from your email, screenshots, files, and anything on your screen.
+        - generic [ref=f4e159]:
+          - button "复制链接" [ref=f4e161] [cursor=pointer]
+          - generic [ref=f4e163]:
+            - generic [ref=f4e164]: 提供应用内购买
+            - button "家长控制信息" [ref=f4e167] [cursor=pointer]
+      - generic [ref=f4e169]:
+        - generic [ref=f4e170]:
+          - generic [ref=f4e171]:
+            - heading "屏幕截图" [level=2] [ref=f4e174]
+            - group [ref=f4e178]:
+              - 'button "当前屏幕截图: 1，共有 4 个" [ref=f4e181]'
+              - 'button "当前屏幕截图: 2，共有 4 个" [ref=f4e184]'
+              - 'button "当前屏幕截图: 3，共有 4 个" [ref=f4e187]'
+              - 'button "当前屏幕截图: 4，共有 4 个" [ref=f4e190]'
+              - generic "向右滚动" [ref=f4e192]:
+                - button [ref=f4e193] [cursor=pointer]:
+                  - img "向右滚动" [ref=f4e194]
+          - generic [ref=f4e197]:
+            - heading "说明" [level=2] [ref=f4e200]
+            - generic [ref=f4e202]:
+              - paragraph [ref=f4e205]: ChatGPT is your everyday AI assistant for Windows. Use Chat to ask questions, explore ideas, write, learn, and work through everyday tasks. When you need to go further, ChatGPT Work can gather context and turn goals into polished documents, presentations, spreadsheets, reports, analyses, and more—while keeping you in control. For software development, Codex is the coding agent in ChatGPT, built to help you plan, write, review, and ship code. Bring in context from your apps, files, browser, screenshots, email, and screen so ChatGPT can help without breaking your flow. Whether you’re getting a quick answer, finishing a complex project, or building software, ChatGPT brings it together in one desktop app.
+              - button "说明 阅读更多" [ref=f4e207] [cursor=pointer]:
+                - generic "说明 阅读更多" [ref=f4e209]: 阅读更多信息
+          - generic [ref=f4e210]:
+            - heading "评分和评价" [level=2] [ref=f4e213]
+            - generic [ref=f4e215]:
+              - heading "已加载下一组集合" [level=3] [ref=f4e218]
+              - button "评分和评价 阅读更多" [ref=f4e222] [cursor=pointer]:
+                - generic "评分和评价 阅读更多" [ref=f4e224]: 阅读更多信息
+          - generic [ref=f4e225]:
+            - heading "功能" [level=2] [ref=f4e228]
+            - generic [ref=f4e230]:
+              - generic [ref=f4e231]:
+                - paragraph [ref=f4e232]: Chat — Ask questions, brainstorm, write, learn, and solve everyday problems.
+                - paragraph [ref=f4e233]: ChatGPT Work — Delegate meaningful tasks and turn goals and context into finished deliverables.
+                - paragraph [ref=f4e234]: Codex — Plan, write, review, and ship code with the coding agent in ChatGPT.
+                - paragraph [ref=f4e235]: Use your context — Work with apps, files, browser, screenshots, email, and anything on your screen.
+                - paragraph [ref=f4e236]: Stay in control — Review the work and decide what gets used, sent, shared, or automated.
+              - button "功能 阅读更多" [ref=f4e238] [cursor=pointer]:
+                - generic "功能 阅读更多" [ref=f4e240]: 阅读更多信息
+          - generic [ref=f4e244]:
+            - heading "系统要求" [level=2] [ref=f4e247]
+            - generic [ref=f4e248]:
+              - generic:
+                - generic [ref=f4e249]:
+                  - paragraph [ref=f4e251]: "适用平台:"
+                  - paragraph [ref=f4e252]: 电脑
+                - generic [ref=f4e253]:
+                  - paragraph [ref=f4e255]: "操作系统:"
+                  - paragraph [ref=f4e256]: Windows 10 版本 19041.0 或更高版本
+                - generic [ref=f4e257]:
+                  - paragraph [ref=f4e259]: "键盘:"
+                  - paragraph [ref=f4e260]: 集成键盘
+                - generic [ref=f4e261]:
+                  - paragraph [ref=f4e263]: "鼠标:"
+                  - paragraph [ref=f4e264]:
+                    - text: 未指定
+                    - generic [ref=f4e265]: (最低)
+                    - text: ", 集成鼠标"
+                    - generic [ref=f4e266]: (推荐)
+          - generic [ref=f4e270]:
+            - heading "其他信息" [level=2] [ref=f4e273]
+            - generic [ref=f4e275]:
+              - generic [ref=f4e276]:
+                - heading "开发者" [level=3] [ref=f4e281]
+                - paragraph [ref=f4e282]: OpenAI
+              - generic [ref=f4e283]:
+                - heading "发布者" [level=3] [ref=f4e288]
+                - generic "发布者" [ref=f4e289]:
+                  - link "OpenAI" [ref=f4e292] [cursor=pointer]:
+                    - /url: /search/publisher?name=OpenAI&hl=zh-CN&gl=CN
+              - generic [ref=f4e294]:
+                - heading "上次更新日期" [level=3] [ref=f4e298]
+                - paragraph [ref=f4e299]: 2026/8/5
+              - generic [ref=f4e300]:
+                - heading "发布日期" [level=3] [ref=f4e306]
+                - paragraph [ref=f4e307]: 2026/3/4
+              - generic [ref=f4e308]:
+                - heading "近似大小" [level=3] [ref=f4e313]
+                - paragraph [ref=f4e314]: 1.8 GB
+              - generic [ref=f4e315]:
+                - heading "类别" [level=3] [ref=f4e320]
+                - generic "类别" [ref=f4e321]:
+                  - link "开发人员工具" [ref=f4e323] [cursor=pointer]:
+                    - /url: /collections/computed/apps/TopFree?category=%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%B7%A5%E5%85%B7&hl=zh-CN&gl=CN
+              - generic [ref=f4e325]:
+                - heading "安装" [level=3] [ref=f4e331]
+                - paragraph [ref=f4e332]: 在登录到 Microsoft 帐户时获取此应用，并将其安装在最多 10 台 Windows 设备上。
+              - generic [ref=f4e333]:
+                - heading "此应用的功能" [level=3] [ref=f4e338]
+                - generic "此应用的功能" [ref=f4e339]:
+                  - generic "使用全部系统资源" [ref=f4e340]
+                  - generic "写入卸载时未清理的注册表项和文件。" [ref=f4e341]
+                  - generic "访问 Internet 连接" [ref=f4e342]
+                  - link "权限信息" [ref=f4e346] [cursor=pointer]:
+                    - /url: https://support.microsoft.com/en-us/windows/app-permissions-aea98a7c-b61a-1930-6ed0-47f0ed2ee15c
+              - generic [ref=f4e348]:
+                - heading "支持的语言" [level=3] [ref=f4e354]
+                - generic "支持的语言" [ref=f4e355]: 英语(美国)
+              - generic [ref=f4e357]:
+                - heading "发行商信息" [level=3] [ref=f4e362]
+                - generic "发行商信息" [ref=f4e363]:
+                  - link "支持" [ref=f4e365] [cursor=pointer]:
+                    - /url: mailto:support@openai.com
+                  - link "网站" [ref=f4e368] [cursor=pointer]:
+                    - /url: https://openai.com/codex/
+                  - link "联系人信息" [ref=f4e371] [cursor=pointer]:
+                    - /url: "#"
+              - generic [ref=f4e373]:
+                - heading "附加条款" [level=3] [ref=f4e379]
+                - generic "附加条款" [ref=f4e380]:
+                  - link "隐私政策" [ref=f4e382] [cursor=pointer]:
+                    - /url: https://openai.com/policies/privacy-policy/
+                  - link "交易条款" [ref=f4e386] [cursor=pointer]:
+                    - /url: https://www.microsoft.com/en-us/store/b/terms-of-sale?rtc=1
+              - generic [ref=f4e388]:
+                - heading "举报此产品" [level=3] [ref=f4e393]
+                - generic "举报此产品" [ref=f4e394]:
+                  - link "报告此产品违反 Microsoft Store 策略" [ref=f4e396] [cursor=pointer]:
+                    - /url: https://support.xbox.com/en-US/help/family-online-safety/online-safety/report-issue-in-microsoft-store
+                  - link "报告此产品中含有非法内容" [ref=f4e399] [cursor=pointer]:
+                    - /url: https://aka.ms/reportconcerns?productgroup=store-web&content=https%3A%2F%2Fapps.microsoft.com%2Fdetail%2F9plm9xgg6vks%3Fhl%3Dzh-CN%26gl%3DCN
+              - generic [ref=f4e401]:
+                - heading "应用徽章" [level=3] [ref=f4e407]
+                - generic "应用徽章" [ref=f4e408]:
+                  - link "创建应用徽章" [ref=f4e410] [cursor=pointer]:
+                    - /url: /badge/9plm9xgg6vks?hl=zh-CN&gl=CN
+              - generic [ref=f4e412]:
+                - heading "法律免责声明" [level=3] [ref=f4e418]
+                - generic "法律免责声明" [ref=f4e419]:
+                  - paragraph [ref=f4e420]: 此卖方已认证它将仅提供符合欧盟法律的产品或服务。
+              - generic [ref=f4e421]:
+                - heading "家长控制信息" [level=3] [ref=f4e427]
+                - generic "家长控制信息" [ref=f4e428]:
+                  - generic [ref=f4e429]: 此产品使用非 Microsoft 计费进行应用内购买，这可能会影响购买的家长控制设置。
+                  - link "家长控制信息 阅读更多" [ref=f4e432] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=f4e433]:
+                      - generic [ref=f4e434]: 阅读更多信息
+                      - generic [ref=f4e435]: 家长控制信息 阅读更多
+          - button "ChatGPT OpenAI" [ref=f4e438]:
+            - generic [ref=f4e439]: ChatGPT
+            - generic [ref=f4e440]: OpenAI
+        - generic [ref=f4e444]:
+          - link "查看全部 发现更多。使用箭头键浏览项目" [ref=f4e446] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/related/9plm9xgg6vks?hl=zh-CN&gl=CN
+            - heading [level=2] [ref=f4e447]:
+              - text: 发现更多
+              - img "查看全部" [ref=f4e448]
+          - generic [ref=f4e452]:
+            - link "ChatGPT (Beta) 评分为 3.8/5。 开发人员工具 免费下载" [ref=f4e454] [cursor=pointer]:
+              - /url: /detail/9n8cj4w95tbz?hl=zh-CN&gl=CN
+              - generic [ref=f4e457]:
+                - paragraph [ref=f4e458]: ChatGPT (Beta)
+                - generic [ref=f4e459]:
+                  - generic "评分为 3.8/5。" [ref=f4e461]: "3.8"
+                  - separator [ref=f4e466]
+                  - generic "开发人员工具" [ref=f4e467]
+              - generic [ref=f4e469]: 免费下载
+            - link "Python Install Manager 评分为 4.5/5。 开发人员工具 免费下载" [ref=f4e473] [cursor=pointer]:
+              - /url: /detail/9nq7512cxl7t?hl=zh-CN&gl=CN
+              - generic [ref=f4e476]:
+                - paragraph [ref=f4e477]: Python Install Manager
+                - generic [ref=f4e478]:
+                  - generic "评分为 4.5/5。" [ref=f4e480]: "4.5"
+                  - separator [ref=f4e485]
+                  - generic "开发人员工具" [ref=f4e486]
+              - generic [ref=f4e488]: 免费下载
+            - link "CCX Desktop 开发人员工具 免费下载" [ref=f4e492] [cursor=pointer]:
+              - /url: /detail/9nr3n6rfns5m?hl=zh-CN&gl=CN
+              - generic [ref=f4e495]:
+                - paragraph [ref=f4e496]: CCX Desktop
+                - generic "开发人员工具" [ref=f4e498]
+              - generic [ref=f4e500]: 免费下载
+            - link "Ubuntu 评分为 4.0/5。 开发人员工具 免费下载" [ref=f4e504] [cursor=pointer]:
+              - /url: /detail/9pdxgncfsczv?hl=zh-CN&gl=CN
+              - generic [ref=f4e507]:
+                - paragraph [ref=f4e508]: Ubuntu
+                - generic [ref=f4e509]:
+                  - generic "评分为 4.0/5。" [ref=f4e511]: "4.0"
+                  - separator [ref=f4e516]
+                  - generic "开发人员工具" [ref=f4e517]
+              - generic [ref=f4e519]: 免费下载
+            - link "Visual Studio Code 评分为 4.8/5。 开发人员工具 免费下载" [ref=f4e523] [cursor=pointer]:
+              - /url: /detail/xp9khm4bk9fz7q?hl=zh-CN&gl=CN
+              - generic [ref=f4e526]:
+                - paragraph [ref=f4e527]: Visual Studio Code
+                - generic [ref=f4e528]:
+                  - generic "评分为 4.8/5。" [ref=f4e530]: "4.8"
+                  - separator [ref=f4e535]
+                  - generic "开发人员工具" [ref=f4e536]
+              - generic [ref=f4e538]: 免费下载
+            - link "Windows Terminal 评分为 4.6/5。 开发人员工具 免费下载" [ref=f4e542] [cursor=pointer]:
+              - /url: /detail/9n0dx20hk701?hl=zh-CN&gl=CN
+              - generic [ref=f4e545]:
+                - paragraph [ref=f4e546]: Windows Terminal
+                - generic [ref=f4e547]:
+                  - generic "评分为 4.6/5。" [ref=f4e549]: "4.6"
+                  - separator [ref=f4e554]
+                  - generic "开发人员工具" [ref=f4e555]
+              - generic [ref=f4e557]: 免费下载
+  - contentinfo [ref=f4e562]:
+    - generic [ref=f4e564]:
+      - generic [ref=f4e565]:
+        - generic "新增功能" [ref=f4e566]:
+          - heading "新增功能" [level=2] [ref=f4e567]
+          - link "Microsoft Store 中的更多内容" [ref=f4e570] [cursor=pointer]:
+            - /url: https://blogs.windows.com/windowsexperience/2022/09/20/more-content-and-new-developer-opportunities-in-the-microsoft-store/
+          - link "应用" [ref=f4e574] [cursor=pointer]:
+            - /url: /apps
+          - link "游戏" [ref=f4e578] [cursor=pointer]:
+            - /url: /games
+          - link "主题" [ref=f4e582] [cursor=pointer]:
+            - /url: /themes
+          - link "多应用安装" [ref=f4e586] [cursor=pointer]:
+            - /url: /apppack
+          - link "Windows 体验博客" [ref=f4e590] [cursor=pointer]:
+            - /url: https://blogs.windows.com/
+        - generic "Microsoft Store" [ref=f4e592]:
+          - heading "Microsoft Store" [level=2] [ref=f4e593]
+          - link "Microsoft 帐户" [ref=f4e596] [cursor=pointer]:
+            - /url: https://account.microsoft.com/
+          - link "Microsoft Store 支持" [ref=f4e600] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?linkid=2139749
+          - link "返回" [ref=f4e604] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/p/?LinkID=824764&clcid=0x409
+          - link "灵活的付款方式" [ref=f4e608] [cursor=pointer]:
+            - /url: https://www.microsoft.com/store/b/payment-financing-options?icid=footer_financing_vcc
+          - link "策略和行为准则" [ref=f4e612] [cursor=pointer]:
+            - /url: https://learn.microsoft.com/windows/apps/publish/store-policies-and-code-of-conduct
+          - link "获取 Microsoft Store 应用" [ref=f4e616] [cursor=pointer]:
+            - /url: /detail/9WZDNCRFJBMP
+        - generic "适用于开发人员" [ref=f4e618]:
+          - heading "适用于开发人员" [level=2] [ref=f4e619]
+          - link "发布应用" [ref=f4e622] [cursor=pointer]:
+            - /url: https://developer.microsoft.com/microsoft-store
+          - link "生成应用徽章" [ref=f4e626] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/store/app-badge/
+          - link "PWABuilder" [ref=f4e630] [cursor=pointer]:
+            - /url: https://www.pwabuilder.com/
+        - generic "Windows" [ref=f4e632]:
+          - heading "Windows" [level=2] [ref=f4e633]
+          - link "职业" [ref=f4e636] [cursor=pointer]:
+            - /url: https://careers.microsoft.com/
+          - link "关于 Microsoft" [ref=f4e640] [cursor=pointer]:
+            - /url: https://www.microsoft.com/about
+          - link "公司新闻" [ref=f4e644] [cursor=pointer]:
+            - /url: https://news.microsoft.com/
+          - link "投资者" [ref=f4e648] [cursor=pointer]:
+            - /url: https://www.microsoft.com/investor/default.aspx
+          - link "多样性和包容性" [ref=f4e652] [cursor=pointer]:
+            - /url: https://www.microsoft.com/diversity/
+          - link "辅助功能" [ref=f4e656] [cursor=pointer]:
+            - /url: https://www.microsoft.com/accessibility
+          - link "可持续性" [ref=f4e660] [cursor=pointer]:
+            - /url: https://www.microsoft.com/sustainability/
+      - generic [ref=f4e662]:
+        - generic [ref=f4e663]:
+          - generic [ref=f4e666]:
+            - generic:
+              - generic "更改语言" [ref=f4e667]:
+                - button "中文（中国）" [ref=f4e668] [cursor=pointer]
+              - generic:
+                - generic: Afrikaans (Suid-Afrika)
+                - generic: አማርኛ (ኢትዮጵያ)
+                - generic: العربية (المملكة العربية السعودية)
+                - generic: অসমীয়া (ভাৰত)
+                - generic: azərbaycan (latın, Azərbaycan)
+                - generic: български (България)
+                - generic: বাংলা (ভারত)
+                - generic: bosanski (latinica, Bosna i Hercegovina)
+                - generic: català (Espanya)
+                - generic: valencià (Espanya, valencià)
+                - generic: čeština (Česko)
+                - generic: Cymraeg (Y Deyrnas Unedig)
+                - generic: dansk (Danmark)
+                - generic: Deutsch (Deutschland)
+                - generic: Ελληνικά (Ελλάδα)
+                - generic: English (United Kingdom)
+                - generic: English (United States)
+                - generic: español (España)
+                - generic: español (México)
+                - generic: eesti (Eesti)
+                - generic: euskara (Espainia)
+                - generic: فارسی (ایران)
+                - generic: suomi (Suomi)
+                - generic: Tagalog (Pilipinas)
+                - generic: français (Canada)
+                - generic: français (France)
+                - generic: Gaeilge (Éire)
+                - generic: Gàidhlig (An Rìoghachd Aonaichte)
+                - generic: galego (España)
+                - generic: ગુજરાતી (ભારત)
+                - generic: עברית (ישראל)
+                - generic: हिन्दी (भारत)
+                - generic: hrvatski (Hrvatska)
+                - generic: magyar (Magyarország)
+                - generic: Indonesia (Indonesia)
+                - generic: íslenska (Ísland)
+                - generic: italiano (Italia)
+                - generic: 日本語 (日本)
+                - generic: ქართული (საქართველო)
+                - generic: қазақ тілі (Қазақстан)
+                - generic: ខ្មែរ (កម្ពុជា)
+                - generic: ಕನ್ನಡ (ಭಾರತ)
+                - generic: कोंकणी (भारत)
+                - generic: 한국어(대한민국)
+                - generic: Lëtzebuergesch (Lëtzebuerg)
+                - generic: ລາວ (ລາວ)
+                - generic: lietuvių (Lietuva)
+                - generic: latviešu (Latvija)
+                - generic: Māori (Aotearoa)
+                - generic: македонски (Северна Македонија)
+                - generic: മലയാളം (ഇന്ത്യ)
+                - generic: मराठी (भारत)
+                - generic: Melayu (Malaysia)
+                - generic: Malti (Malta)
+                - generic: norsk bokmål (Norge)
+                - generic: नेपाली (नेपाल)
+                - generic: Nederlands (Nederland)
+                - generic: nynorsk (Noreg)
+                - generic: ଓଡ଼ିଆ (ଭାରତ)
+                - generic: ਪੰਜਾਬੀ (ਭਾਰਤ)
+                - generic: polski (Polska)
+                - generic: português (Brasil)
+                - generic: português (Portugal)
+                - generic: Runasimi (Perú)
+                - generic: română (România)
+                - generic: русский (Россия)
+                - generic: slovenčina (Slovensko)
+                - generic: slovenščina (Slovenija)
+                - generic: shqip (Shqipëri)
+                - generic: српски (ћирилица, Босна и Херцеговина)
+                - generic: српски (ћирилица, Србија)
+                - generic: srpski (latinica, Srbija)
+                - generic: svenska (Sverige)
+                - generic: தமிழ் (இந்தியா)
+                - generic: తెలుగు (భారతదేశం)
+                - generic: ไทย (ไทย)
+                - generic: Türkçe (Türkiye)
+                - generic: татар (Россия)
+                - generic: ئۇيغۇرچە (جۇڭگو)
+                - generic: українська (Україна)
+                - generic: اردو (پاکستان)
+                - generic: Tiếng Việt (Việt Nam)
+                - generic: 中文（中国）
+                - generic: 中文（台灣）
+          - generic [ref=f4e674]:
+            - link [ref=f4e676] [cursor=pointer]:
+              - /url: https://aka.ms/yourcaliforniaprivacychoices
+              - paragraph [ref=f4e679]: 你的隐私选择
+            - button "管理 Cookie" [ref=f4e681] [cursor=pointer]
+        - generic [ref=f4e684]:
+          - link "联系 Microsoft" [ref=f4e686] [cursor=pointer]:
+            - /url: https://support.microsoft.com/contactus
+          - link "隐私" [ref=f4e689] [cursor=pointer]:
+            - /url: https://privacy.microsoft.com/privacystatement
+          - link "使用条款" [ref=f4e692] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/terms-of-use
+          - link "商标" [ref=f4e695] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/intellectualproperty/trademarks
+          - link "安全与生态" [ref=f4e698] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/compliance/devices-safety-and-eco
+          - link "回收" [ref=f4e701] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/compliance/recycling
+          - link "关于我们的广告" [ref=f4e704] [cursor=pointer]:
+            - /url: https://choice.microsoft.com/
+          - generic [ref=f4e706]: © Microsoft 2026

@@ -83,6 +83,8 @@ const buildUrlList = (pictures: Picture[]): UrlItem[] => {
 
 let lastZIndex = 10
 const TOP_Z_INDEX = 9999
+const IMAGE_ENTER_STAGGER_MS = 40
+const MAX_IMAGE_ENTER_DELAY_MS = 240
 
 const formatUploadedAt = (uploadedAt?: string) => {
 	if (!uploadedAt) return ''
@@ -137,14 +139,7 @@ const FloatingImage = ({
 	const bodyRef = useRef(document.body)
 	const mouseDownTimeRef = useRef<number | null>(null)
 	const [zIndex, setZIndex] = useState(index)
-	const [show, setShow] = useState(false)
 	const [dragOffset, setDragOffset] = useState(() => loadSavedOffset(url))
-
-	useEffect(() => {
-		setTimeout(() => {
-			setShow(true)
-		}, 200 * index)
-	}, [])
 
 	const [originalSize, setOriginalSize] = useState<OriginalSize | null>(null)
 
@@ -190,7 +185,7 @@ const FloatingImage = ({
 	const [isZoomed, setIsZoomed] = useState(false)
 	const dragStartOffsetRef = useRef({ x: 0, y: 0 })
 
-	if (!position || !show) return null
+	if (!position) return null
 
 	return (
 		<>
@@ -285,13 +280,19 @@ const FloatingImage = ({
 								borderWidth: 8
 							}
 				}
-				transition={{ type: 'tween', ease: 'easeOut' }}
+				transition={{
+					type: 'tween',
+					ease: 'easeOut',
+					delay: isZoomed ? 0 : Math.min(index * IMAGE_ENTER_STAGGER_MS, MAX_IMAGE_ENTER_DELAY_MS) / 1000
+				}}
 				className={cn(
 					'pointer-events-auto absolute origin-center -translate-1/2 cursor-pointer shadow-xl transition-[scale]',
 					!isEditMode && !isZoomed && 'hover:scale-105'
 				)}>
 				<motion.img
 					src={url}
+					loading={index < 6 ? 'eager' : 'lazy'}
+					decoding='async'
 					onLoad={event => {
 						const img = event.currentTarget
 						setOriginalSize({ width: img.naturalWidth, height: img.naturalHeight })
@@ -391,13 +392,6 @@ const getStablePosition = (uniqueId: string, width: number, height: number): Pos
 export const RandomLayout = ({ pictures, isEditMode = false, onDeleteSingle, onDeleteGroup }: RandomLayoutProps) => {
 	useCenterInit()
 	const { width, height } = useCenterStore()
-	const [show, setShow] = useState(false)
-
-	useEffect(() => {
-		setTimeout(() => {
-			setShow(true)
-		}, 1000)
-	}, [])
 
 	const urls = useMemo(() => buildUrlList(pictures), [pictures])
 
@@ -412,8 +406,6 @@ export const RandomLayout = ({ pictures, isEditMode = false, onDeleteSingle, onD
 	if (!urls.length || !width || !height) {
 		return null
 	}
-
-	if (!show) return null
 
 	lastZIndex = urls.length + 11
 

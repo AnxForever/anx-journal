@@ -1,0 +1,199 @@
+- generic [active] [ref=f16e1]:
+  - region "Notifications alt+T"
+  - main [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - generic [ref=f16e4]:
+        - article [ref=f16e5]:
+          - generic [ref=f16e6]:
+            - generic [ref=f16e7]: Codex 零基础教程（一）：从微软商店下载 Codex 客户端
+            - generic [ref=f16e8]:
+              - generic [ref=f16e9]: "#Codex"
+              - generic [ref=f16e10]: "#AI 编程"
+              - generic [ref=f16e11]: "#新手教程"
+              - generic [ref=f16e12]: "#ChatGPT"
+            - generic [ref=f16e13]: 2026年 8月 7日
+            - generic [ref=f16e14]:
+              - paragraph [ref=f16e15]:
+                - text: Codex 是 OpenAI 推出的 AI 编程助手。它和 ChatGPT 是同一个应用：
+                - strong [ref=f16e16]: Codex 内嵌在 ChatGPT 桌面应用里
+                - text: ，微软商店里没有单独的「Codex App」，这一点很多人第一次都会找错，下文会详细说明。
+              - paragraph [ref=f16e17]: 本教程面向完全没接触过的新手，从下载安装开始，一步一步来。
+              - paragraph [ref=f16e18]: 本文核对时间：2026-08-07。
+              - heading "# 你需要准备什么" [level=2] [ref=f16e19]
+              - list [ref=f16e20]:
+                - listitem [ref=f16e21]:
+                  - text: 一台
+                  - strong [ref=f16e22]: Windows 10（2004 版及以上）或 Windows 11
+                  - text: 电脑
+                - listitem [ref=f16e23]: 微软账号（登录微软商店用，Windows 自带的账号就行）
+                - listitem [ref=f16e24]: ChatGPT 账号（安装后用，注册方法在下一篇教程里讲）
+              - heading "# 第一步：打开微软商店" [level=2] [ref=f16e25]
+              - paragraph [ref=f16e26]: 有两种方式：
+              - paragraph [ref=f16e27]:
+                - strong [ref=f16e28]: 方式一（推荐）
+                - text: ：点击 Windows 任务栏左下角的开始菜单，搜索「Microsoft Store」，打开微软商店。
+              - paragraph [ref=f16e29]:
+                - strong [ref=f16e30]: 方式二
+                - text: ：用浏览器打开商店网页版：
+                - link "https://apps.microsoft.com" [ref=f16e31] [cursor=pointer]:
+                  - /url: https://apps.microsoft.com
+              - heading "# 第二步：搜索 Codex" [level=2] [ref=f16e32]
+              - paragraph [ref=f16e33]:
+                - text: 在商店顶部的搜索框输入
+                - code [ref=f16e34]: codex
+                - text: ，按回车。你会看到类似下面的结果：
+              - paragraph [ref=f16e35]:
+                - img "在微软商店搜索 codex 的结果" [ref=f16e36] [cursor=pointer]
+              - paragraph [ref=f16e37]:
+                - strong [ref=f16e38]: 重点来了
+                - text: ：搜索结果里排在第一位的是
+                - strong [ref=f16e39]: ChatGPT
+                - text: （发布者是 OpenAI），而不是名字叫「Codex」的应用。这是正常的——Codex 是 ChatGPT 应用内置的编程功能。
+              - paragraph [ref=f16e40]:
+                - text: 同时要注意：商店里有一些名字带 Codex 的
+                - strong [ref=f16e41]: 无关应用
+                - text: （比如 "Codex - QR Reader" 二维码工具），
+                - strong [ref=f16e42]: 不要下载
+                - text: 。认准两点：
+              - list [ref=f16e43]:
+                - listitem [ref=f16e44]:
+                  - text: 应用名是
+                  - strong [ref=f16e45]: ChatGPT
+                - listitem [ref=f16e46]:
+                  - text: 发布者是
+                  - strong [ref=f16e47]: OpenAI
+              - heading "# 第三步：点击「获取」安装" [level=2] [ref=f16e48]
+              - paragraph [ref=f16e49]: 点击 ChatGPT 应用进入详情页，确认发布者是 OpenAI：
+              - paragraph [ref=f16e50]:
+                - img "ChatGPT 应用详情页" [ref=f16e51] [cursor=pointer]
+              - paragraph [ref=f16e52]: 点击「获取」或「安装」按钮，等待下载完成。应用大小约 1.8 GB，视网速可能需要几分钟到几十分钟。
+              - paragraph [ref=f16e53]:
+                - text: 安装完成后，开始菜单里会出现
+                - strong [ref=f16e54]: ChatGPT
+                - text: 应用。
+              - heading "# 第四步：打开应用" [level=2] [ref=f16e55]
+              - paragraph [ref=f16e56]: 打开 ChatGPT 应用，会进入登录界面：
+              - list [ref=f16e57]:
+                - listitem [ref=f16e58]:
+                  - strong [ref=f16e59]: 已经有 ChatGPT 账号
+                  - text: ：直接登录，登录后左上角就能找到 Codex 入口
+                - listitem [ref=f16e60]:
+                  - strong [ref=f16e61]: 还没有账号
+                  - text: ：先看本系列下一篇《注册 ChatGPT 账号（含手机号验证方法）》，注册完再回来登录
+              - heading "# 常见问题" [level=2] [ref=f16e62]
+              - heading "## 商店里搜不到 ChatGPT？" [level=3] [ref=f16e63]
+              - list [ref=f16e64]:
+                - listitem [ref=f16e65]: 确认系统是 Windows 10 2004 或更高版本（设置 → 系统 → 关于，查看版本号）
+                - listitem [ref=f16e66]: 检查系统区域设置，商店服务在中国大陆可用，一般不需要改区域
+                - listitem [ref=f16e67]:
+                  - text: 换用网页版：
+                  - link "https://apps.microsoft.com/detail/9plm9xgg6vks" [ref=f16e68] [cursor=pointer]:
+                    - /url: https://apps.microsoft.com/detail/9plm9xgg6vks
+              - heading "## 下载太慢或卡住？" [level=3] [ref=f16e69]
+              - list [ref=f16e70]:
+                - listitem [ref=f16e71]: 微软商店下载依赖网络环境，可以稍后再试
+                - listitem [ref=f16e72]: 打开「设置 → 更新和安全 → Windows 更新」确认系统已是最新，老版本系统会导致商店异常
+              - heading "## 我下了一个叫 \"Codex\" 的应用，对吗？" [level=3] [ref=f16e73]
+              - paragraph [ref=f16e74]:
+                - text: 大概率不对。商店里绝大多数叫 Codex 的应用和 OpenAI 没有关系。请确认应用名是
+                - strong [ref=f16e75]: ChatGPT
+                - text: 、发布者是
+                - strong [ref=f16e76]: OpenAI
+                - text: ，再安装。
+              - heading "# 下一步" [level=2] [ref=f16e77]
+              - paragraph [ref=f16e78]: 安装完成后，你还需要：
+              - list [ref=f16e79]:
+                - listitem [ref=f16e80]: 注册 ChatGPT 账号（本系列第二篇，包含手机号验证的完整方法）
+                - listitem [ref=f16e81]: 登录并找到 Codex 入口
+                - listitem [ref=f16e82]: 用 Codex 开始你的第一个编程任务
+              - heading "# 参考来源" [level=2] [ref=f16e83]
+              - list [ref=f16e84]:
+                - listitem [ref=f16e85]:
+                  - text: 微软商店 ChatGPT 应用页：
+                  - link "https://apps.microsoft.com/detail/9plm9xgg6vks" [ref=f16e86] [cursor=pointer]:
+                    - /url: https://apps.microsoft.com/detail/9plm9xgg6vks
+                - listitem [ref=f16e87]:
+                  - text: OpenAI Codex 官网：
+                  - link "https://openai.com/codex/" [ref=f16e88] [cursor=pointer]:
+                    - /url: https://openai.com/codex/
+            - navigation "手册章节导航" [ref=f16e89]:
+              - generic [ref=f16e90]:
+                - generic [ref=f16e91]: AI 编程工具手册
+                - generic [ref=f16e92]: 2/7 · 第一章
+              - generic [ref=f16e93]:
+                - link "回到目录 目录：AI 编程工具手册" [ref=f16e94] [cursor=pointer]:
+                  - /url: /blog/ai-tool-handbook
+                  - generic [ref=f16e95]:
+                    - generic [ref=f16e96]: 回到目录
+                    - generic [ref=f16e97]: 目录：AI 编程工具手册
+                - link "下一章 第二章：API Key、中转站与国内模型" [ref=f16e99] [cursor=pointer]:
+                  - /url: /blog/ai-tool-handbook-codex-network
+                  - generic [ref=f16e100]:
+                    - generic [ref=f16e101]: 下一章
+                    - generic [ref=f16e102]: 第二章：API Key、中转站与国内模型
+              - list [ref=f16e105]:
+                - listitem [ref=f16e106]:
+                  - link "01 目录：AI 编程工具手册" [ref=f16e107] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook
+                    - generic [ref=f16e108]: "01"
+                    - generic [ref=f16e109]: 目录：AI 编程工具手册
+                - listitem [ref=f16e110]:
+                  - link "02 第一章：Codex 入口选择" [ref=f16e111] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-codex
+                    - generic [ref=f16e112]: "02"
+                    - generic [ref=f16e113]: 第一章：Codex 入口选择
+                - listitem [ref=f16e114]:
+                  - link "03 第二章：API Key、中转站与国内模型" [ref=f16e115] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-codex-network
+                    - generic [ref=f16e116]: "03"
+                    - generic [ref=f16e117]: 第二章：API Key、中转站与国内模型
+                - listitem [ref=f16e118]:
+                  - link "04 第三章：Claude Code" [ref=f16e119] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-claude-code
+                    - generic [ref=f16e120]: "04"
+                    - generic [ref=f16e121]: 第三章：Claude Code
+                - listitem [ref=f16e122]:
+                  - link "05 第四章：MCP" [ref=f16e123] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-mcp
+                    - generic [ref=f16e124]: "05"
+                    - generic [ref=f16e125]: 第四章：MCP
+                - listitem [ref=f16e126]:
+                  - link "06 第五章：Skills" [ref=f16e127] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-skills
+                    - generic [ref=f16e128]: "06"
+                    - generic [ref=f16e129]: 第五章：Skills
+                - listitem [ref=f16e130]:
+                  - link "07 附录：国内访问与部署" [ref=f16e131] [cursor=pointer]:
+                    - /url: /blog/ai-tool-handbook-deploy-cn
+                    - generic [ref=f16e132]: "07"
+                    - generic [ref=f16e133]: 附录：国内访问与部署
+        - generic [ref=f16e134]:
+          - generic [ref=f16e135]:
+            - heading "摘要" [level=2] [ref=f16e136]
+            - generic [ref=f16e137]: 面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。
+          - generic [ref=f16e138]:
+            - heading "目录" [level=2] [ref=f16e139]
+            - generic [ref=f16e140]:
+              - link "你需要准备什么" [ref=f16e141] [cursor=pointer]:
+                - /url: "#你需要准备什么"
+              - link "第一步：打开微软商店" [ref=f16e142] [cursor=pointer]:
+                - /url: "#第一步打开微软商店"
+              - link "第二步：搜索 Codex" [ref=f16e143] [cursor=pointer]:
+                - /url: "#第二步搜索-codex"
+              - link "第三步：点击「获取」安装" [ref=f16e144] [cursor=pointer]:
+                - /url: "#第三步点击获取安装"
+              - link "第四步：打开应用" [ref=f16e145] [cursor=pointer]:
+                - /url: "#第四步打开应用"
+              - link "常见问题" [ref=f16e146] [cursor=pointer]:
+                - /url: "#常见问题"
+              - link "商店里搜不到 ChatGPT？" [ref=f16e147] [cursor=pointer]:
+                - /url: "#商店里搜不到-chatgpt"
+              - link "下载太慢或卡住？" [ref=f16e148] [cursor=pointer]:
+                - /url: "#下载太慢或卡住"
+              - link "我下了一个叫 \"Codex\" 的应用，对吗？" [ref=f16e149] [cursor=pointer]:
+                - /url: "#我下了一个叫-codex-的应用对吗"
+              - link "下一步" [ref=f16e150] [cursor=pointer]:
+                - /url: "#下一步"
+              - link "参考来源" [ref=f16e151] [cursor=pointer]:
+                - /url: "#参考来源"
+      - button "编辑" [ref=f16e152] [cursor=pointer]

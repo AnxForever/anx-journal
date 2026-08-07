@@ -1,0 +1,29 @@
+- generic [ref=f58e1]:
+  - generic [ref=f58e3]:
+    - link "ChatGPT home" [ref=f58e4] [cursor=pointer]:
+      - /url: /?slm=1
+      - img "ChatGPT logo" [ref=f58e5]
+    - generic [ref=f58e14]:
+      - generic [ref=f58e17]:
+        - heading "Log in or sign up" [level=2] [ref=f58e18]
+        - form "Log in or sign up" [ref=f58e19]:
+          - generic [ref=f58e20]:
+            - button "Continue with Google" [ref=f58e21] [cursor=pointer]
+            - button "Continue with Apple" [ref=f58e27] [cursor=pointer]
+            - button "Continue with phone" [ref=f58e33] [cursor=pointer]
+          - generic [ref=f58e39]: OR
+          - textbox "Email address" [active] [ref=f58e48]
+          - button "Continue" [ref=f58e49] [cursor=pointer]
+          - link "Try it first" [ref=f58e52] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f58e53]:
+        - img [ref=f58e54]:
+          - generic [ref=f58e55]: ChatGPT
+        - generic [ref=f58e57]:
+          - link "Terms of use" [ref=f58e58] [cursor=pointer]:
+            - /url: https://openai.com/policies/terms-of-use
+          - generic [ref=f58e59]: "|"
+          - link "Privacy policy" [ref=f58e60] [cursor=pointer]:
+            - /url: https://openai.com/policies/privacy-policy
+  - alert [ref=f58e61]
+  - status [ref=f58e62]

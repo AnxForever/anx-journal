@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'motion/react'
 import { ANIMATION_DELAY, INIT_DELAY } from '@/consts'
 import LikeButton from '@/components/like-button'
@@ -21,7 +22,7 @@ type BlogSidebarProps = {
 }
 
 export function BlogSidebar({ cover, summary, toc, slug }: BlogSidebarProps) {
-	const { siteContent } = useConfigStore()
+	const siteContent = useConfigStore(s => s.siteContent)
 	const summaryInContent = siteContent.summaryInContent ?? false
 
 	return (
@@ -30,9 +31,11 @@ export function BlogSidebar({ cover, summary, toc, slug }: BlogSidebarProps) {
 				<motion.div
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}
-					transition={{ delay: INIT_DELAY + ANIMATION_DELAY * 1 }}
+					transition={{ duration: 0.18, ease: 'easeOut' }}
 					className='bg-card w-full rounded-xl border p-3'>
-					<img src={cover} alt='cover' className='h-auto w-full rounded-xl border object-cover' />
+					<div className='relative aspect-[5/3] w-full overflow-hidden rounded-xl border'>
+						<Image src={cover} alt='cover' fill className='object-cover' unoptimized priority />
+					</div>
 				</motion.div>
 			)}
 

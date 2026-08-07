@@ -14,7 +14,9 @@ import { MusicPlayerProvider } from '@/components/music-player-context'
 export default function Layout({ children }: PropsWithChildren) {
 	useCenterInit()
 	useSizeInit()
-	const { cardStyles, siteContent, regenerateKey } = useConfigStore()
+	const cardStyles = useConfigStore(s => s.cardStyles)
+	const siteContent = useConfigStore(s => s.siteContent)
+	const regenerateKey = useConfigStore(s => s.regenerateKey)
 	const { maxLG, init } = useSize()
 	const musicEnabled = cardStyles.musicCard?.enabled !== false
 

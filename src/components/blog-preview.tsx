@@ -1,8 +1,9 @@
 'use client'
 
-import { startTransition, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { ReactElement, ReactNode } from 'react'
 import { useMarkdownRender } from '@/hooks/use-markdown-render'
+import { renderMarkdown } from '@/lib/markdown-renderer'
 import { BlogSidebar } from '@/components/blog-sidebar'
 import { useConfigStore } from '@/app/(home)/stores/config-store'
 import type { TocItem } from '@/lib/markdown-renderer'
@@ -16,10 +17,9 @@ type BlogPreviewProps = {
 	summary?: string
 	cover?: string
 	slug?: string
-	renderedHtml?: string
+	serverContent?: ReactElement | null
 	toc?: TocItem[]
 	footer?: ReactNode
-	/** Fired once markdown body has finished rendering. */
 	onBodyReady?: () => void
 }
 
@@ -41,48 +41,27 @@ function BlogBodySkeleton() {
 	)
 }
 
-export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, renderedHtml, toc, footer, onBodyReady }: BlogPreviewProps) {
+export function BlogPreview({ markdown, title, tags, date, summary, cover, slug, serverContent, toc, footer, onBodyReady }: BlogPreviewProps) {
 	const markdownToRender = markdown ?? ''
-	const [htmlBody, setHtmlBody] = useState<ReactElement | null>(null)
-	const htmlParseGen = useRef(0)
-	const markdownResult = useMarkdownRender(renderedHtml ? '' : markdownToRender)
-	const content = renderedHtml ? htmlBody : markdownResult.content
-	const finalToc = renderedHtml ? (toc ?? []) : markdownResult.toc
-	const markdownLoading = !renderedHtml && markdownResult.loading
-	const htmlBodyLoading = Boolean(renderedHtml && htmlBody === null)
-	const loading = markdownLoading
-	const { siteContent } = useConfigStore()
+	const markdownResult = useMarkdownRender(markdownToRender)
+	const content = serverContent ?? markdownResult.content
+	const finalToc = serverContent ? (toc ?? []) : markdownResult.toc
+	const loading = Boolean(markdownToRender) && markdownResult.loading
+	const siteContent = useConfigStore(s => s.siteContent)
 	const summaryInContent = siteContent.summaryInContent ?? false
 	const notifiedMarkdown = useRef<string | null>(null)
 
 	useEffect(() => {
 		notifiedMarkdown.current = null
-	}, [markdownToRender, renderedHtml])
-
-	useEffect(() => {
-		if (!renderedHtml) {
-			htmlParseGen.current += 1
-			setHtmlBody(null)
-			return
-		}
-		setHtmlBody(null)
-		const gen = ++htmlParseGen.current
-		const html = renderedHtml
-		startTransition(() => {
-			const el = renderMarkdownHtmlToReact(html)
-			if (gen !== htmlParseGen.current) return
-			setHtmlBody(el)
-		})
-	}, [renderedHtml])
+	}, [markdownToRender, serverContent])
 
 	useEffect(() => {
 		if (loading || !onBodyReady) return
-		if (renderedHtml && htmlBody === null) return
-		const currentRenderKey = renderedHtml ?? markdownToRender
+		const currentRenderKey = serverContent ? 'server' : markdownToRender
 		if (notifiedMarkdown.current === currentRenderKey) return
 		notifiedMarkdown.current = currentRenderKey
 		onBodyReady()
-	}, [loading, markdownToRender, onBodyReady, renderedHtml, htmlBody])
+	}, [loading, markdownToRender, onBodyReady, serverContent])
 
 	if (loading) {
 		return <div className='text-secondary flex min-h-[40dvh] items-center justify-center px-4 text-sm'>渲染中...</div>
@@ -105,9 +84,9 @@ export function BlogPreview({ markdown, title, tags, date, summary, cover, slug,
 					{summary && summaryInContent && <div className='text-secondary mt-6 cursor-text text-center text-sm'>“{summary}”</div>}
 
 					<div className='prose mt-6 max-w-none min-w-0 cursor-text'>
-						{htmlBodyLoading ? <BlogBodySkeleton /> : content}
+						{loading ? <BlogBodySkeleton /> : content}
 					</div>
-					{!htmlBodyLoading && footer}
+					{!loading && footer}
 				</div>
 			</article>
 

@@ -1,0 +1,1194 @@
+- generic [ref=f14e2]:
+  - banner [ref=f14e5]:
+    - navigation [ref=f14e6]:
+      - generic [ref=f14e8]:
+        - button "跳转到主要内容" [ref=f14e10] [cursor=pointer]
+        - generic [ref=f14e12]:
+          - generic [ref=f14e13]:
+            - link "通用 Microsoft 网站" [ref=f14e14] [cursor=pointer]:
+              - /url: https://microsoft.com
+              - img "通用 Microsoft 网站" [ref=f14e15]
+            - link "Microsoft Store 主页" [ref=f14e16] [cursor=pointer]:
+              - /url: /home?hl=zh-CN&gl=CN
+              - img "Microsoft Store 主页" [ref=f14e17]
+          - group [ref=f14e19]:
+            - link "已选择“主页”" [ref=f14e21] [cursor=pointer]:
+              - /url: /home?hl=zh-CN&gl=CN
+              - generic "已选择“主页”" [ref=f14e23]: 主页
+            - link "应用" [ref=f14e25] [cursor=pointer]:
+              - /url: /apps?hl=zh-CN&gl=CN
+              - generic "应用" [ref=f14e27]
+            - link "游戏" [ref=f14e29] [cursor=pointer]:
+              - /url: /games?hl=zh-CN&gl=CN
+              - generic "游戏" [ref=f14e31]
+            - link "腾讯应用宝" [ref=f14e33] [cursor=pointer]:
+              - /url: /tencent?hl=zh-CN&gl=CN
+              - generic "腾讯应用宝" [ref=f14e42]
+            - link "主题" [ref=f14e44] [cursor=pointer]:
+              - /url: /themes?hl=zh-CN&gl=CN
+              - generic "主题" [ref=f14e46]
+            - link "关于" [ref=f14e48] [cursor=pointer]:
+              - /url: /about?hl=zh-CN&gl=CN
+              - generic "关于" [ref=f14e50]
+        - generic [ref=f14e52]:
+          - generic [ref=f14e54]:
+            - generic "搜索" [ref=f14e55]:
+              - textbox [ref=f14e61]:
+                - /placeholder: 搜索应用、游戏等
+            - status [ref=f14e62]
+          - generic [ref=f14e63]:
+            - generic "多应用安装" [ref=f14e64]:
+              - link "多应用安装" [ref=f14e65] [cursor=pointer]:
+                - /url: /apppack?ocid=pack-nav&hl=zh-CN&gl=CN
+            - generic [ref=f14e76] [cursor=pointer]:
+              - generic [ref=f14e77]: 登录
+              - generic "登录按钮" [ref=f14e78]:
+                - button "登录按钮" [ref=f14e79]
+  - main [ref=f14e83]:
+    - generic [ref=f14e85]:
+      - generic [ref=f14e86]:
+        - generic [ref=f14e87]:
+          - heading "\"codex\" 的结果" [level=2] [ref=f14e88]
+          - button "筛选器" [ref=f14e90] [cursor=pointer]
+        - tablist [ref=f14e99]:
+          - tab "所有分类" [ref=f14e101] [cursor=pointer]
+          - tab "应用" [ref=f14e104] [cursor=pointer]
+          - tab "游戏" [ref=f14e107] [cursor=pointer]
+          - tab "移动应用" [ref=f14e110] [cursor=pointer]
+          - tab "微信小游戏" [ref=f14e113] [cursor=pointer]
+      - generic [ref=f14e117]:
+        - generic [ref=f14e118]:
+          - link "ChatGPT 评分为 3.8/5。 应用 开发人员工具 免费下载 ChatGPT is your everyday AI assistant for Windows. Use Chat to ask questions, explore ideas, write, learn, and work through everyday tasks. When you need to go further, ChatGPT Work can gather context and turn goals into polished documents, presentations, spreadsheets, reports, analyses, and more—while keeping you in control. For software development, Codex is the coding agent in ChatGPT, built to help you plan, write, review, and ship code. Bring in context from your apps, files, browser, screenshots, email, and screen so ChatGPT can help without breaking your flow. Whether you’re getting a quick answer, finishing a complex project, or building software, ChatGPT brings it together in one desktop app." [ref=f14e120] [cursor=pointer]:
+            - /url: /detail/9plm9xgg6vks?hl=zh-CN&gl=CN
+            - generic [ref=f14e121]:
+              - generic [ref=f14e125]:
+                - paragraph [ref=f14e126]: ChatGPT
+                - generic [ref=f14e127]:
+                  - generic "评分为 3.8/5。" [ref=f14e129]: "3.8"
+                  - separator [ref=f14e134]
+                  - generic [ref=f14e135]: 应用
+                  - separator [ref=f14e136]
+                  - generic "开发人员工具" [ref=f14e137]
+              - generic [ref=f14e138]: 免费下载
+            - generic [ref=f14e141]:
+              - paragraph [ref=f14e142]: ChatGPT is your everyday AI assistant for Windows. Use Chat to ask questions, explore ideas, write, learn, and work through everyday tasks.
+              - paragraph [ref=f14e143]: When you need to go further, ChatGPT Work can gather context and turn goals into polished documents, presentations, spreadsheets, reports, analyses, and more—while keeping you in control.
+              - paragraph [ref=f14e144]: For software development, Codex is the coding agent in ChatGPT, built to help you plan, write, review, and ship code.
+              - paragraph [ref=f14e145]: Bring in context from your apps, files, browser, screenshots, email, and screen so ChatGPT can help without breaking your flow. Whether you’re getting a quick answer, finishing a complex project, or building software, ChatGPT brings it together in one desktop app.
+          - link [ref=f14e150] [cursor=pointer]:
+            - /url: /detail/9nd876hcnrhz?hl=zh-CN&gl=CN
+            - generic [ref=f14e151]:
+              - generic [ref=f14e155]:
+                - paragraph [ref=f14e156]: AI Chat Hub (ChatGPT/Gemini/Claude/DeepSeek)
+                - generic [ref=f14e157]:
+                  - generic "评分为 4.8/5。" [ref=f14e159]: "4.8"
+                  - separator [ref=f14e164]
+                  - generic [ref=f14e165]: 应用
+                  - separator [ref=f14e166]
+                  - generic "高效工作" [ref=f14e167]
+              - generic [ref=f14e168]: 免费下载
+            - generic [ref=f14e171]:
+              - paragraph [ref=f14e172]: AI Chat brings multiple advanced AI models to Windows in a fast and flexible desktop experience. Access ChatGPT, Gemini, Claude, and DeepSeek from one convenient workspace to help with writing, idea generation, research, coding, analysis, and everyday tasks.
+              - paragraph [ref=f14e173]: Image Creator allows you to create visual content from natural language descriptions. You can generate illustrations, concept art, creative drafts, and other AI-generated visuals directly inside the app, making it easier to turn ideas into images for creative and professional use.
+              - paragraph [ref=f14e174]: Computer Cleaner helps simplify routine PC organization tasks through AI-assisted file management. The app can help identify unnecessary files, organize storage areas, and support cleanup workflows to keep your workspace more organized and efficient.
+              - paragraph [ref=f14e175]: Designed to Optimize Your Workflow
+              - paragraph [ref=f14e176]: Enjoy seamless AI interaction inside a clean, intuitive Windows environment.
+              - paragraph [ref=f14e177]: Whether you're a student, developer, or business professional, this app helps you multiply your productivity.
+              - paragraph [ref=f14e178]: Download now and start your Windows AI era.
+              - paragraph [ref=f14e179]: "Free trial function description:"
+              - paragraph [ref=f14e180]: AI Chat provides free conversation trials per day.
+              - paragraph [ref=f14e181]: After exceeding the limit, you need to purchase a Pro account to remove the AI chat limit.
+          - link "AI Chat+ – 智能聊天助手 应用 高效工作 免费下载 AI Chat+ 是一款基于 Windows 的聊天助手，采用 OpenAI 的先进 ChatGPT 技术构建，旨在帮助您直接在桌面上生成答案、创意和智能解决方案。凭借简洁的界面和直观的操作方式，它让您可以轻松开始新对话、切换主题，并高效管理多个聊天会话。 主要功能包括： • 自然对话 – 借助 OpenAI 的 ChatGPT 模型，用日常语言与 AI 自由交流。 • 多聊天管理 – 创建、切换或删除聊天，保持条理清晰与高效。 • 反馈工具 – 通过点赞、点踩或复制 AI 回复来优化结果并便捷复用。 • 自定义设置 – 根据个人偏好调整配色主题和显示语言。 • 每日免费访问 – 每天可免费使用 10 条 AI 消息，并可升级为无限聊天。 无论用于工作、学习还是个人项目，AI Chat+ 都将 OpenAI 驱动的智能对话体验带到您的 Windows 设备，让 ChatGPT 的强大功能与您的日常高效与便利完美结合。" [ref=f14e186] [cursor=pointer]:
+            - /url: /detail/9pfmtgk1jvkl?hl=zh-CN&gl=CN
+            - generic [ref=f14e187]:
+              - generic [ref=f14e191]:
+                - paragraph [ref=f14e192]: AI Chat+ – 智能聊天助手
+                - generic [ref=f14e193]:
+                  - generic [ref=f14e194]: 应用
+                  - separator [ref=f14e195]
+                  - generic "高效工作" [ref=f14e196]
+              - generic [ref=f14e197]: 免费下载
+            - generic [ref=f14e200]:
+              - paragraph [ref=f14e201]: AI Chat+ 是一款基于 Windows 的聊天助手，采用 OpenAI 的先进 ChatGPT 技术构建，旨在帮助您直接在桌面上生成答案、创意和智能解决方案。凭借简洁的界面和直观的操作方式，它让您可以轻松开始新对话、切换主题，并高效管理多个聊天会话。
+              - paragraph [ref=f14e202]: 主要功能包括：
+              - paragraph [ref=f14e203]: • 自然对话 – 借助 OpenAI 的 ChatGPT 模型，用日常语言与 AI 自由交流。
+              - paragraph [ref=f14e204]: • 多聊天管理 – 创建、切换或删除聊天，保持条理清晰与高效。
+              - paragraph [ref=f14e205]: • 反馈工具 – 通过点赞、点踩或复制 AI 回复来优化结果并便捷复用。
+              - paragraph [ref=f14e206]: • 自定义设置 – 根据个人偏好调整配色主题和显示语言。
+              - paragraph [ref=f14e207]: • 每日免费访问 – 每天可免费使用 10 条 AI 消息，并可升级为无限聊天。
+              - paragraph [ref=f14e208]: 无论用于工作、学习还是个人项目，AI Chat+ 都将 OpenAI 驱动的智能对话体验带到您的 Windows 设备，让 ChatGPT 的强大功能与您的日常高效与便利完美结合。
+          - 'link "Codex - QR Reader & Generator 评分为 4.0/5。 应用 高效工作 免费下载 Codex - QR 读取器和生成器应用是最好的应用程序，可以从您的相机或文件扫描 Windows 上的二维码。您也可以生成任何类型的二维码。 将二维码放在镜头前面，如果您看到它正确，那么相机将为您识别它。 分享、保存，享受简单直观的设计带来的体验，所有必要的一切都在您的指尖。 通过历史记录部分轻松再次检查所有扫描的二维码。 最好的 Windows 10 和 Windows 11 二维码应用，超过 +1 百万下载。 也可在 Android、iOS 和 macOS M1 上使用。 只需在 Play Store/App Store 上搜索''CODEX QR''，或访问 http://bit.ly/qruniversal 。 专业版功能: 生成带有自定义颜色背景的二维码; 生成带有自定义分辨率的二维码; 自动打开解码二维码的链接; 从图片文件读取二维码; 从屏幕读取二维码; 无广告。 如有建议，请给我发送电子邮件 info@codexqr.app 网站 codexqr.app 前名: Windows 10 的二维码 Windows 11 的二维码" [ref=f14e213] [cursor=pointer]':
+            - /url: /detail/9nblggh5m02g?hl=zh-CN&gl=CN
+            - generic [ref=f14e214]:
+              - generic [ref=f14e218]:
+                - paragraph [ref=f14e219]: Codex - QR Reader & Generator
+                - generic [ref=f14e220]:
+                  - generic "评分为 4.0/5。" [ref=f14e222]: "4.0"
+                  - separator [ref=f14e227]
+                  - generic [ref=f14e228]: 应用
+                  - separator [ref=f14e229]
+                  - generic "高效工作" [ref=f14e230]
+              - generic [ref=f14e231]: 免费下载
+            - generic [ref=f14e234]:
+              - paragraph [ref=f14e235]: Codex - QR 读取器和生成器应用是最好的应用程序，可以从您的相机或文件扫描 Windows 上的二维码。您也可以生成任何类型的二维码。
+              - paragraph [ref=f14e236]: 将二维码放在镜头前面，如果您看到它正确，那么相机将为您识别它。
+              - paragraph [ref=f14e237]: 分享、保存，享受简单直观的设计带来的体验，所有必要的一切都在您的指尖。
+              - paragraph [ref=f14e238]: 通过历史记录部分轻松再次检查所有扫描的二维码。
+              - paragraph [ref=f14e239]: 最好的 Windows 10 和 Windows 11 二维码应用，超过 +1 百万下载。
+              - paragraph [ref=f14e240]: 也可在 Android、iOS 和 macOS M1 上使用。 只需在 Play Store/App Store 上搜索'CODEX QR'，或访问 http://bit.ly/qruniversal 。
+              - paragraph [ref=f14e241]: "专业版功能:"
+              - paragraph [ref=f14e242]: 生成带有自定义颜色背景的二维码;
+              - paragraph [ref=f14e243]: 生成带有自定义分辨率的二维码;
+              - paragraph [ref=f14e244]: 自动打开解码二维码的链接;
+              - paragraph [ref=f14e245]: 从图片文件读取二维码;
+              - paragraph [ref=f14e246]: 从屏幕读取二维码;
+              - paragraph [ref=f14e247]: 无广告。
+              - paragraph [ref=f14e248]: 如有建议，请给我发送电子邮件 info@codexqr.app
+              - paragraph [ref=f14e249]: 网站 codexqr.app
+              - paragraph [ref=f14e250]: "前名: Windows 10 的二维码"
+              - paragraph [ref=f14e251]: Windows 11 的二维码
+          - link [ref=f14e256] [cursor=pointer]:
+            - /url: /detail/9nxk0pk5zs1b?hl=zh-CN&gl=CN
+            - generic [ref=f14e257]:
+              - generic [ref=f14e261]:
+                - paragraph [ref=f14e262]: Easy Chat AI
+                - generic [ref=f14e263]:
+                  - generic "评分为 3.8/5。" [ref=f14e265]: "3.8"
+                  - separator [ref=f14e270]
+                  - generic [ref=f14e271]: 应用
+                  - separator [ref=f14e272]
+                  - generic "高效工作" [ref=f14e273]
+              - generic [ref=f14e274]: 免费下载
+            - generic [ref=f14e277]:
+              - paragraph [ref=f14e278]: "EasyChat AI: Your Ultimate AI Companion on Windows! 🤖✨"
+              - paragraph [ref=f14e279]: Experience the future of AI conversations with EasyChat AI, a beautifully designed app that brings powerful AI assistance to your Windows desktop. Whether you need quick answers, creative inspiration, or insightful conversations, EasyChat AI is here to help you every step of the way. 🌟
+              - paragraph [ref=f14e280]: "Why You'll Love EasyChat AI:"
+              - paragraph [ref=f14e281]: "💬 Intelligent Conversations: Engage with an AI assistant powered by GPT-4 for natural, flowing dialogues."
+              - paragraph [ref=f14e282]: "🚀 Quick Access Flyout: The Quick Chat feature hovers at the screen edge for instant AI access without opening the full app."
+              - paragraph [ref=f14e283]: "📄 Clipboard Actions: Copy text and instantly Summarize, Translate, Explain, or Proofread with one click."
+              - paragraph [ref=f14e284]: "🎭 Character Library: Chat with AI personalities like Albert Einstein, a Dating Coach, and more for specialized insights."
+              - paragraph [ref=f14e285]: "📁 Local Chat History: Chats are saved locally, ensuring privacy and easy access to past conversations."
+              - paragraph [ref=f14e286]: "🔖 Pin Conversations: Keep important chats at your fingertips by pinning them."
+              - paragraph [ref=f14e287]: "🎨 Stunning Fluent Design: Modern UI with delightful animations using the latest Windows Fluent Design and Mica material."
+              - paragraph [ref=f14e288]: "🌙 Dark Mode Support: Switch to dark mode for comfortable viewing in low-light environments."
+              - paragraph [ref=f14e289]: "✨ Markdown Rendering: Enjoy rich, well-formatted AI responses with full markdown support."
+              - paragraph [ref=f14e290]: "Get Started with EasyChat AI:"
+              - paragraph [ref=f14e291]: 1️⃣ Download EasyChat AI from the Microsoft Store.
+              - paragraph [ref=f14e292]: 2️⃣ Launch the app and start a new conversation—no setup required!
+              - paragraph [ref=f14e293]: 3️⃣ Explore the Character Library and Quick Chat features to enhance your experience.
+              - paragraph [ref=f14e294]: 4️⃣ Upgrade to EasyChat Unlimited for unlimited queries and unlock all features.
+              - paragraph [ref=f14e295]: "Boost Your Productivity and Creativity:"
+              - paragraph [ref=f14e296]: EasyChat AI is more than a chat app; it's your personal assistant, creative partner, and knowledge navigator. With the power of LLM technology, EasyChat AI is ready to engage with you.
+              - paragraph [ref=f14e297]: Ready to Revolutionize Your Workflow?
+              - paragraph [ref=f14e298]: Download EasyChat AI now and let your conversations flow! 🚀
+              - paragraph [ref=f14e299]: ________________________________________
+              - paragraph [ref=f14e300]: "Note: The free version of EasyChat AI has a daily query limit. Upgrade to EasyChat Unlimited to unlock unlimited access and all features."
+              - paragraph [ref=f14e301]: EasyChat AI is a third-party application and is not affiliated with OpenAI. All trademarks are the property of their respective owners.
+          - link "PyGPT - AI Assistant 应用 高效工作 免费下载 Desktop AI Assistant powered by GPT-5, GPT-4, o1, o3, Claude, Gemini, Ollama with chat, assistant, text completion, vision analysis, image generation, speech synthesis, voice recognition, memory, internet access, commands and code execution, file upload and download, and more." [ref=f14e306] [cursor=pointer]:
+            - /url: /detail/xp99r4mx3x65vq?hl=zh-CN&gl=CN
+            - generic [ref=f14e307]:
+              - generic [ref=f14e311]:
+                - paragraph [ref=f14e312]: PyGPT - AI Assistant
+                - generic [ref=f14e313]:
+                  - generic [ref=f14e314]: 应用
+                  - separator [ref=f14e315]
+                  - generic "高效工作" [ref=f14e316]
+              - generic [ref=f14e317]: 免费下载
+            - paragraph [ref=f14e321]: Desktop AI Assistant powered by GPT-5, GPT-4, o1, o3, Claude, Gemini, Ollama with chat, assistant, text completion, vision analysis, image generation, speech synthesis, voice recognition, memory, internet access, commands and code execution, file upload and download, and more.
+          - link [ref=f14e326] [cursor=pointer]:
+            - /url: /detail/9np2q4gbwr6s?hl=zh-CN&gl=CN
+            - generic [ref=f14e327]:
+              - generic [ref=f14e331]:
+                - paragraph [ref=f14e332]: AI Voice GPT
+                - generic [ref=f14e333]:
+                  - generic [ref=f14e334]: 应用
+                  - separator [ref=f14e335]
+                  - generic "高效工作" [ref=f14e336]
+              - generic [ref=f14e338]:
+                - generic [ref=f14e339]: "-33%"
+                - generic [ref=f14e340]:
+                  - generic "折扣前的上一价格： ¥35.00" [ref=f14e341]: ¥35.00
+                  - generic "折扣后的新价格： ¥23.45" [ref=f14e342]: ¥23.45
+            - generic [ref=f14e344]:
+              - paragraph [ref=f14e345]: 使用 AI Voice GPT 改变您与 AI 的互动方式 - 这是一款智能语音助手,能够倾听、理解并自然地回应您。
+              - paragraph [ref=f14e346]: 厌倦了输入冗长的提示词?AI Voice GPT 将免提 AI 对话带到您的桌面。只需按下按钮并说出您的问题、命令或请求 - 应用程序使用先进的 Whisper AI 技术转录您的语音,并以自然的语音输出进行回应。
+              - paragraph [ref=f14e347]: "核心功能:"
+              - paragraph [ref=f14e348]: 语音优先体验
+              - paragraph [ref=f14e349]: 与 AI 进行自然的双向语音对话。按下麦克风按钮说话,助手会用合成语音回应。非常适合多任务处理、无障碍需求或不方便打字的场景。
+              - paragraph [ref=f14e350]: 强大的 AI 引擎
+              - paragraph [ref=f14e351]: 采用包括 Llama 3、Groq 和 Azure OpenAI 在内的前沿语言模型。可选择本地处理以保护隐私,或使用云端模型以获得最大能力。
+              - paragraph [ref=f14e352]: 智能函数调用
+              - paragraph [ref=f14e353]: 询问需要实时信息的问题 - 助手可以搜索网络,提供关于天气、新闻、体育比分等最新答案。甚至可以通过语音执行 PowerShell 命令来完成系统任务。
+              - paragraph [ref=f14e354]: 文档智能
+              - paragraph [ref=f14e355]: 附加 PDF、文本文件和文档,获取关于其内容的 AI 驱动答案。内置的 RAG(检索增强生成)系统智能索引和搜索您的文档,提供准确响应。
+              - paragraph [ref=f14e356]: 可自定义个性
+              - paragraph [ref=f14e357]: 为您的助手命名,设置其语音性别,并自定义系统消息,创建符合您偏好的个性化 AI 伴侣。
+              - paragraph [ref=f14e358]: 多种语音引擎
+              - paragraph [ref=f14e359]: 选择 Piper(本地、快速)、Azure Speech(云端、自然)或 Windows 内置 TTS 进行语音输出。可选择在线或本地 Whisper 模型进行语音识别。
+              - paragraph [ref=f14e360]: 全局热键支持
+              - paragraph [ref=f14e361]: 启用一键通话功能,配置热键即可实现即时语音激活,无需点击。
+              - paragraph [ref=f14e362]: 隐私选项
+              - paragraph [ref=f14e363]: 使用本地 LLM 模型和本地语音处理完全离线运行,或连接到云服务以增强功能 - 选择权在您手中。
+              - paragraph [ref=f14e364]: "适用场景:"
+              - paragraph [ref=f14e365]: "- 需要免提 AI 辅助的专业人士"
+              - paragraph [ref=f14e366]: "- 有无障碍需求的用户"
+              - paragraph [ref=f14e367]: "- 希望更自然地与 AI 互动的任何人"
+              - paragraph [ref=f14e368]: "- 测试语音 AI 应用程序的开发人员"
+              - paragraph [ref=f14e369]: "- 处理文档的学生和研究人员"
+              - paragraph [ref=f14e370]: AI Voice GPT 最适合配备麦克风和扬声器使用。网络搜索和云端 AI 功能需要互联网连接;本地模型支持离线模式。
+              - paragraph [ref=f14e371]: 立即下载 AI Voice GPT,体验人机对话的未来!
+          - link [ref=f14e376] [cursor=pointer]:
+            - /url: /detail/9nw24n9w33c9?hl=zh-CN&gl=CN
+            - generic [ref=f14e377]:
+              - generic [ref=f14e381]:
+                - paragraph [ref=f14e382]: MDC AI
+                - generic [ref=f14e383]:
+                  - generic [ref=f14e384]: 应用
+                  - separator [ref=f14e385]
+                  - generic "高效工作" [ref=f14e386]
+              - generic [ref=f14e387]: 免费下载
+            - generic [ref=f14e390]:
+              - paragraph [ref=f14e391]: Native Windows desktop GPT agent app, which is your portal to the very powerful OpenAI API. Privacy of your conversations is guaranteed, unlike with web agents. No intermediary services are involved, it's just you and the stateless API.
+              - paragraph [ref=f14e392]: "⚠ IMPORTANT NOTE: This app will only work if you bring your own API Key (BYOK concept). There is NO OTHER way for it to operate without middleware in-between you and the AI. To use OpenAI services through this app, you need to purchase/obtain a key from OpenAI directly, which can be as cheap as $5. This app and its developer are not associated with OpenAI in any way, this app provides a free UI for you to use your AI API key which isn't free ."
+              - paragraph [ref=f14e393]: "* Custom personalities (assistants), each with different parameters, models and system prompts."
+              - paragraph [ref=f14e394]: "* Integrated full-width Markdown renderer via WebView2. Unlike other desktop apps, where output is simple and unformatted (or barely formatted) text, this app formats source code, headings, paragraphs, bullet lists, etc. The output is fully selectable and snappy."
+              - paragraph [ref=f14e395]: "* Advanced Edit functionality, the Edit button allows you to create infinite number of nested forks within a conversation, branching out in different directions. Unlike in other apps and web UIs, nested forks are supported, and the app remembers your current fork, allowing you to continue where you left off. Why forking? Because it can save massive amount of credits, reducing token usage by up to 95% - few people know, but every time you stack another message to previous ones, even when you say \"forget past messages\", the LLM, being stateless, will still re-evaluate the entire stack of messages and charge all the tokens regardless."
+              - paragraph [ref=f14e396]: "* Full chat history that loads up instantly so you can scroll through hundreds of past chats and load them in an instant."
+              - paragraph [ref=f14e397]: "* Privacy. Unlike with Chat GPT subscriptions, your prompts are not saved or stored anywhere other than your computer. With subscription-based agents, your prompts are used for training and stored on an external database, which is vulnerable to hacking. The API used by external agents is statless."
+              - paragraph [ref=f14e398]: "* Costs and rate limits. OpenAI API pay-as-you-go approach, combined with the Edit functionality, can save you a lot of money in the long run. You are also free from standard rate limits when you need the LLM the most."
+          - link [ref=f14e403] [cursor=pointer]:
+            - /url: /detail/9nxkfgfqncxs?hl=zh-CN&gl=CN
+            - generic [ref=f14e404]:
+              - generic [ref=f14e408]:
+                - paragraph [ref=f14e409]: Bree AI - 人工智能聊天机器人
+                - generic [ref=f14e410]:
+                  - generic "评分为 4.5/5。" [ref=f14e412]: "4.5"
+                  - separator [ref=f14e417]
+                  - generic [ref=f14e418]: 应用
+                  - separator [ref=f14e419]
+                  - generic "高效工作" [ref=f14e420]
+              - generic [ref=f14e421]: 免费下载
+            - generic [ref=f14e424]:
+              - paragraph [ref=f14e425]: Bree AI – 与AI沟通的无缝直观新体验。
+              - paragraph [ref=f14e426]: 与Bree AI一同迈入AI互动的未来，这是您通往世界最强大语言模型的无缝门户。无论您是在起草关键文件、调试复杂代码，还是打破语言障碍，Bree AI都将先进的LLM技术融入到一种直观、轻松的体验中。
+              - paragraph [ref=f14e427]: 为何选择 Bree AI？
+              - paragraph [ref=f14e428]: 在充满ChatGPT、OpenAI的GPT-4、GPT-5、Anthropic的Claude、Google的Gemini（前身为Bard）、Microsoft的Copilot等众多选择的市场中，Bree AI以其顶级的性能和无与伦比的易用性脱颖而出。我们将现代AI的原始力量打造成一款多功能工具，让您感觉它就像是您自身创造力和生产力的自然延伸。
+              - paragraph [ref=f14e429]: 一个强大工具，释放您的全部潜能
+              - paragraph [ref=f14e430]: 忘掉在Grammarly、Notion、翻译器或词典等标签页之间来回切换的烦恼。Bree AI是您处理几乎任何任务的统一中心。
+              - paragraph [ref=f14e431]: • 轻松创作与撰写：生成原创内容，从博客文章、社交媒体更新到定制简历和专业邮件。激发您的创造力，再也不用面对空白页面。
+              - paragraph [ref=f14e432]: • 改写与完善您的文本：提升您现有的文稿。我们集成的工具能帮助您重塑和增强内容，使其更具吸引力、清晰和有效。
+              - paragraph [ref=f14e433]: • 解释复杂主题：提供任何文本，Bree AI会将其中的复杂主题分解为简单易懂的语言。就像拥有一个随时待命的专家导师。
+              - paragraph [ref=f14e434]: • 激发创新想法：在项目上卡住了？将Bree AI作为您的头脑风暴伙伴，为任何任务生成新颖的想法、创造性的解决方案和创新策略。
+              - paragraph [ref=f14e435]: • 精准翻译：打破语言障碍。我们强大的翻译功能确保在数十种语言之间进行清晰、细致的沟通。
+              - paragraph [ref=f14e436]: • 自信地编写代码：从编写、调试到解释复杂代码，Bree AI扮演着您的资深程序员伙伴。适合所有技能水平的开发者。
+              - paragraph [ref=f14e437]: • 您的个性化聊天机器人：就您能想象到的任何话题进行聊天。Bree AI不仅仅是一个工具，更是一位知识渊博的伙伴，随时准备深入讨论您提供的任何主题。
+              - paragraph [ref=f14e438]: 体验 Bree AI 的与众不同
+              - paragraph [ref=f14e439]: • 轻松的AI互动：简洁直观的界面让与先进AI的互动变得真正轻松自如。
+              - paragraph [ref=f14e440]: • 100+个预设提示词模板：利用我们庞大的专业提示词库，快速开启任何对话，涵盖从商业到创意写作的方方面面——无需费心设计完美的查询。
+              - paragraph [ref=f14e441]: • 您的个人库：将您最常用和最喜欢的提示词保存到个人收集中，以便快速轻松地访问，让AI适应您独特的工作流程。
+              - paragraph [ref=f14e442]: 升级至 Bree AI Pro – 解锁无限潜能
+              - paragraph [ref=f14e443]: "[应用内购买功能]"
+              - paragraph [ref=f14e444]: • 与AI无限聊天
+              - paragraph [ref=f14e445]: • 更准确、更详细的回答
+              - paragraph [ref=f14e446]: • 无广告
+              - paragraph [ref=f14e447]: • 多样的提示词模板
+              - paragraph [ref=f14e448]: 订阅计划
+              - paragraph [ref=f14e449]: • $69.99/年
+              - paragraph [ref=f14e450]: • $9.99/月
+              - paragraph [ref=f14e451]: 加入新一代AI工具的行列
+              - paragraph [ref=f14e452]: 虽然您可能熟悉Bing Chat GPT、Perplexity、DeepSeek、Grok或Llama，但Bree AI旨在成为市场上最用户友好和功能最全面的选择。我们将这些技术的精华融合成一个无缝且强大的应用程序。
+              - paragraph [ref=f14e453]: 立即下载Bree AI，体验与AI沟通最直观的方式。彻底改变您的工作、创作和学习方式。
+              - paragraph [ref=f14e454]: 更多激动人心的功能即将推出！
+          - link [ref=f14e459] [cursor=pointer]:
+            - /url: /detail/9ngr4chvlv4g?hl=zh-CN&gl=CN
+            - generic [ref=f14e460]:
+              - generic [ref=f14e464]:
+                - paragraph [ref=f14e465]: ChatOn - AI Chatbot Assistant
+                - generic [ref=f14e466]:
+                  - generic [ref=f14e467]: 应用
+                  - separator [ref=f14e468]
+                  - generic "高效工作" [ref=f14e469]
+              - generic [ref=f14e470]: 免费下载
+            - generic [ref=f14e473]:
+              - paragraph [ref=f14e474]: ChatOn–Your AI Chatbot & Virtual Assistant
+              - paragraph [ref=f14e475]: Welcome to the world of AI assistance! Meet ChatOn, your chat AI and virtual assistant, built on GPT-5, Gemini 2.5 Pro, GPT-4o, o4-mini, Sonar, and Claude 3.7. It's designed to streamline your daily tasks by combining the top AI tools into one experience.
+              - paragraph [ref=f14e476]: ChatOn can help anyone seeking a productivity boost, from bloggers to business leaders. Need to draft emails, create pics, or generate ideas? Turn to our chatbot for help.
+              - paragraph [ref=f14e477]: With nearly 100M users already giving ChatOn a try, this smart AI generator and chatbot significantly speeds up content creation thanks to its collection of 100+ AI prompts.
+              - paragraph [ref=f14e478]: How it works
+              - paragraph [ref=f14e479]: Step 1. Type a request, pick from our prompts, or chat with your AI assistant
+              - paragraph [ref=f14e480]: Step 2. ChatOn processes your request using AI tools
+              - paragraph [ref=f14e481]: Step 3. Get your answer in the form of text, an image, a summary, etc.
+              - paragraph [ref=f14e482]: With ChatOn AI, you can
+              - paragraph [ref=f14e483]: "-Write, edit, and proofread your text"
+              - paragraph [ref=f14e484]: "-Get quick answers and explanations"
+              - paragraph [ref=f14e485]: "-Brainstorm ideas"
+              - paragraph [ref=f14e486]: "-Turn ideas into visuals with our image generator"
+              - paragraph [ref=f14e487]: "-Plan daily tasks, trips, schedules, etc."
+              - paragraph [ref=f14e488]: "Key features:"
+              - paragraph [ref=f14e489]: "Image Generator:"
+              - paragraph [ref=f14e490]: Transform photos into AI creations or generate completely new images from any idea. Customize style, size, and details in seconds. For example, you can restyle a photo for fun or create a custom infographic from scratch.
+              - paragraph [ref=f14e491]: "Photo-to-Video Converter:"
+              - paragraph [ref=f14e492]: This AI video generator animates your favorite photos in seconds.
+              - paragraph [ref=f14e493]: "AI Writing Assistant:"
+              - paragraph [ref=f14e494]: ChatOn, built on GPT-5, Gemini 2.5 Pro, GPT-4o, o4-mini, Sonar, and Claude 3.7, offers a versatile AI chat assistant and generator that helps with any project (emails, speeches, social posts, etc.) Plus, you can get ideas for follow-up questions to keep your chat going. For example, you can ask the chatbot to turn bullet points into an essay.
+              - paragraph [ref=f14e495]: "Web Analyzer:"
+              - paragraph [ref=f14e496]: The chatbot AI, built on GPT-5, Gemini 2.5 Pro, GPT-4o, o4-mini, Sonar, and Claude 3.7, is ideal for finding answers online. For instance, try asking it for the current weather in your location!
+              - paragraph [ref=f14e497]: "Doc Master:"
+              - paragraph [ref=f14e498]: Summarize, rewrite, translate, and ask questions about any doc with our chatbot AI. Just upload a file (PDF, DOCX, CSV, TXT, etc.) and get a summary for quick studying.
+              - paragraph [ref=f14e499]: Explore the potential of GPT-5, Gemini 2.5 Pro, GPT-4o, GPT-4, and Claude to make the most of this intelligent assistant.
+              - paragraph [ref=f14e500]: Download ChatOn, start chatting in the AI chat or creating images in the AI picture generator, and boost your productivity!
+              - paragraph [ref=f14e501]: FAQ
+              - paragraph [ref=f14e502]: 1. Can ChatOn create text and images in multiple languages?
+              - paragraph [ref=f14e503]: Yes! The chatbot and image generator support multilingual outputs for both writing and visuals.
+              - paragraph [ref=f14e504]: 2. Which AI models is ChatOn built on?
+              - paragraph [ref=f14e505]: This chat AI is built on GPT-5, Gemini 2.5 Pro, GPT-4o, o4-mini, Sonar, and Claude 3.7.
+              - paragraph [ref=f14e506]: PRODUCT FEATURES
+              - paragraph [ref=f14e507]: Access top AI models.
+              - paragraph [ref=f14e508]: Explore a huge library of prompts.
+              - paragraph [ref=f14e509]: Create and edit any text (essays, social media posts, emails, etc.).
+              - paragraph [ref=f14e510]: Proofread your writing.
+              - paragraph [ref=f14e511]: Create pictures in any style you like.
+              - paragraph [ref=f14e512]: Turn photos into videos.
+              - paragraph [ref=f14e513]: Search for info online.
+              - paragraph [ref=f14e514]: Handle text files and images.
+              - paragraph [ref=f14e515]: Summarize articles, documents, notes, etc.
+              - paragraph [ref=f14e516]: Dictate your messages.
+              - paragraph [ref=f14e517]: Solve any math problem.
+              - paragraph [ref=f14e518]: Translate from and into any language.
+          - link "Deep AI & AI聊天写作助手 应用 高效工作 免费下载 🚀 Deep AI & AI聊天写作助手 欢迎使用基于 GPT-5 的开源聊天机器人——一款由 Gemini、Claude、GPT-4 和 GPT-5 等尖端模型驱动的新一代 AI 聊天机器人。 Deep AI & AI聊天写作助手 将彻底革新您与 AI 的交互方式。它基于尖端技术打造，旨在提供流畅的使用体验，Easy Chat AI 不仅智能，而且真正直观。无论您是在聊天、学习还是工作，Easy Chat AI 都是您值得信赖的智能助手。 🌟 主要功能 互动式对话 享受自然流畅、如同真人般的对话体验。Ask AI & AI Chat 能够理解上下文，并针对几乎任何主题提供准确、周到的答案。 即时摘要 厌倦了冗长的段落？Ask AI & AI Chat 可快速将文本精简为清晰易懂的摘要，为您节省时间和精力。 您的专属助手 告别复杂问题的困扰。Ask AI 和 AI Chat 将一步步引导您，助您找到合适的解决方案。 流畅友好的用户界面 直观的设计确保每一次互动都轻松愉悦。 自适应学习 您使用得越多，Ask AI 和 AI Chat 就越智能，能够根据您的需求量身定制回复。 💡 为什么选择 Ask AI 和 AI Chat？ 专家解答触手可及：从常识到技术深度解析，甚至包括基于图像的查询。 提升您的工作效率：概括内容、解决问题，学习速度前所未有。 持续改进：我们不断升级 Easy Chat AI，融入最新的 AI 创新技术和真实用户反馈。 🔥 加入 AI 革命 Ask AI 和 AI Chat 不仅仅是一个聊天机器人，更是您的智能伙伴。 立即下载，体验 AI 赋能对话的未来！" [ref=f14e523] [cursor=pointer]:
+            - /url: /detail/9nnn5cswc75j?hl=zh-CN&gl=CN
+            - generic [ref=f14e524]:
+              - generic [ref=f14e528]:
+                - paragraph [ref=f14e529]: Deep AI & AI聊天写作助手
+                - generic [ref=f14e530]:
+                  - generic [ref=f14e531]: 应用
+                  - separator [ref=f14e532]
+                  - generic "高效工作" [ref=f14e533]
+              - generic [ref=f14e534]: 免费下载
+            - generic [ref=f14e537]:
+              - paragraph [ref=f14e538]: 🚀 Deep AI & AI聊天写作助手
+              - paragraph [ref=f14e539]: 欢迎使用基于 GPT-5 的开源聊天机器人——一款由 Gemini、Claude、GPT-4 和 GPT-5 等尖端模型驱动的新一代 AI 聊天机器人。
+              - paragraph [ref=f14e540]: Deep AI & AI聊天写作助手 将彻底革新您与 AI 的交互方式。它基于尖端技术打造，旨在提供流畅的使用体验，Easy Chat AI 不仅智能，而且真正直观。无论您是在聊天、学习还是工作，Easy Chat AI 都是您值得信赖的智能助手。
+              - paragraph [ref=f14e541]: 🌟 主要功能
+              - paragraph [ref=f14e542]: 互动式对话
+              - paragraph [ref=f14e543]: 享受自然流畅、如同真人般的对话体验。Ask AI & AI Chat 能够理解上下文，并针对几乎任何主题提供准确、周到的答案。
+              - paragraph [ref=f14e544]: 即时摘要
+              - paragraph [ref=f14e545]: 厌倦了冗长的段落？Ask AI & AI Chat 可快速将文本精简为清晰易懂的摘要，为您节省时间和精力。
+              - paragraph [ref=f14e546]: 您的专属助手
+              - paragraph [ref=f14e547]: 告别复杂问题的困扰。Ask AI 和 AI Chat 将一步步引导您，助您找到合适的解决方案。
+              - paragraph [ref=f14e548]: 流畅友好的用户界面
+              - paragraph [ref=f14e549]: 直观的设计确保每一次互动都轻松愉悦。
+              - paragraph [ref=f14e550]: 自适应学习
+              - paragraph [ref=f14e551]: 您使用得越多，Ask AI 和 AI Chat 就越智能，能够根据您的需求量身定制回复。
+              - paragraph [ref=f14e552]: 💡 为什么选择 Ask AI 和 AI Chat？
+              - paragraph [ref=f14e553]: 专家解答触手可及：从常识到技术深度解析，甚至包括基于图像的查询。
+              - paragraph [ref=f14e554]: 提升您的工作效率：概括内容、解决问题，学习速度前所未有。
+              - paragraph [ref=f14e555]: 持续改进：我们不断升级 Easy Chat AI，融入最新的 AI 创新技术和真实用户反馈。
+              - paragraph [ref=f14e556]: 🔥 加入 AI 革命
+              - paragraph [ref=f14e557]: Ask AI 和 AI Chat 不仅仅是一个聊天机器人，更是您的智能伙伴。
+              - paragraph [ref=f14e558]: 立即下载，体验 AI 赋能对话的未来！
+          - link "Omnigrid AI - All-in-one Chat Hub 评分为 4.5/5。 应用 高效工作 免费下载 Omnigrid AI 是一款全能AI助手工具，支持在一个工作区内同时调用 ChatGPT、Gemini、Claude、Grok 等多个主流大模型。 核心功能： • 多模型对话 – 同时使用 GPT、Gemini、Claude 等多个模型，无需多个账号或页面。 • 并列对比 – 对同一个问题，让不同模型同时回答，直观对比输出质量。 • 流式输出 + Markdown – 实时生成回答，完美支持代码高亮、表格、列表等 Markdown 格式。 • 本地历史记录 – 所有对话默认保存在本地，尊重隐私，也可开启云端同步。 • 提示词库 – 收藏和复用你常用的提示词，跨模型生效。 • 离线友好 – 支持自带 API Key 或使用内置选项，灵活可控。 [应用内购买功能] • 与 AI 无限畅聊 • 更准确、更详细的回答 • 无广告 • 多种提示词模板 免费套餐 每日限制 5 次对话 订阅套餐 • $54/年 • $9/月 • $2.5/周" [ref=f14e563] [cursor=pointer]:
+            - /url: /detail/9pkg556gft08?hl=zh-CN&gl=CN
+            - generic [ref=f14e564]:
+              - generic [ref=f14e568]:
+                - paragraph [ref=f14e569]: Omnigrid AI - All-in-one Chat Hub
+                - generic [ref=f14e570]:
+                  - generic "评分为 4.5/5。" [ref=f14e572]: "4.5"
+                  - separator [ref=f14e577]
+                  - generic [ref=f14e578]: 应用
+                  - separator [ref=f14e579]
+                  - generic "高效工作" [ref=f14e580]
+              - generic [ref=f14e581]: 免费下载
+            - generic [ref=f14e584]:
+              - paragraph [ref=f14e585]: Omnigrid AI 是一款全能AI助手工具，支持在一个工作区内同时调用 ChatGPT、Gemini、Claude、Grok 等多个主流大模型。
+              - paragraph [ref=f14e586]: 核心功能：
+              - paragraph [ref=f14e587]: • 多模型对话 – 同时使用 GPT、Gemini、Claude 等多个模型，无需多个账号或页面。
+              - paragraph [ref=f14e588]: • 并列对比 – 对同一个问题，让不同模型同时回答，直观对比输出质量。
+              - paragraph [ref=f14e589]: • 流式输出 + Markdown – 实时生成回答，完美支持代码高亮、表格、列表等 Markdown 格式。
+              - paragraph [ref=f14e590]: • 本地历史记录 – 所有对话默认保存在本地，尊重隐私，也可开启云端同步。
+              - paragraph [ref=f14e591]: • 提示词库 – 收藏和复用你常用的提示词，跨模型生效。
+              - paragraph [ref=f14e592]: • 离线友好 – 支持自带 API Key 或使用内置选项，灵活可控。
+              - paragraph [ref=f14e593]: "[应用内购买功能]"
+              - paragraph [ref=f14e594]: • 与 AI 无限畅聊
+              - paragraph [ref=f14e595]: • 更准确、更详细的回答
+              - paragraph [ref=f14e596]: • 无广告
+              - paragraph [ref=f14e597]: • 多种提示词模板
+              - paragraph [ref=f14e598]: 免费套餐
+              - paragraph [ref=f14e599]: 每日限制 5 次对话
+              - paragraph [ref=f14e600]: 订阅套餐
+              - paragraph [ref=f14e601]: • $54/年
+              - paragraph [ref=f14e602]: • $9/月
+              - paragraph [ref=f14e603]: • $2.5/周
+          - link [ref=f14e608] [cursor=pointer]:
+            - /url: /detail/9mwmknpvp3v1?hl=zh-CN&gl=CN
+            - generic [ref=f14e609]:
+              - generic [ref=f14e613]:
+                - paragraph [ref=f14e614]: AI Chatbot - Smart AI Assistant
+                - generic [ref=f14e615]:
+                  - generic "评分为 4.4/5。" [ref=f14e617]: "4.4"
+                  - separator [ref=f14e622]
+                  - generic [ref=f14e623]: 应用
+                  - separator [ref=f14e624]
+                  - generic "高效工作" [ref=f14e625]
+              - generic [ref=f14e626]: 免费下载
+            - generic [ref=f14e629]:
+              - paragraph [ref=f14e630]: AI Chatbot - Smart AI Assistant for Windows
+              - paragraph [ref=f14e631]: Supports leading AI models including GPT 4o, GPT 4.1, Claude 3.5, Gemini 1.5, Grok, Kimi, and more, giving you flexibility and powerful performance in one app.
+              - paragraph [ref=f14e632]: Available chat models include Grok, ChatGPT, Claude, Kimi, and Gemini, allowing you to choose the AI that best fits your needs.
+              - paragraph [ref=f14e633]: Open AI Chatbot Assistant is a powerful multimodal AI chatbot designed for Windows to help you chat, write, learn, analyze images, and work more efficiently. Get instant AI-powered responses directly on your desktop in a fast, simple, and convenient way.
+              - paragraph [ref=f14e634]: Whether you are writing content, solving problems, coding, analyzing images, or asking complex questions, Open AI Chatbot Assistant is your reliable AI companion for everyday tasks.
+              - paragraph [ref=f14e635]: Key Features
+              - paragraph [ref=f14e636]: 🧠 Multimodal AI support with text and image understanding
+              - paragraph [ref=f14e637]: 🤖 Access to multiple AI chat models including Grok, ChatGPT, Claude, Kimi, and Gemini
+              - paragraph [ref=f14e638]: 💬 Intelligent AI chatbot with natural, human-like responses
+              - paragraph [ref=f14e639]: ✍️ Writing assistance for emails, articles, reports, and notes
+              - paragraph [ref=f14e640]: 🖼️ Image understanding and visual analysis
+              - paragraph [ref=f14e641]: 💻 Coding help with explanations, debugging, and problem solving
+              - paragraph [ref=f14e642]: 📚 Quick answers for study, research, and learning
+              - paragraph [ref=f14e643]: ⚡ Fast, lightweight, and optimized desktop performance
+              - paragraph [ref=f14e644]: "Ideal For:"
+              - paragraph [ref=f14e645]: Students and learners
+              - paragraph [ref=f14e646]: Developers and programmers
+              - paragraph [ref=f14e647]: Writers and content creators
+              - paragraph [ref=f14e648]: Business professionals
+              - paragraph [ref=f14e649]: Designers and creatives
+              - paragraph [ref=f14e650]: Anyone who wants a powerful AI assistant on Windows
+              - paragraph [ref=f14e651]: Subscription Information
+              - paragraph [ref=f14e652]: The app is free to download. A Pro subscription is required to unlock all advanced features, including access to premium AI models and full multimodal capabilities.
+              - paragraph [ref=f14e653]: Pricing and subscription details are clearly displayed inside the app before purchase.
+              - paragraph [ref=f14e654]: "Available plans: Monthly Plan and Yearly Plan"
+              - paragraph [ref=f14e655]: Download Open AI Chatbot Assistant today and experience a smarter, multimodal way to chat, write, code, analyze, and get instant answers on Windows.
+          - link [ref=f14e660] [cursor=pointer]:
+            - /url: /detail/9msv5ldkpnlf?hl=zh-CN&gl=CN
+            - generic [ref=f14e661]:
+              - generic [ref=f14e665]:
+                - paragraph [ref=f14e666]: G AI
+                - generic [ref=f14e667]:
+                  - generic "评分为 4.9/5。" [ref=f14e669]: "4.9"
+                  - separator [ref=f14e674]
+                  - generic [ref=f14e675]: 应用
+                  - separator [ref=f14e676]
+                  - generic "高效工作" [ref=f14e677]
+              - generic [ref=f14e678]: 免费下载
+            - generic [ref=f14e681]:
+              - paragraph [ref=f14e682]: G AI powered by Google Gemini models, delivers a modern chat experience designed to improve productivity, creativity, and technical workflows. Built for Windows users, it provides fast, intelligent responses to support both everyday tasks and complex projects.
+              - paragraph [ref=f14e683]: G AI adapts to your needs, whether you are drafting content, generating code, analyzing documents, or exploring new ideas. The experience is designed to feel natural, responsive, and efficient.
+              - paragraph [ref=f14e684]: Image Generation lets you create visual content from simple text prompts. You can generate concept images, creative drafts, illustrations, and visual ideas directly inside the app, helping you move from idea to image more quickly.
+              - paragraph [ref=f14e685]: AI Cleaner lets you describe cleanup tasks in natural language. The app helps identify unnecessary files, organize storage locations, and simplify file management so routine cleanup tasks become faster and easier.
+              - paragraph [ref=f14e686]: AI Translate lets you translate text using natural language AI assistance. You can translate words, sentences, and longer content across multiple languages directly inside the app, helping make communication, reading, and writing easier and more efficient.
+              - paragraph [ref=f14e687]: "Free trial function description:"
+              - paragraph [ref=f14e688]: G AI provides 5 free conversation trials per day.
+              - paragraph [ref=f14e689]: After exceeding the limit, you need to purchase a Pro account to remove the AI chat limit.
+          - link [ref=f14e694] [cursor=pointer]:
+            - /url: /detail/9n3ff8j3d7zr?hl=zh-CN&gl=CN
+            - generic [ref=f14e695]:
+              - generic [ref=f14e699]:
+                - paragraph [ref=f14e700]: Chat AI Assistant - Ask Me Anything
+                - generic [ref=f14e701]:
+                  - generic "评分为 3.4/5。" [ref=f14e703]: "3.4"
+                  - separator [ref=f14e708]
+                  - generic [ref=f14e709]: 应用
+                  - separator [ref=f14e710]
+                  - generic "高效工作" [ref=f14e711]
+              - generic [ref=f14e712]: 免费下载
+            - generic [ref=f14e715]:
+              - paragraph [ref=f14e716]: Chat AI Assistant is developed on GPT-4 and brings AI to your PC
+              - paragraph [ref=f14e717]: "It can help you:"
+              - paragraph [ref=f14e718]: "- Brainstorming ideas"
+              - paragraph [ref=f14e719]: "- Write essays"
+              - paragraph [ref=f14e720]: "- Save your chats for late us"
+              - paragraph [ref=f14e721]: "- Coding questions"
+              - paragraph [ref=f14e722]: "- Explanation of different concepts"
+              - paragraph [ref=f14e723]: "- Learning a new language"
+              - paragraph [ref=f14e724]: "- Casual conversation with intelligent AI"
+              - paragraph [ref=f14e725]: "- Find ideas for an essay or report"
+              - paragraph [ref=f14e726]: "- Generate boilerplate code snippets"
+              - paragraph [ref=f14e727]: "- Find errors in code"
+              - paragraph [ref=f14e728]: "- Reformat and correct your grammar"
+              - paragraph [ref=f14e729]: "- Generate common business documents"
+              - paragraph [ref=f14e730]: "Is developed on models such as :"
+              - paragraph [ref=f14e731]: "- GPT-4o"
+              - paragraph [ref=f14e732]: "- GPT-4"
+              - paragraph [ref=f14e733]: Uses large language models that are trained on large text that enable the models to inhibit human-like intelligence when responding to prompts.
+              - paragraph [ref=f14e734]: Where GPT stands for Generative Pre-trained Transformer neural network, providing you with a way to chat with AI on Windows 10 and Windows 11.
+              - paragraph [ref=f14e735]: What’s included?
+              - paragraph [ref=f14e736]: The free version of Fusion comes with free limited credits that you can use to try out Fusion Chat and understand how it works.
+              - paragraph [ref=f14e737]: The free account comes with 50 Credits, which are equivalent to 5000 words generated.
+              - paragraph [ref=f14e738]: Premium Fusion Chat Premium includes the following features which have high availability, with blazing first AI responses.
+              - paragraph [ref=f14e739]: Premium accounts start at $4.99 with 1500 credits which is equivalent to 150,000 words generated/month.
+          - link "深度AI写作助手 — 智能对话和绘画生成器软件 应用 高效工作 免费下载 深度AI写作助手：你的智能AI助手与桌面工具 通过你的个人聊天助手，全面提升日常工作效率。这款AI聊天机器人旨在通过AI对话和图像生成功能，将你的所有创意变为现实。无论是在头脑风暴、查询信息，还是仅仅出于好奇，这款AI助手都能为你提供即时响应，让你在交流中倍感愉悦。 无限AI对话 通过直观且快速的交互，体验全新的AI对话方式。无论你需要一个处理复杂任务的虚拟助手，还是一个帮你激发灵感的私人助理，我们的技术都能提供即时且深思熟虑的回答。从简短的咨询到长篇的AI文本交流，对话过程自然流畅。 高级AI翻译与沟通 轻松打破语言障碍。利用内置的AI翻译功能，你可以理解全球内容，或在任何虚拟聊天过程中优化你的沟通表达。 创意图像生成 将你的构思转化为惊艳的视觉效果。只需输入提示词，引擎便会将你的想法变为现实。凭借多种艺术风格和分辨率选项，生成独特的图像已成为你AI桌面体验中自然的一部分。 智能聊天记录 不再错过任何灵光一现的时刻。系统会存储你之前所有的对话内容，确保你每次回到对话时都能拥有顺畅、便捷的体验。 如果你正在寻找一种在电脑上与AI可靠交流的方式，深度AI写作助手将尖端智能与用户友好界面完美结合。 注意：部分功能仅限订阅用户使用。在订阅之前，请查阅： https://amplify-it.com/privacy https://amplify-it.com/tos" [ref=f14e744] [cursor=pointer]:
+            - /url: /detail/9nnbqt0rgml7?hl=zh-CN&gl=CN
+            - generic [ref=f14e745]:
+              - generic [ref=f14e749]:
+                - paragraph [ref=f14e750]: 深度AI写作助手 — 智能对话和绘画生成器软件
+                - generic [ref=f14e751]:
+                  - generic [ref=f14e752]: 应用
+                  - separator [ref=f14e753]
+                  - generic "高效工作" [ref=f14e754]
+              - generic [ref=f14e755]: 免费下载
+            - generic [ref=f14e758]:
+              - paragraph [ref=f14e759]: 深度AI写作助手：你的智能AI助手与桌面工具
+              - paragraph [ref=f14e760]: 通过你的个人聊天助手，全面提升日常工作效率。这款AI聊天机器人旨在通过AI对话和图像生成功能，将你的所有创意变为现实。无论是在头脑风暴、查询信息，还是仅仅出于好奇，这款AI助手都能为你提供即时响应，让你在交流中倍感愉悦。
+              - paragraph [ref=f14e761]: 无限AI对话
+              - paragraph [ref=f14e762]: 通过直观且快速的交互，体验全新的AI对话方式。无论你需要一个处理复杂任务的虚拟助手，还是一个帮你激发灵感的私人助理，我们的技术都能提供即时且深思熟虑的回答。从简短的咨询到长篇的AI文本交流，对话过程自然流畅。
+              - paragraph [ref=f14e763]: 高级AI翻译与沟通
+              - paragraph [ref=f14e764]: 轻松打破语言障碍。利用内置的AI翻译功能，你可以理解全球内容，或在任何虚拟聊天过程中优化你的沟通表达。
+              - paragraph [ref=f14e765]: 创意图像生成
+              - paragraph [ref=f14e766]: 将你的构思转化为惊艳的视觉效果。只需输入提示词，引擎便会将你的想法变为现实。凭借多种艺术风格和分辨率选项，生成独特的图像已成为你AI桌面体验中自然的一部分。
+              - paragraph [ref=f14e767]: 智能聊天记录
+              - paragraph [ref=f14e768]: 不再错过任何灵光一现的时刻。系统会存储你之前所有的对话内容，确保你每次回到对话时都能拥有顺畅、便捷的体验。
+              - paragraph [ref=f14e769]: 如果你正在寻找一种在电脑上与AI可靠交流的方式，深度AI写作助手将尖端智能与用户友好界面完美结合。
+              - paragraph [ref=f14e770]: 注意：部分功能仅限订阅用户使用。在订阅之前，请查阅：
+              - paragraph [ref=f14e771]: https://amplify-it.com/privacy
+              - paragraph [ref=f14e772]: https://amplify-it.com/tos
+          - link [ref=f14e777] [cursor=pointer]:
+            - /url: /detail/9njz51v8ntdl?hl=zh-CN&gl=CN
+            - generic [ref=f14e778]:
+              - generic [ref=f14e782]:
+                - paragraph [ref=f14e783]: Translator - GPT
+                - generic [ref=f14e784]:
+                  - generic [ref=f14e785]: 应用
+                  - separator [ref=f14e786]
+                  - generic "高效工作" [ref=f14e787]
+              - generic [ref=f14e789]:
+                - generic [ref=f14e790]: "-33%"
+                - generic [ref=f14e791]:
+                  - generic "折扣前的上一价格： ¥35.00" [ref=f14e792]: ¥35.00
+                  - generic "折扣后的新价格： ¥23.45" [ref=f14e793]: ¥23.45
+            - generic [ref=f14e795]:
+              - paragraph [ref=f14e796]: 突破语言障碍，体验超越简单逐字翻译的AI精准翻译。Translator - GPT运用先进的人工智能技术，提供具有语境意识、自然流畅的翻译，完美保留原文的含义、语气和文化内涵。
+              - paragraph [ref=f14e797]: 为什么您需要TRANSLATOR - GPT
+              - paragraph [ref=f14e798]: 传统翻译工具往往产生生硬的字面翻译，忽略文化背景。Translator - GPT通过深入理解文本的深层语境来解决这一问题，确保您的信息在任何语言中都能自然表达。无论您是在翻译商业文档、创意内容还是日常对话，都能即时获得专业级的翻译效果。
+              - paragraph [ref=f14e799]: 核心功能
+              - paragraph [ref=f14e800]: • AI驱动翻译：运用Llama3、Mistral和Groq等GPT模型，提供卓越的准确性
+              - paragraph [ref=f14e801]: • 多语言支持：支持数十种语言互译，具备智能源语言检测功能
+              - paragraph [ref=f14e802]: • 语境感知处理：准确理解习语、文化典故和语境含义
+              - paragraph [ref=f14e803]: • 实时翻译：输入时即时获得翻译结果，配备实时预览
+              - paragraph [ref=f14e804]: • 灵活的AI后端：可选择云端服务（OpenAI、Azure、Groq）或本地离线运行
+              - paragraph [ref=f14e805]: • GPU加速：利用显卡进行更快速的本地处理
+              - paragraph [ref=f14e806]: • 字幕翻译：导入并翻译字幕文件，保留时间轴信息
+              - paragraph [ref=f14e807]: • 批量处理：通过智能缓存高效翻译多个文本片段
+              - paragraph [ref=f14e808]: • 翻译记忆：内置缓存功能记住之前的翻译，确保译文一致性
+              - paragraph [ref=f14e809]: 专业特性
+              - paragraph [ref=f14e810]: 智能复制粘贴：一键将翻译文本复制到剪贴板
+              - paragraph [ref=f14e811]: 进度跟踪：可视化指示器让您随时了解较长任务的进展
+              - paragraph [ref=f14e812]: 停止与恢复：可在翻译过程中暂停并从中断处继续
+              - paragraph [ref=f14e813]: 质量优化：自动重试逻辑确保翻译结果准确
+              - paragraph [ref=f14e814]: 完美适用于
+              - paragraph [ref=f14e815]: 商务专业人士：翻译电子邮件、演示文稿和文档，实现国际化沟通
+              - paragraph [ref=f14e816]: 内容创作者：为全球受众本地化内容，提供自然流畅的翻译
+              - paragraph [ref=f14e817]: 学生与研究人员：理解外文材料并翻译研究论文
+              - paragraph [ref=f14e818]: 字幕翻译人员：专业字幕工作，保留时间线信息
+              - paragraph [ref=f14e819]: 旅行者：快速翻译文档、菜单和对话
+              - paragraph [ref=f14e820]: 语言学习者：对比原文与译文，提升语言技能
+              - paragraph [ref=f14e821]: 技术优势
+              - paragraph [ref=f14e822]: 与基础工具不同，Translator - GPT使用神经语言模型来理解语境、语法和文化细微差别。支持云端AI（最高准确度）和本地模型（隐私保护与离线使用）。GPU加速确保即使处理复杂翻译也能快速完成。
+              - paragraph [ref=f14e823]: 智能缓存系统会记住您的翻译，为重复的短语提供即时结果，同时保持译文的一致性。内置语言检测功能可自动识别源语言。
+              - paragraph [ref=f14e824]: 隐私与灵活性
+              - paragraph [ref=f14e825]: 使用本地AI模型完全离线运行翻译——您的敏感文档永远不会离开设备。或者利用强大的云端AI服务获得最高质量。您可以在隐私、速度和准确性之间自由选择平衡点。
+              - paragraph [ref=f14e826]: 体验AI驱动、语境感知的翻译技术，让全球沟通变得轻松自如。
+          - link "CodexApp Pro 应用 高效工作 免费下载 Für die Verwendung der CodexApp Pro ist mindestens Windach-Version 24.10.3 nötig. Die neue CodexApp Pro vereint ab sofort alle Einzelfunktionen der bereits bekannten Codex Apps in einer einzigen Anwendung. Es ist kein Wechseln der App für die Nutzung aller Anwendungen mehr nötig. Somit entfällt z.B. mehrfaches Suchen und Filtern der Projekte. Profitieren Sie von der komfortablen Arbeitsweise und den Erweiterungen und Neuheiten für den optimalen Überblick über alle Baustellen, u.a. durch die Ergänzung der Infoboard-Anzeige Ihrer Projekt- und Auftragsplanungen. Die bewährte Codex PhotoApp ist ebenfalls in die neue CodexApp Pro integriert und zusätzlich deutlich verbessert und erweitert worden. Z.B. können die Photos aller Kollegen eingesehen werden, denn es stehen ab sofort geräteübergreifend alle Baustellen-Bilder zur Verfügung." [ref=f14e831] [cursor=pointer]:
+            - /url: /detail/9p0p6m0l41j8?hl=zh-CN&gl=CN
+            - generic [ref=f14e832]:
+              - generic [ref=f14e836]:
+                - paragraph [ref=f14e837]: CodexApp Pro
+                - generic [ref=f14e838]:
+                  - generic [ref=f14e839]: 应用
+                  - separator [ref=f14e840]
+                  - generic "高效工作" [ref=f14e841]
+              - generic [ref=f14e842]: 免费下载
+            - generic [ref=f14e845]:
+              - paragraph [ref=f14e846]: Für die Verwendung der CodexApp Pro ist mindestens Windach-Version 24.10.3 nötig.
+              - paragraph [ref=f14e847]: Die neue CodexApp Pro vereint ab sofort alle Einzelfunktionen der bereits bekannten Codex Apps in einer einzigen Anwendung. Es ist kein Wechseln der App für die Nutzung aller Anwendungen mehr nötig. Somit entfällt z.B. mehrfaches Suchen und Filtern der Projekte. Profitieren Sie von der komfortablen Arbeitsweise und den Erweiterungen und Neuheiten für den optimalen Überblick über alle Baustellen, u.a. durch die Ergänzung der Infoboard-Anzeige Ihrer Projekt- und Auftragsplanungen.
+              - paragraph [ref=f14e848]: Die bewährte Codex PhotoApp ist ebenfalls in die neue CodexApp Pro integriert und zusätzlich deutlich verbessert und erweitert worden. Z.B. können die Photos aller Kollegen eingesehen werden, denn es stehen ab sofort geräteübergreifend alle Baustellen-Bilder zur Verfügung.
+          - link "AI Chat Bot - Multiple AI chats 应用 高效工作 免费下载 获取即时答案、创意想法、草稿电子邮件、总结文本等等——由包括 OpenAI 的 ChatGPT、Google Gemini 和 Anthropic Claude 在内的广泛高级 AI 模型提供支持。 可用的 AI 模型 ▪️ ChatGPT（GPT-5：OpenAI 最先进的语言模型， ideal for 生成创意内容、解决问题和进行有趣的对话。 ▪️ Claude 3 Opus：Anthropic 的强大 AI 模型，旨在进行细腻和深入的分析。 ▪️ Gemini 2.0 Flash：一个快速高效的 AI 模型，用于实时聊天和快速响应。 ▪️ DeepSeek AI（即将推出） 关键功能 ▪️ 轻松切换模型：无缝切换不同 AI 模型，如 ChatGPT、Claude 和 Gemini，以满足您的需求——无论是创意、生产力还是休闲对话。 ▪️ 多语言支持：使用您的母语进行交流 ▪️ 聊天记录：跟踪以前的聊天记录，以便快速访问和易于参考。 ▪️ 免费开始：使用应用程序，无需成本，提供基本功能的免费计划。 定价 ▪️ 免费：开始聊天，有限制地访问 AI 模型和功能。 ▪️ Pro：解锁所有 AI 模型的无限制访问，包括 ChatGPT 5、Claude 和 Gemini 下载 AI 聊天机器人今天，并体验 AI 驱动的对话的未来，无论您是寻找 ChatGPT 或其他尖端模型的帮助！" [ref=f14e853] [cursor=pointer]:
+            - /url: /detail/9p8jczc45twq?hl=zh-CN&gl=CN
+            - generic [ref=f14e854]:
+              - generic [ref=f14e858]:
+                - paragraph [ref=f14e859]: AI Chat Bot - Multiple AI chats
+                - generic [ref=f14e860]:
+                  - generic [ref=f14e861]: 应用
+                  - separator [ref=f14e862]
+                  - generic "高效工作" [ref=f14e863]
+              - generic [ref=f14e864]: 免费下载
+            - generic [ref=f14e867]:
+              - paragraph [ref=f14e868]: 获取即时答案、创意想法、草稿电子邮件、总结文本等等——由包括 OpenAI 的 ChatGPT、Google Gemini 和 Anthropic Claude 在内的广泛高级 AI 模型提供支持。
+              - paragraph [ref=f14e869]: 可用的 AI 模型
+              - paragraph [ref=f14e870]: ▪️ ChatGPT（GPT-5：OpenAI 最先进的语言模型， ideal for 生成创意内容、解决问题和进行有趣的对话。
+              - paragraph [ref=f14e871]: ▪️ Claude 3 Opus：Anthropic 的强大 AI 模型，旨在进行细腻和深入的分析。
+              - paragraph [ref=f14e872]: ▪️ Gemini 2.0 Flash：一个快速高效的 AI 模型，用于实时聊天和快速响应。
+              - paragraph [ref=f14e873]: ▪️ DeepSeek AI（即将推出）
+              - paragraph [ref=f14e874]: 关键功能
+              - paragraph [ref=f14e875]: ▪️ 轻松切换模型：无缝切换不同 AI 模型，如 ChatGPT、Claude 和 Gemini，以满足您的需求——无论是创意、生产力还是休闲对话。
+              - paragraph [ref=f14e876]: ▪️ 多语言支持：使用您的母语进行交流
+              - paragraph [ref=f14e877]: ▪️ 聊天记录：跟踪以前的聊天记录，以便快速访问和易于参考。
+              - paragraph [ref=f14e878]: ▪️ 免费开始：使用应用程序，无需成本，提供基本功能的免费计划。
+              - paragraph [ref=f14e879]: 定价
+              - paragraph [ref=f14e880]: ▪️ 免费：开始聊天，有限制地访问 AI 模型和功能。
+              - paragraph [ref=f14e881]: ▪️ Pro：解锁所有 AI 模型的无限制访问，包括 ChatGPT 5、Claude 和 Gemini
+              - paragraph [ref=f14e882]: 下载 AI 聊天机器人今天，并体验 AI 驱动的对话的未来，无论您是寻找 ChatGPT 或其他尖端模型的帮助！
+          - link [ref=f14e887] [cursor=pointer]:
+            - /url: /detail/9p4j455pnl77?hl=zh-CN&gl=CN
+            - generic [ref=f14e888]:
+              - generic [ref=f14e892]:
+                - paragraph [ref=f14e893]: Codex Arbeitszeit
+                - generic [ref=f14e894]:
+                  - generic [ref=f14e895]: 应用
+                  - separator [ref=f14e896]
+                  - generic "高效工作" [ref=f14e897]
+              - generic [ref=f14e898]: 免费下载
+            - generic [ref=f14e901]:
+              - paragraph [ref=f14e902]: Mit dieser App erfassen Ihre Baustellenmitarbeiter einfach, sauber und übersichtlich Ihre Arbeitszeiten direkt auf der Baustelle zu den jeweiligen Projekten. Aber auch Ihre Büromitarbeiter können mit dieser App problemlos Ihre Arbeitszeiten digital erfassen.
+              - paragraph [ref=f14e903]: Die ArbeitszeitApp ist personenbezogen je Endgerät und kann nur zusammen mit der CODEX-Software WinDach eingesetzt werden.
+              - paragraph [ref=f14e904]: Sie starten die ArbeitszeitApp auf Ihrem iOS Handy oder Tablet, Ihrem Android Handy oder Tablet oder über den Desktop Ihres PCs. Es öffnet sich Ihre Buchungsmaske und Sie starten den Beginn Ihrer Arbeitszeit über den Button „Arbeitszeit starten“. Sobald Ihr Arbeitstag beendet ist, beenden Sie auch in der App Ihre Zeiterfassung per Klick auf den Button „Arbeitszeit beenden“.
+              - paragraph [ref=f14e905]: Ihre so erfassten Zeiten werden direkt automatisiert ans Büro geschickt, es ist kein separater Export nötig. Diese Zeiten werden nach den zuvor getätigten Grundeinstellungen auf das gewünschte Projekt und die hinterlegte Lohnart gebucht und können über die Windach-Nachkalkulation ausgewertet werden.
+              - paragraph [ref=f14e906]: Bei Fragen sprechen Sie uns gerne an.
+          - link [ref=f14e911] [cursor=pointer]:
+            - /url: /detail/9p7rcfxcb468?hl=zh-CN&gl=CN
+            - generic [ref=f14e912]:
+              - generic [ref=f14e916]:
+                - paragraph [ref=f14e917]: Codex Quota
+                - generic [ref=f14e918]:
+                  - generic [ref=f14e919]: 应用
+                  - separator [ref=f14e920]
+                  - generic "实用程序与工具" [ref=f14e921]
+              - generic [ref=f14e922]: ¥28.00
+            - generic [ref=f14e925]:
+              - paragraph [ref=f14e926]: "Codex Quota puts your remaining Codex quota where you can actually see it: docked into the Windows 11 taskbar, as if it were part of the operating system."
+              - paragraph [ref=f14e927]: No more opening a browser, a terminal, or a settings page to check how much you have left. The number is just there — quiet, precise, and always up to date.
+              - paragraph [ref=f14e928]: WHY YOU'LL LIKE IT
+              - paragraph [ref=f14e929]: • Lives in the taskbar. A borderless, always-on indicator docked left, center, or right of your taskbar. It looks native because it renders directly onto the taskbar surface — not a floating desktop widget.
+              - paragraph [ref=f14e930]: • Three display styles.
+              - paragraph [ref=f14e931]: "– Minimal: just the number (81%, 40K / 50K, or 10,000 used)."
+              - paragraph [ref=f14e932]: "– Circular: a Fluent progress ring with the percentage in the center."
+              - paragraph [ref=f14e933]: "– Bar: a compact, battery-style progress bar."
+              - paragraph [ref=f14e934]: • Reads your real quota. Connects through the same ChatGPT login Codex already uses, reading remaining, used, total, and % left, with the last sync time.
+              - paragraph [ref=f14e935]: • Smart notifications. Optional toasts at 80 / 90 / 95 / 99% used, plus exhausted and reset alerts, so a limit never surprises you mid-task.
+              - paragraph [ref=f14e936]: • Feels like Windows. Follows your light/dark theme and Windows accent color automatically, with a Mica settings window and Segoe UI Variable typography.
+              - paragraph [ref=f14e937]: • Featherweight. Timer-driven background polling, cached readings for instant startup, and near-zero idle CPU and RAM. No Electron, no webview — pure native WinUI 3 and Win32.
+              - paragraph [ref=f14e938]: • Out of your way. Invisible when idle, optional system-tray icon (Refresh / Settings / Pause / Quit), and optional launch on sign-in.
+              - paragraph [ref=f14e939]: TRY BEFORE YOU BUY
+              - paragraph [ref=f14e940]: Codex Quota includes a free trial so you can see it live on your own taskbar before purchasing. One simple one-time purchase — no subscription.
+              - paragraph [ref=f14e941]: REQUIREMENTS
+              - paragraph [ref=f14e942]: Windows 10 version 2004 (build 19041) or later; Windows 11 recommended. You sign in with your existing ChatGPT / Codex account to read your quota.
+          - link [ref=f14e947] [cursor=pointer]:
+            - /url: /detail/9n9pcnfvmbtv?hl=zh-CN&gl=CN
+            - generic [ref=f14e948]:
+              - generic [ref=f14e952]:
+                - paragraph [ref=f14e953]: Scripture Codex
+                - generic [ref=f14e954]:
+                  - generic [ref=f14e955]: 应用
+                  - separator [ref=f14e956]
+                  - generic "书籍与参考" [ref=f14e957]
+              - generic [ref=f14e958]: 免费下载
+            - generic [ref=f14e961]:
+              - paragraph [ref=f14e962]: Scripture Codex is a distraction-free Bible reader for Windows, built for serious study, quiet reading, and church use alike.
+              - paragraph [ref=f14e963]: Read the King James Version alongside the original Hebrew Old Testament, Greek New Testament, and Septuagint. Open multiple translations in tabs, arrange panels to match your workflow, and jump to any verse in seconds with the Ctrl+G quick-navigation bar.
+              - paragraph [ref=f14e964]: Study tools
+              - paragraph [ref=f14e965]: Tap any verse for a full analysis — original text, interlinear breakdown, word usage, cross-references, and AI-generated commentary. Browse the Strong's Concordance and look up words across every occurrence in Scripture.
+              - paragraph [ref=f14e966]: Bible Codes
+              - paragraph [ref=f14e967]: Search for equidistant letter sequences (ELS) across the Hebrew text with an adjustable skip range, multi-term highlighting, and a paginated letter grid.
+              - paragraph [ref=f14e968]: Reading Calendar
+              - paragraph [ref=f14e969]: Build and track personal reading plans on a monthly calendar. Import and export plans as standard .ics files compatible with any calendar app.
+              - paragraph [ref=f14e970]: Songs & Hymns
+              - paragraph [ref=f14e971]: Manage a personal song library with lyrics editing and chord transposition. Browse hundreds of public-domain hymns and project any song directly to a second screen.
+              - paragraph [ref=f14e972]: Notes & Books
+              - paragraph [ref=f14e973]: Write rich notes with a freeform canvas editor. Import and read books in PDF and EPUB format alongside your Bible.
+              - paragraph [ref=f14e974]: Artifacts
+              - paragraph [ref=f14e975]: Browse the Leningrad Codex — the oldest complete Hebrew Bible manuscript — with high-resolution folio images. Add your own artifact collections with linked images and documents.
+              - paragraph [ref=f14e976]: Projection
+              - paragraph [ref=f14e977]: Send verses, song lyrics, notes, and images to a second display for church or group use. Manage a projection queue and switch slides from the app.
+              - paragraph [ref=f14e978]: Drawing & Diagrams
+              - paragraph [ref=f14e979]: Sketch theology charts and Bible timelines on a freeform canvas with shapes, connectors, and text. Import .drawio files.
+              - paragraph [ref=f14e980]: AI Assistants
+              - paragraph [ref=f14e981]: Chat with Claude, Microsoft Copilot, or a local AI model directly inside the app for study questions, commentary, and translation help.
+              - paragraph [ref=f14e982]: Group Sync (optional account)
+              - paragraph [ref=f14e983]: Share Bibles, notes, songs, books, artifacts, and calendars with a group. Content syncs automatically in the background and is available offline from cache.
+              - paragraph [ref=f14e984]: Layouts & Perspectives
+              - paragraph [ref=f14e985]: Save and switch between named panel layouts — resize, pin, and rearrange the explorer, reader, references, interlinear, calendar, and AI panels independently.
+          - link "Codex Vitals 应用 开发人员工具 免费下载 Codex Vitals is an unofficial, local-first Windows tray utility for people who use multiple Codex accounts. See best-effort usage and reset windows in one dashboard, label and group accounts, and switch the active local account used by Codex CLI and the Codex experience in the ChatGPT desktop app. Because Codex session history is stored on the device, you can resume local sessions after switching accounts. Profiles, usage snapshots, aliases, and settings stay on this device. The app uses your existing local Codex/OpenAI authentication to request usage information. It does not automate account cycling, share accounts, change service limits, or upload tokens to RamterStudio. A compatible ChatGPT/OpenAI account and Codex CLI are required. Codex Vitals is not affiliated with or endorsed by OpenAI." [ref=f14e990] [cursor=pointer]:
+            - /url: /detail/9n0zcbrc20hv?hl=zh-CN&gl=CN
+            - generic [ref=f14e991]:
+              - generic [ref=f14e995]:
+                - paragraph [ref=f14e996]: Codex Vitals
+                - generic [ref=f14e997]:
+                  - generic [ref=f14e998]: 应用
+                  - separator [ref=f14e999]
+                  - generic "开发人员工具" [ref=f14e1000]
+              - generic [ref=f14e1001]: 免费下载
+            - generic [ref=f14e1004]:
+              - paragraph [ref=f14e1005]: Codex Vitals is an unofficial, local-first Windows tray utility for people who use multiple Codex accounts.
+              - paragraph [ref=f14e1006]: See best-effort usage and reset windows in one dashboard, label and group accounts, and switch the active local account used by Codex CLI and the Codex experience in the ChatGPT desktop app. Because Codex session history is stored on the device, you can resume local sessions after switching accounts.
+              - paragraph [ref=f14e1007]: Profiles, usage snapshots, aliases, and settings stay on this device. The app uses your existing local Codex/OpenAI authentication to request usage information. It does not automate account cycling, share accounts, change service limits, or upload tokens to RamterStudio.
+              - paragraph [ref=f14e1008]: A compatible ChatGPT/OpenAI account and Codex CLI are required. Codex Vitals is not affiliated with or endorsed by OpenAI.
+          - link "codex管家 应用 实用程序与工具 免费下载 Accounts for Codex 是一款用于管理 Codex 登录账户的桌面工具。 它可帮助你查看和切换已配置的账户，管理账户凭据，并快速确认当前使用的登录状态。" [ref=f14e1013] [cursor=pointer]:
+            - /url: /detail/9n481hbjhsw0?hl=zh-CN&gl=CN
+            - generic [ref=f14e1014]:
+              - generic [ref=f14e1018]:
+                - paragraph [ref=f14e1019]: codex管家
+                - generic [ref=f14e1020]:
+                  - generic [ref=f14e1021]: 应用
+                  - separator [ref=f14e1022]
+                  - generic "实用程序与工具" [ref=f14e1023]
+              - generic [ref=f14e1024]: 免费下载
+            - generic [ref=f14e1027]:
+              - paragraph [ref=f14e1028]: Accounts for Codex 是一款用于管理 Codex 登录账户的桌面工具。
+              - paragraph [ref=f14e1029]: 它可帮助你查看和切换已配置的账户，管理账户凭据，并快速确认当前使用的登录状态。
+          - link "Codex Usage Dock 应用 开发人员工具 免费下载 Codex Usage Dock is an extension for the PowerToys Command Palette Dock that lets you see your Codex usage limits directly at the top of your screen. At a glance, the Dock shows how much of your five-hour and weekly usage limits remain, when both limits will reset, and whether the local Codex connection is active. The data is refreshed every minute. The extension communicates exclusively with the locally installed Codex app server and uses local Codex session metadata as a fallback. No usage data, analytics, or telemetry is ever sent to the developer. **Requirements:** * Windows 11 * Microsoft PowerToys with Command Palette * Codex installed and signed in After installation, open PowerToys Command Palette, enable the **Codex Usage** extension, and add its corresponding band to the Dock." [ref=f14e1034] [cursor=pointer]:
+            - /url: /detail/9nfcpjxqg9fg?hl=zh-CN&gl=CN
+            - generic [ref=f14e1035]:
+              - generic [ref=f14e1039]:
+                - paragraph [ref=f14e1040]: Codex Usage Dock
+                - generic [ref=f14e1041]:
+                  - generic [ref=f14e1042]: 应用
+                  - separator [ref=f14e1043]
+                  - generic "开发人员工具" [ref=f14e1044]
+              - generic [ref=f14e1045]: 免费下载
+            - generic [ref=f14e1048]:
+              - paragraph [ref=f14e1049]: Codex Usage Dock is an extension for the PowerToys Command Palette Dock that lets you see your Codex usage limits directly at the top of your screen. At a glance, the Dock shows how much of your five-hour and weekly usage limits remain, when both limits will reset, and whether the local Codex connection is active.
+              - paragraph [ref=f14e1050]: The data is refreshed every minute. The extension communicates exclusively with the locally installed Codex app server and uses local Codex session metadata as a fallback. No usage data, analytics, or telemetry is ever sent to the developer.
+              - paragraph [ref=f14e1051]: "**Requirements:**"
+              - paragraph [ref=f14e1052]: "* Windows 11"
+              - paragraph [ref=f14e1053]: "* Microsoft PowerToys with Command Palette"
+              - paragraph [ref=f14e1054]: "* Codex installed and signed in"
+              - paragraph [ref=f14e1055]: After installation, open PowerToys Command Palette, enable the **Codex Usage** extension, and add its corresponding band to the Dock.
+          - link "CodexStats 应用 开发人员工具 免费下载 CodexStats is a simple Windows desktop dashboard for checking your local Codex usage. The app reads Codex session files stored on your PC and shows token usage, question categories, work steps, and attachment description quality in an easy-to-read dashboard. You can review which questions used the most tokens, see usage trends by date, check category charts, and get practical suggestions for writing clearer prompts while reducing unnecessary token usage. CodexStats is designed as a local-first tool. The current version analyzes data on your device and does not upload your Codex session contents to an external server." [ref=f14e1060] [cursor=pointer]:
+            - /url: /detail/9nrrxpzh75p4?hl=zh-CN&gl=CN
+            - generic [ref=f14e1061]:
+              - generic [ref=f14e1065]:
+                - paragraph [ref=f14e1066]: CodexStats
+                - generic [ref=f14e1067]:
+                  - generic [ref=f14e1068]: 应用
+                  - separator [ref=f14e1069]
+                  - generic "开发人员工具" [ref=f14e1070]
+              - generic [ref=f14e1071]: 免费下载
+            - generic [ref=f14e1074]:
+              - paragraph [ref=f14e1075]: CodexStats is a simple Windows desktop dashboard for checking your local Codex usage.
+              - paragraph [ref=f14e1076]: The app reads Codex session files stored on your PC and shows token usage, question categories, work steps, and attachment description quality in an easy-to-read dashboard.
+              - paragraph [ref=f14e1077]: You can review which questions used the most tokens, see usage trends by date, check category charts, and get practical suggestions for writing clearer prompts while reducing unnecessary token usage.
+              - paragraph [ref=f14e1078]: CodexStats is designed as a local-first tool. The current version analyzes data on your device and does not upload your Codex session contents to an external server.
+          - link "LoreArchiveCodex 应用 书籍与参考 ¥81.00 Lore Archive Codex is a comprehensive worldbuilding tool designed for writers and game developers to create, organize, and manage interconnected fictional worlds. From foundational ideas to intricate details, it helps you keep characters, lore, locations, and story elements structured in one place. Built for offline use, Lore Archive Codex ensures your creative work remains private, accessible, and fully under your control, without distractions or the need for an internet connection." [ref=f14e1083] [cursor=pointer]:
+            - /url: /detail/9n5wzltbc8xw?hl=zh-CN&gl=CN
+            - generic [ref=f14e1084]:
+              - generic [ref=f14e1088]:
+                - paragraph [ref=f14e1089]: LoreArchiveCodex
+                - generic [ref=f14e1090]:
+                  - generic [ref=f14e1091]: 应用
+                  - separator [ref=f14e1092]
+                  - generic "书籍与参考" [ref=f14e1093]
+              - generic [ref=f14e1094]: ¥81.00
+            - paragraph [ref=f14e1098]: Lore Archive Codex is a comprehensive worldbuilding tool designed for writers and game developers to create, organize, and manage interconnected fictional worlds. From foundational ideas to intricate details, it helps you keep characters, lore, locations, and story elements structured in one place. Built for offline use, Lore Archive Codex ensures your creative work remains private, accessible, and fully under your control, without distractions or the need for an internet connection.
+          - link "Codex Float 应用 实用程序与工具 ¥18.00 重要提示：使用 Codex Float 前，需要先安装并使用 Codex 至少一次，产生本地会话数据后才能显示用量。Codex Float 是一款轻量 Windows 辅助工具，可通过桌面浮窗显示本机 Codex 用量状态。你可以在详细卡片、紧凑胶囊和百分比气泡三种样式之间切换，将窗口保持置顶并拖动到任意位置，数据会在后台自动刷新。外观配置支持主题、纯色背景、透明度与本地化设置。Codex Float 读取设备上已有的 Codex 会话数据，无需额外注册账号。" [ref=f14e1103] [cursor=pointer]:
+            - /url: /detail/9nqxhff4l7zr?hl=zh-CN&gl=CN
+            - generic [ref=f14e1104]:
+              - generic [ref=f14e1108]:
+                - paragraph [ref=f14e1109]: Codex Float
+                - generic [ref=f14e1110]:
+                  - generic [ref=f14e1111]: 应用
+                  - separator [ref=f14e1112]
+                  - generic "实用程序与工具" [ref=f14e1113]
+              - generic [ref=f14e1114]: ¥18.00
+            - paragraph [ref=f14e1118]: 重要提示：使用 Codex Float 前，需要先安装并使用 Codex 至少一次，产生本地会话数据后才能显示用量。Codex Float 是一款轻量 Windows 辅助工具，可通过桌面浮窗显示本机 Codex 用量状态。你可以在详细卡片、紧凑胶囊和百分比气泡三种样式之间切换，将窗口保持置顶并拖动到任意位置，数据会在后台自动刷新。外观配置支持主题、纯色背景、透明度与本地化设置。Codex Float 读取设备上已有的 Codex 会话数据，无需额外注册账号。
+          - link [ref=f14e1123] [cursor=pointer]:
+            - /url: /detail/9nrn2hq1k1r7?hl=zh-CN&gl=CN
+            - generic [ref=f14e1124]:
+              - generic [ref=f14e1128]:
+                - paragraph [ref=f14e1129]: Scribox
+                - generic [ref=f14e1130]:
+                  - generic [ref=f14e1131]: 应用
+                  - separator [ref=f14e1132]
+                  - generic "高效工作" [ref=f14e1133]
+              - generic [ref=f14e1134]: ¥35.00
+            - generic [ref=f14e1137]:
+              - paragraph [ref=f14e1138]: Scribox is a free, local audio and video transcriber powered by
+              - paragraph [ref=f14e1139]: OpenAI Whisper — one of the most accurate speech recognition
+              - paragraph [ref=f14e1140]: models in the world.
+              - paragraph [ref=f14e1141]: Everything is processed directly on your computer. Your files
+              - paragraph [ref=f14e1142]: are NEVER uploaded to the internet. No subscription, no API
+              - paragraph [ref=f14e1143]: key, no hidden costs.
+              - paragraph [ref=f14e1144]: "⚡ With NVIDIA GPU: 1 hour of audio transcribed in ~5 minutes."
+              - paragraph [ref=f14e1145]: "🖥️ CPU only: 1 hour of audio in ~30-90 minutes."
+              - paragraph [ref=f14e1146]: "KEY FEATURES:"
+              - paragraph [ref=f14e1147]: "- Supports MP3, MP4, WAV, MKV, AVI, MOV and many more formats"
+              - paragraph [ref=f14e1148]: "- Multiple Whisper models: tiny, base, small, medium, large-v3"
+              - paragraph [ref=f14e1149]: "- Auto-detects hardware and recommends the best model for your PC"
+              - paragraph [ref=f14e1150]: "- VAD filter to remove silence and avoid hallucinations"
+              - paragraph [ref=f14e1151]: "- Export to TXT, SRT and VTT (subtitle formats)"
+              - paragraph [ref=f14e1152]: "- Batch processing — transcribe multiple files at once"
+              - paragraph [ref=f14e1153]: "- Supports 30+ languages with auto-detection"
+              - paragraph [ref=f14e1154]: "- Translate audio to English in one click"
+              - paragraph [ref=f14e1155]: "- 100% free and open, no internet required after first run"
+          - link "Church Book 应用 生活方式 免费下载 ChurchBook is a application for all of the God’sHouse of Worship members. It is used as aelectronic church bulletin. This app allows all saintsto be able to be up to date with all speakerengagements and is linked to our FaceBook page,and provides information on how to contact us. Also,provides variety filled gallery." [ref=f14e1160] [cursor=pointer]:
+            - /url: /detail/9mw7b2sl37qc?hl=zh-CN&gl=CN
+            - generic [ref=f14e1161]:
+              - generic [ref=f14e1165]:
+                - paragraph [ref=f14e1166]: Church Book
+                - generic [ref=f14e1167]:
+                  - generic [ref=f14e1168]: 应用
+                  - separator [ref=f14e1169]
+                  - generic "生活方式" [ref=f14e1170]
+              - generic [ref=f14e1171]: 免费下载
+            - paragraph [ref=f14e1175]: ChurchBook is a application for all of the God’sHouse of Worship members. It is used as aelectronic church bulletin. This app allows all saintsto be able to be up to date with all speakerengagements and is linked to our FaceBook page,and provides information on how to contact us. Also,provides variety filled gallery.
+          - link "墨册 移动 app 商务 免费下载 墨册作为一款智能的数字化考勤管理工具，其核心优势在于其易用性和高效性。它的操作流程设计得极为直观，无论是企业管理员还是员工，都能快速适应并流畅地进行日常考勤操作，通过自动化的记录、统计和分析，帮助企业系统性全面掌握员工的出勤情况，优化人力资源配置，提高整体管理效率。 实时出勤记录 员工可以通过手机、电脑等设备进行实时签到和签退，系统自动跟踪并记录每个员工的出勤时间。 请假与加班管理 支持在线申请请假、加班等请求，审批流程简化，提高管理效率。 出勤数据分析 系统对员工的出勤数据进行深度分析，为企业提供全面的考勤报告。 灵活规则设置 管理员可根据不同需求设定个性化的考勤规则，实现人性化的精细管理。" [ref=f14e1180] [cursor=pointer]:
+            - /url: /detail/xp9cmz1t0wz193?hl=zh-CN&gl=CN
+            - generic [ref=f14e1181]:
+              - generic [ref=f14e1185]:
+                - paragraph [ref=f14e1186]: 墨册
+                - generic [ref=f14e1187]:
+                  - text: 移动 app
+                  - separator [ref=f14e1194]
+                  - generic "商务" [ref=f14e1195]
+              - generic [ref=f14e1196]: 免费下载
+            - generic [ref=f14e1199]:
+              - paragraph [ref=f14e1200]: 墨册作为一款智能的数字化考勤管理工具，其核心优势在于其易用性和高效性。它的操作流程设计得极为直观，无论是企业管理员还是员工，都能快速适应并流畅地进行日常考勤操作，通过自动化的记录、统计和分析，帮助企业系统性全面掌握员工的出勤情况，优化人力资源配置，提高整体管理效率。
+              - paragraph [ref=f14e1201]: 实时出勤记录
+              - paragraph [ref=f14e1202]: 员工可以通过手机、电脑等设备进行实时签到和签退，系统自动跟踪并记录每个员工的出勤时间。
+              - paragraph [ref=f14e1203]: 请假与加班管理
+              - paragraph [ref=f14e1204]: 支持在线申请请假、加班等请求，审批流程简化，提高管理效率。
+              - paragraph [ref=f14e1205]: 出勤数据分析
+              - paragraph [ref=f14e1206]: 系统对员工的出勤数据进行深度分析，为企业提供全面的考勤报告。
+              - paragraph [ref=f14e1207]: 灵活规则设置
+              - paragraph [ref=f14e1208]: 管理员可根据不同需求设定个性化的考勤规则，实现人性化的精细管理。
+          - link [ref=f14e1213] [cursor=pointer]:
+            - /url: /detail/9nblggh1k9w7?hl=zh-CN&gl=CN
+            - generic [ref=f14e1214]:
+              - generic [ref=f14e1218]:
+                - paragraph [ref=f14e1219]: Medizinbuch
+                - generic [ref=f14e1220]:
+                  - generic [ref=f14e1221]: 应用
+                  - separator [ref=f14e1222]
+                  - generic "健康与健身" [ref=f14e1223]
+              - generic [ref=f14e1224]: ¥18.00
+            - generic [ref=f14e1227]:
+              - paragraph [ref=f14e1228]: Das Medizinbuch ist der unverzichtbare Begleiter für alle, die regelmäßig Medikamente einnehmen müssen oder Ihre persönlichen Gesundheitsdaten immer griffbereit haben wollen. Zusätzlich ist das Medizinbuch mehrbenutzerfähig, sodass Sie nicht nur Ihre, sondern auch die Gesundheitsdaten ihrer ganzen Familie stets aktuell griffbereit haben.
+              - paragraph [ref=f14e1229]: Alle persönlichen Gesundheitsdaten wie Erkrankungen, Arztbesuche, Krankenhausaufenthalte, Medikamenteneinnahmen, Zahnbehandlungen, Allergien, Blutdruck- und Blutzuckerwerte, Cholesterinwerte, Gewichts- und Temperaturwerte, Impfungen, Sehstärken und Blutspenden können für die ganze Familie erfasst werden. Grafiken und eigene Zieleinstellungen unterstützen Sie dabei zur Erreichung Ihrer Gesundheitsziele. Dazu können alle gesundheitsbezogenen Ausgaben und Kosten erfasst und ausgewertet werden. Dies ist insbesondere für Zuzahlungen hilfreich.
+              - paragraph [ref=f14e1230]: Das Medizinbuch erinnert Sie an Medikamenteneinnahmen und Arzttermine über Benachrichtigung und Live Tile Darstellung. Zu Medikamenten, Allergien, Arzt- und Zahnarztbehandlungen und weiteren können Sie zusätzlich zu Ihren Eingaben Fotos und Bilder aufnehmen.
+              - paragraph [ref=f14e1231]: Die auf dem PC, Tablet oder Smartphone eingegebenen Gesundheitsdaten können zwischen den Geräten synchronisiert werden, sodass Sie Ihre Gesundheitswerte immer aktuell bei sich haben. Neben einer Synchronisation über OneDrive steht auch ein Datenaustausch über Box zur Verfügung.
+              - paragraph [ref=f14e1232]: Das Medizinbuch steht auch für Smartphones und Tablets mit anderen Betriebssystemen zur Verfügung.
+              - paragraph [ref=f14e1233]: Alle Gesundheitsdaten können ausgedruckt, als Microsoft Excel und PDF Datei exportiert oder als E-Mail versendet werden. Zusätzlich können die Gesundheitswerte zu Ihren OneNote Notizen hinzugefügt werden.
+          - link "Codex Skin Studio 应用 实用程序与工具 ¥28.00 Codex Skin Studio 是面向 Codex 主题设计和管理的 Windows 本地编辑器。你可以通过可视化控件创建皮肤，预览背景和组件样式，检查主题 JSON，导入或导出 .codexskin 包，并将草稿、设置、日志和生成素材保存在本机。当你选择在正在运行的 Codex 窗口中预览皮肤时，应用可通过本机 loopback 连接 Codex 桌面调试会话。只有在你提供在线素材 URL 时，才会使用 HTTPS 下载素材。" [ref=f14e1238] [cursor=pointer]:
+            - /url: /detail/9nhdcs5h2psn?hl=zh-CN&gl=CN
+            - generic [ref=f14e1239]:
+              - generic [ref=f14e1243]:
+                - paragraph [ref=f14e1244]: Codex Skin Studio
+                - generic [ref=f14e1245]:
+                  - generic [ref=f14e1246]: 应用
+                  - separator [ref=f14e1247]
+                  - generic "实用程序与工具" [ref=f14e1248]
+              - generic [ref=f14e1249]: ¥28.00
+            - paragraph [ref=f14e1253]: Codex Skin Studio 是面向 Codex 主题设计和管理的 Windows 本地编辑器。你可以通过可视化控件创建皮肤，预览背景和组件样式，检查主题 JSON，导入或导出 .codexskin 包，并将草稿、设置、日志和生成素材保存在本机。当你选择在正在运行的 Codex 窗口中预览皮肤时，应用可通过本机 loopback 连接 Codex 桌面调试会话。只有在你提供在线素材 URL 时，才会使用 HTTPS 下载素材。
+          - link "ordex 应用 高效工作 免费下载 指定フォルダを監視し、キーワードや拡張子の条件に応じてファイルを自動で振り分ける Windows 向けアプリです。" [ref=f14e1258] [cursor=pointer]:
+            - /url: /detail/xp8jjw317lcws5?hl=zh-CN&gl=CN
+            - generic [ref=f14e1259]:
+              - generic [ref=f14e1263]:
+                - paragraph [ref=f14e1264]: ordex
+                - generic [ref=f14e1265]:
+                  - generic [ref=f14e1266]: 应用
+                  - separator [ref=f14e1267]
+                  - generic "高效工作" [ref=f14e1268]
+              - generic [ref=f14e1269]: 免费下载
+            - paragraph [ref=f14e1273]: 指定フォルダを監視し、キーワードや拡張子の条件に応じてファイルを自動で振り分ける Windows 向けアプリです。
+          - link [ref=f14e1278] [cursor=pointer]:
+            - /url: /detail/9n94v4458m3v?hl=zh-CN&gl=CN
+            - generic [ref=f14e1279]:
+              - generic [ref=f14e1283]:
+                - paragraph [ref=f14e1284]: Lorebox
+                - generic [ref=f14e1285]:
+                  - generic [ref=f14e1286]: 应用
+                  - separator [ref=f14e1287]
+                  - generic "高效工作" [ref=f14e1288]
+              - generic [ref=f14e1289]: 免费下载
+            - generic [ref=f14e1292]:
+              - paragraph [ref=f14e1293]: Lorebox turns a shoebox of cards into an organized, valued collection — and it
+              - paragraph [ref=f14e1294]: does it privately, right on your computer.
+              - paragraph [ref=f14e1295]: Scan cards with a TWAIN scanner or import images and PDFs, and Lorebox
+              - paragraph [ref=f14e1296]: automatically reads each card's name, set, number, year, and game. It estimates
+              - paragraph [ref=f14e1297]: the card's condition, looks up an approximate market value, and files it into a
+              - paragraph [ref=f14e1298]: searchable collection with dashboards, reports, and set-completion tracking.
+              - paragraph [ref=f14e1299]: Built for collectors of sports cards and trading card games alike.
+              - paragraph [ref=f14e1300]: WHAT YOU CAN DO
+              - paragraph [ref=f14e1301]: • Identify cards automatically from a scan or photo
+              - paragraph [ref=f14e1302]: • Get an estimated condition grade for every card
+              - paragraph [ref=f14e1303]: • See approximate market values, adjusted for condition
+              - paragraph [ref=f14e1304]: • Browse, search, and sort your whole collection
+              - paragraph [ref=f14e1305]: • Import in bulk from folders or multi-page PDFs, pairing fronts and backs
+              - paragraph [ref=f14e1306]: • Auto-import from a watch folder on a schedule
+              - paragraph [ref=f14e1307]: • Track value over time, value by game, and set completion on a dashboard
+              - paragraph [ref=f14e1308]: • Edit any card and rotate/straighten its scans
+              - paragraph [ref=f14e1309]: • Export your collection to CSV anytime
+              - paragraph [ref=f14e1310]: • Personalize the app with team-color themes
+              - paragraph [ref=f14e1311]: • Adjustable text size, high-contrast mode, and keyboard navigation
+              - paragraph [ref=f14e1312]: PRIVATE BY DESIGN
+              - paragraph [ref=f14e1313]: Your collection lives in a local database on your PC. Lorebox has no accounts,
+              - paragraph [ref=f14e1314]: no analytics, and no cloud. Card images and names are sent to identification and
+              - paragraph [ref=f14e1315]: pricing services only when you use those features, using API keys you provide.
+              - paragraph [ref=f14e1316]: BRING YOUR OWN KEYS
+              - paragraph [ref=f14e1317]: Card identification uses the Anthropic (Claude) API, and pricing uses Scryfall
+              - paragraph [ref=f14e1318]: and the eBay API. You add your own free/low-cost API keys in Settings, so you're
+              - paragraph [ref=f14e1319]: always in control of usage and cost.
+              - paragraph [ref=f14e1320]: PLEASE NOTE
+              - paragraph [ref=f14e1321]: Estimated values and condition grades are automated and approximate. They are a
+              - paragraph [ref=f14e1322]: helpful guide for organizing and exploring your collection — not guaranteed sale
+              - paragraph [ref=f14e1323]: prices, professional appraisals, or a substitute for a professional grading
+              - paragraph [ref=f14e1324]: service.
+              - paragraph [ref=f14e1325]: Lorebox is open source (AGPL-3.0). Learn more at https://loreboxapp.dev
+          - link "Art Book 评分为 3.2/5。 应用 育儿与家庭 免费下载 A great app for kids who love coloring, dressing and drawing. Many playful pics to choose from, easy to use design, bright colors and lots of other features are waiting for you in Art Book. More pictures are added regularly." [ref=f14e1330] [cursor=pointer]:
+            - /url: /detail/9wzdncrfhw9v?hl=zh-CN&gl=CN
+            - generic [ref=f14e1331]:
+              - generic [ref=f14e1335]:
+                - paragraph [ref=f14e1336]: Art Book
+                - generic [ref=f14e1337]:
+                  - generic "评分为 3.2/5。" [ref=f14e1339]: "3.2"
+                  - separator [ref=f14e1344]
+                  - generic [ref=f14e1345]: 应用
+                  - separator [ref=f14e1346]
+                  - generic "育儿与家庭" [ref=f14e1347]
+              - generic [ref=f14e1348]: 免费下载
+            - paragraph [ref=f14e1352]: A great app for kids who love coloring, dressing and drawing. Many playful pics to choose from, easy to use design, bright colors and lots of other features are waiting for you in Art Book. More pictures are added regularly.
+          - link [ref=f14e1357] [cursor=pointer]:
+            - /url: /detail/9n2pdkdg1fx1?hl=zh-CN&gl=CN
+            - generic [ref=f14e1358]:
+              - generic [ref=f14e1362]:
+                - paragraph [ref=f14e1363]: Bookerei
+                - generic [ref=f14e1364]:
+                  - generic [ref=f14e1365]: 应用
+                  - separator [ref=f14e1366]
+                  - generic "书籍与参考" [ref=f14e1367]
+              - generic [ref=f14e1368]: 免费下载
+            - generic [ref=f14e1371]:
+              - paragraph [ref=f14e1372]: Bookerei is a modern ebook reader and ebook management app for EPUB and PDF files, designed for readers who want a beautiful, distraction-free reading experience and a powerful digital library manager on Windows.
+              - paragraph [ref=f14e1373]: Whether you’re an avid reader or an occasional one, Bookerei helps you read, organize, and enjoy your ebooks effortlessly.
+              - paragraph [ref=f14e1374]: 📚 Key Features
+              - paragraph [ref=f14e1375]: Elegant Ebook Reader for EPUB and PDF
+              - paragraph [ref=f14e1376]: Enjoy smooth, comfortable reading with a clean interface and carefully crafted design. Bookerei is built to keep the focus on your books.
+              - paragraph [ref=f14e1377]: Beautiful Interface with Multiple Themes
+              - paragraph [ref=f14e1378]: Customize your reading experience with multiple themes and visual styles. Read comfortably during the day or night and choose a look that fits your mood.
+              - paragraph [ref=f14e1379]: Automatic Book Metadata Fetching
+              - paragraph [ref=f14e1380]: Import your ebooks and let Bookerei automatically fetch book information such as title, author, cover, and description from the internet. No more manual editing.
+              - paragraph [ref=f14e1381]: Powerful Ebook Library Management
+              - paragraph [ref=f14e1382]: Organize your ebook collection with ease. Sort and browse your library by author, genre, or reading progress, and keep everything neatly structured.
+              - paragraph [ref=f14e1383]: Lightweight, Fast, and Ad-Free
+              - paragraph [ref=f14e1384]: Bookerei is a fast and responsive Windows ebook app with no ads, focusing entirely on reading and library management.
+              - paragraph [ref=f14e1385]: 📖 Your Digital Reading Companion
+              - paragraph [ref=f14e1386]: Bookerei is more than just an epub and PDF reader. It’s a complete ebook library manager designed to improve the way you read and organize your digital books. Whether you’re studying, reading for pleasure, or maintaining a large ebook collection, Bookerei adapts to your workflow.
+              - paragraph [ref=f14e1387]: Explore literature in a new light with Bookerei — your trusted ebook reader and library manager for Windows.
+          - link [ref=f14e1392] [cursor=pointer]:
+            - /url: /detail/9ppcvbvr9zpg?hl=zh-CN&gl=CN
+            - generic [ref=f14e1393]:
+              - generic [ref=f14e1397]:
+                - paragraph [ref=f14e1398]: DasBook
+                - generic [ref=f14e1399]:
+                  - generic [ref=f14e1400]: 应用
+                  - separator [ref=f14e1401]
+                  - generic "高效工作" [ref=f14e1402]
+              - generic [ref=f14e1403]: ¥214.00
+            - generic [ref=f14e1406]:
+              - paragraph [ref=f14e1407]: DasBook is a desktop writing environment built for authors who want the power of AI without surrendering creative control. Every AI agent connected to DasBook operates under strict authorship protection rules. The AI cannot invent plot points, create characters, or decide what happens in your story. It helps you research, structure, format, and refine your prose, but the ideas have to be yours. The story that comes out of DasBook is your story.
+              - paragraph [ref=f14e1408]: What makes DasBook different from other AI writing tools is context awareness. When you ask the AI for help, it reads your actual scenes, character sheets, and world-building codex. You get specific, relevant feedback about your story instead of generic writing advice. And when the AI suggests changes to a scene or chapter, you review a side-by-side diff before anything is applied.
+              - paragraph [ref=f14e1409]: DasBook gives you a full suite of professional writing tools in one place. Organize your work in a binder tree with books, chapters, scenes, characters, timelines, and research documents. Build your world in a searchable codex. Plan visually on a corkboard. Track word counts and targets per scene. Run a consistency checker that flags contradictions across your manuscript. When you are ready, publish directly to PDF or EPUB with full control over layout, fonts, and page size.
+              - paragraph [ref=f14e1410]: Connect to the AI provider of your choice. Use Anthropic Claude for top-tier reasoning, any OpenAI-compatible API, or run models locally with Ollama for completely offline and private writing sessions. DasBook works with all of them.
+              - paragraph [ref=f14e1411]: Whether you are outlining your first novel or deep into a multi-book series, DasBook keeps you in the driver's seat. The AI shapes the words. You shape the story.
+          - link "Catalog 应用 商务 免费下载 This app is intended to create, store and publish catalogues. It can help small companies to manage his products. In the app you can create catalogues and next you can print them or export them to html, txt files, xml files." [ref=f14e1416] [cursor=pointer]:
+            - /url: /detail/9nxf6dmfr43d?hl=zh-CN&gl=CN
+            - generic [ref=f14e1417]:
+              - generic [ref=f14e1421]:
+                - paragraph [ref=f14e1422]: Catalog
+                - generic [ref=f14e1423]:
+                  - generic [ref=f14e1424]: 应用
+                  - separator [ref=f14e1425]
+                  - generic "商务" [ref=f14e1426]
+              - generic [ref=f14e1427]: 免费下载
+            - generic [ref=f14e1430]:
+              - paragraph [ref=f14e1431]: This app is intended to create, store and publish catalogues.
+              - paragraph [ref=f14e1432]: It can help small companies to manage his products.
+              - paragraph [ref=f14e1433]: In the app you can create catalogues and next you can print them or export them to html, txt files, xml files.
+          - link "BOOKSCAN 应用 娱乐 免费下载 [詳細] 「BOOKSCAN」アプリは、BOOKSCANが提供する、お客様の蔵書をPDFファイル化したファイルをダウンロードする専用ツールです。 [ご利用方法] 1.Microsoft Storeから「BOOKSCAN」アプリをダウンロードしてください。 2.会員登録後、「BOOKSCAN」アプリを起動しメールアドレス・パスワードを入力してサインインしてください。 3.管理番号一覧からファイルを選び、ダウンロードしてください。 [主な機能] ・管理番号ごとのファイル表示 ・1つの管理番号内、または全ての管理番号内のファイルのダウンロード ・ダウンロードの進捗表示やキャンセル ・ダウンロードファイルの保存先指定機能" [ref=f14e1438] [cursor=pointer]:
+            - /url: /detail/9ncg93mv552z?hl=zh-CN&gl=CN
+            - generic [ref=f14e1439]:
+              - generic [ref=f14e1443]:
+                - paragraph [ref=f14e1444]: BOOKSCAN
+                - generic [ref=f14e1445]:
+                  - generic [ref=f14e1446]: 应用
+                  - separator [ref=f14e1447]
+                  - generic "娱乐" [ref=f14e1448]
+              - generic [ref=f14e1449]: 免费下载
+            - generic [ref=f14e1452]:
+              - paragraph [ref=f14e1453]: "[詳細]"
+              - paragraph [ref=f14e1454]: 「BOOKSCAN」アプリは、BOOKSCANが提供する、お客様の蔵書をPDFファイル化したファイルをダウンロードする専用ツールです。
+              - paragraph [ref=f14e1455]: "[ご利用方法]"
+              - paragraph [ref=f14e1456]: 1.Microsoft Storeから「BOOKSCAN」アプリをダウンロードしてください。
+              - paragraph [ref=f14e1457]: 2.会員登録後、「BOOKSCAN」アプリを起動しメールアドレス・パスワードを入力してサインインしてください。
+              - paragraph [ref=f14e1458]: 3.管理番号一覧からファイルを選び、ダウンロードしてください。
+              - paragraph [ref=f14e1459]: "[主な機能]"
+              - paragraph [ref=f14e1460]: ・管理番号ごとのファイル表示
+              - paragraph [ref=f14e1461]: ・1つの管理番号内、または全ての管理番号内のファイルのダウンロード
+              - paragraph [ref=f14e1462]: ・ダウンロードの進捗表示やキャンセル
+              - paragraph [ref=f14e1463]: ・ダウンロードファイルの保存先指定機能
+        - button "显示更多" [ref=f14e1469] [cursor=pointer]
+  - contentinfo [ref=f14e1473]:
+    - generic [ref=f14e1475]:
+      - generic [ref=f14e1476]:
+        - generic "新增功能" [ref=f14e1477]:
+          - heading "新增功能" [level=2] [ref=f14e1478]
+          - link "Microsoft Store 中的更多内容" [ref=f14e1481] [cursor=pointer]:
+            - /url: https://blogs.windows.com/windowsexperience/2022/09/20/more-content-and-new-developer-opportunities-in-the-microsoft-store/
+          - link "应用" [ref=f14e1485] [cursor=pointer]:
+            - /url: /apps
+          - link "游戏" [ref=f14e1489] [cursor=pointer]:
+            - /url: /games
+          - link "主题" [ref=f14e1493] [cursor=pointer]:
+            - /url: /themes
+          - link "多应用安装" [ref=f14e1497] [cursor=pointer]:
+            - /url: /apppack
+          - link "Windows 体验博客" [ref=f14e1501] [cursor=pointer]:
+            - /url: https://blogs.windows.com/
+        - generic "Microsoft Store" [ref=f14e1503]:
+          - heading "Microsoft Store" [level=2] [ref=f14e1504]
+          - link "Microsoft 帐户" [ref=f14e1507] [cursor=pointer]:
+            - /url: https://account.microsoft.com/
+          - link "Microsoft Store 支持" [ref=f14e1511] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/?linkid=2139749
+          - link "返回" [ref=f14e1515] [cursor=pointer]:
+            - /url: https://go.microsoft.com/fwlink/p/?LinkID=824764&clcid=0x409
+          - link "灵活的付款方式" [ref=f14e1519] [cursor=pointer]:
+            - /url: https://www.microsoft.com/store/b/payment-financing-options?icid=footer_financing_vcc
+          - link "策略和行为准则" [ref=f14e1523] [cursor=pointer]:
+            - /url: https://learn.microsoft.com/windows/apps/publish/store-policies-and-code-of-conduct
+          - link "获取 Microsoft Store 应用" [ref=f14e1527] [cursor=pointer]:
+            - /url: /detail/9WZDNCRFJBMP
+        - generic "适用于开发人员" [ref=f14e1529]:
+          - heading "适用于开发人员" [level=2] [ref=f14e1530]
+          - link "发布应用" [ref=f14e1533] [cursor=pointer]:
+            - /url: https://developer.microsoft.com/microsoft-store
+          - link "生成应用徽章" [ref=f14e1537] [cursor=pointer]:
+            - /url: https://apps.microsoft.com/store/app-badge/
+          - link "PWABuilder" [ref=f14e1541] [cursor=pointer]:
+            - /url: https://www.pwabuilder.com/
+        - generic "Windows" [ref=f14e1543]:
+          - heading "Windows" [level=2] [ref=f14e1544]
+          - link "职业" [ref=f14e1547] [cursor=pointer]:
+            - /url: https://careers.microsoft.com/
+          - link "关于 Microsoft" [ref=f14e1551] [cursor=pointer]:
+            - /url: https://www.microsoft.com/about
+          - link "公司新闻" [ref=f14e1555] [cursor=pointer]:
+            - /url: https://news.microsoft.com/
+          - link "投资者" [ref=f14e1559] [cursor=pointer]:
+            - /url: https://www.microsoft.com/investor/default.aspx
+          - link "多样性和包容性" [ref=f14e1563] [cursor=pointer]:
+            - /url: https://www.microsoft.com/diversity/
+          - link "辅助功能" [ref=f14e1567] [cursor=pointer]:
+            - /url: https://www.microsoft.com/accessibility
+          - link "可持续性" [ref=f14e1571] [cursor=pointer]:
+            - /url: https://www.microsoft.com/sustainability/
+      - generic [ref=f14e1573]:
+        - generic [ref=f14e1574]:
+          - generic [ref=f14e1577]:
+            - generic:
+              - generic "更改语言" [ref=f14e1578]:
+                - button "中文（中国）" [ref=f14e1579] [cursor=pointer]
+              - generic:
+                - generic: Afrikaans (Suid-Afrika)
+                - generic: አማርኛ (ኢትዮጵያ)
+                - generic: العربية (المملكة العربية السعودية)
+                - generic: অসমীয়া (ভাৰত)
+                - generic: azərbaycan (latın, Azərbaycan)
+                - generic: български (България)
+                - generic: বাংলা (ভারত)
+                - generic: bosanski (latinica, Bosna i Hercegovina)
+                - generic: català (Espanya)
+                - generic: valencià (Espanya, valencià)
+                - generic: čeština (Česko)
+                - generic: Cymraeg (Y Deyrnas Unedig)
+                - generic: dansk (Danmark)
+                - generic: Deutsch (Deutschland)
+                - generic: Ελληνικά (Ελλάδα)
+                - generic: English (United Kingdom)
+                - generic: English (United States)
+                - generic: español (España)
+                - generic: español (México)
+                - generic: eesti (Eesti)
+                - generic: euskara (Espainia)
+                - generic: فارسی (ایران)
+                - generic: suomi (Suomi)
+                - generic: Tagalog (Pilipinas)
+                - generic: français (Canada)
+                - generic: français (France)
+                - generic: Gaeilge (Éire)
+                - generic: Gàidhlig (An Rìoghachd Aonaichte)
+                - generic: galego (España)
+                - generic: ગુજરાતી (ભારત)
+                - generic: עברית (ישראל)
+                - generic: हिन्दी (भारत)
+                - generic: hrvatski (Hrvatska)
+                - generic: magyar (Magyarország)
+                - generic: Indonesia (Indonesia)
+                - generic: íslenska (Ísland)
+                - generic: italiano (Italia)
+                - generic: 日本語 (日本)
+                - generic: ქართული (საქართველო)
+                - generic: қазақ тілі (Қазақстан)
+                - generic: ខ្មែរ (កម្ពុជា)
+                - generic: ಕನ್ನಡ (ಭಾರತ)
+                - generic: कोंकणी (भारत)
+                - generic: 한국어(대한민국)
+                - generic: Lëtzebuergesch (Lëtzebuerg)
+                - generic: ລາວ (ລາວ)
+                - generic: lietuvių (Lietuva)
+                - generic: latviešu (Latvija)
+                - generic: Māori (Aotearoa)
+                - generic: македонски (Северна Македонија)
+                - generic: മലയാളം (ഇന്ത്യ)
+                - generic: मराठी (भारत)
+                - generic: Melayu (Malaysia)
+                - generic: Malti (Malta)
+                - generic: norsk bokmål (Norge)
+                - generic: नेपाली (नेपाल)
+                - generic: Nederlands (Nederland)
+                - generic: nynorsk (Noreg)
+                - generic: ଓଡ଼ିଆ (ଭାରତ)
+                - generic: ਪੰਜਾਬੀ (ਭਾਰਤ)
+                - generic: polski (Polska)
+                - generic: português (Brasil)
+                - generic: português (Portugal)
+                - generic: Runasimi (Perú)
+                - generic: română (România)
+                - generic: русский (Россия)
+                - generic: slovenčina (Slovensko)
+                - generic: slovenščina (Slovenija)
+                - generic: shqip (Shqipëri)
+                - generic: српски (ћирилица, Босна и Херцеговина)
+                - generic: српски (ћирилица, Србија)
+                - generic: srpski (latinica, Srbija)
+                - generic: svenska (Sverige)
+                - generic: தமிழ் (இந்தியா)
+                - generic: తెలుగు (భారతదేశం)
+                - generic: ไทย (ไทย)
+                - generic: Türkçe (Türkiye)
+                - generic: татар (Россия)
+                - generic: ئۇيغۇرچە (جۇڭگو)
+                - generic: українська (Україна)
+                - generic: اردو (پاکستان)
+                - generic: Tiếng Việt (Việt Nam)
+                - generic: 中文（中国）
+                - generic: 中文（台灣）
+          - generic [ref=f14e1585]:
+            - link [ref=f14e1587] [cursor=pointer]:
+              - /url: https://aka.ms/yourcaliforniaprivacychoices
+              - paragraph [ref=f14e1590]: 你的隐私选择
+            - button "管理 Cookie" [ref=f14e1592] [cursor=pointer]
+        - generic [ref=f14e1595]:
+          - link "联系 Microsoft" [ref=f14e1597] [cursor=pointer]:
+            - /url: https://support.microsoft.com/contactus
+          - link "隐私" [ref=f14e1600] [cursor=pointer]:
+            - /url: https://privacy.microsoft.com/privacystatement
+          - link "使用条款" [ref=f14e1603] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/terms-of-use
+          - link "商标" [ref=f14e1606] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/intellectualproperty/trademarks
+          - link "安全与生态" [ref=f14e1609] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/compliance/devices-safety-and-eco
+          - link "回收" [ref=f14e1612] [cursor=pointer]:
+            - /url: https://www.microsoft.com/legal/compliance/recycling
+          - link "关于我们的广告" [ref=f14e1615] [cursor=pointer]:
+            - /url: https://choice.microsoft.com/
+          - generic [ref=f14e1617]: © Microsoft 2026

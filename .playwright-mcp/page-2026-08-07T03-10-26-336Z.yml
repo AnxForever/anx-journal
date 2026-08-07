@@ -1,0 +1,6 @@
+- generic [active] [ref=f62e1]:
+  - region "Notifications alt+T"
+  - main [ref=f62e2]:
+    - generic [ref=f62e3]: 加载中...
+  - text: "# # ## ## ## ## # # ## ## # ## ## ## ## #"
+  - alert [ref=f62e7]

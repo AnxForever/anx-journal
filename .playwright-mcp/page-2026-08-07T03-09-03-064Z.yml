@@ -1,0 +1,37 @@
+- generic [ref=f52e1]:
+  - generic [ref=f52e3]:
+    - link "ChatGPT home" [ref=f52e4] [cursor=pointer]:
+      - /url: /?slm=1
+      - img "ChatGPT logo" [ref=f52e5]
+    - generic [ref=f52e14]:
+      - generic [ref=f52e17]:
+        - heading "Log in or sign up" [level=2] [ref=f52e18]
+        - form "Log in or sign up" [ref=f52e19]:
+          - generic [ref=f52e20]:
+            - button "Continue with Google" [ref=f52e21] [cursor=pointer]
+            - button "Continue with Apple" [ref=f52e27] [cursor=pointer]
+            - button "Continue with email" [ref=f52e63] [cursor=pointer]
+          - generic [ref=f52e39]: OR
+          - group [ref=f52e70]:
+            - generic [ref=f52e71]:
+              - generic [ref=f52e72]:
+                - combobox "Phone number country code" [ref=f52e73] [cursor=pointer]:
+                  - generic [ref=f52e74]: United States +(1)
+                - combobox [ref=f52e78]
+              - generic [ref=f52e80]:
+                - generic: "+1"
+                - textbox "Phone number" [active] [ref=f52e83]
+          - button "Continue" [ref=f52e49] [cursor=pointer]
+          - link "Try it first" [ref=f52e52] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f52e53]:
+        - img [ref=f52e54]:
+          - generic [ref=f52e55]: ChatGPT
+        - generic [ref=f52e57]:
+          - link "Terms of use" [ref=f52e58] [cursor=pointer]:
+            - /url: https://openai.com/policies/terms-of-use
+          - generic [ref=f52e59]: "|"
+          - link "Privacy policy" [ref=f52e60] [cursor=pointer]:
+            - /url: https://openai.com/policies/privacy-policy
+  - alert [ref=f52e61]
+  - status [ref=f52e62]

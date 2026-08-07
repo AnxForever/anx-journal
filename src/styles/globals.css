@@ -21,6 +21,7 @@
 	body {
 		@apply h-full bg-none;
 	}
+
 	* {
 		@apply border-border;
 	}
@@ -91,12 +92,14 @@
 	}
 }
 
+
 @utility card {
 	@apply bg-card absolute rounded-[40px] border p-6;
 	box-shadow:
 		0 40px 50px -32px rgba(0, 0, 0, 0.05),
 		inset 0 0 20 rgba(255, 255, 255, 0.25);
 	backdrop-filter: blur(4px);
+		will-change: transform, opacity;
 
 	&.squircle {
 		@supports (corner-shape: squircle) {
@@ -175,4 +178,23 @@
 	.heartbeat {
 		animation: heartbeat-frame 0.8s ease-in-out;
 	}
+}
+
+@keyframes snowfall-fall {
+	0% {
+		transform: translateY(0) translateX(0);
+		opacity: 0;
+	}
+	2% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(calc(100vh + 200px)) translateX(-15vw);
+		opacity: 0.3;
+	}
+}
+
+.animate-snowfall {
+	animation: snowfall-fall linear infinite;
+	will-change: transform;
 }

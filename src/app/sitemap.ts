@@ -1,15 +1,12 @@
 import { MetadataRoute } from 'next'
 import blogIndex from '@/../public/blogs/index.json'
 import type { BlogIndexItem } from '@/app/blog/types'
+import { getSiteOrigin } from '@/lib/site-url'
 
 export const dynamic = 'force-static'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-	// 域名配置：
-	// 1. 优先使用 SITE_URL (你在 Vercel 手动设置的正式域名)
-	// 2. 其次尝试 VERCEL_URL (Vercel 自动生成的预览域名，通常不带 https://)
-	// 3. 最后回退到本地开发地址
-	const baseUrl = process.env.SITE_URL ? process.env.SITE_URL : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+	const baseUrl = getSiteOrigin()
 
 	console.log(`[Sitemap] Generating for: ${baseUrl}`)
 
@@ -28,7 +25,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			lastModified: new Date(),
 			changeFrequency: 'daily',
 			priority: 1
-		}
+		},
+		{ url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
+		{ url: `${baseUrl}/projects`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+		{ url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 }
 	]
 
 	return [...staticEntries, ...postEntries]

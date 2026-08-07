@@ -8,6 +8,12 @@ import { getFileExt } from '@/lib/utils'
 import { toast } from 'sonner'
 import { formatDateTimeLocal } from '../stores/write-store'
 
+const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const MAX_COVER_BYTES = 200 * 1024
+const MAX_CONTENT_IMAGE_BYTES = 2 * 1024 * 1024
+const COVER_RATIO = 5 / 3
+const COVER_RATIO_TOLERANCE = 0.03
+
 export type PushBlogParams = {
 	form: {
 		slug: string
@@ -25,14 +31,84 @@ export type PushBlogParams = {
 	originalSlug?: string | null
 }
 
+function formatBytes(bytes: number): string {
+	return `${Math.round(bytes / 1024)}KB`
+}
+
+function ensureValidDate(value?: string): void {
+	if (!value) return
+	if (Number.isNaN(new Date(value).getTime())) {
+		throw new Error('发布时间格式不正确')
+	}
+}
+
+async function readImageSize(file: File): Promise<{ width: number; height: number }> {
+	const objectUrl = URL.createObjectURL(file)
+
+	try {
+		const image = new Image()
+		image.decoding = 'async'
+		const loaded = new Promise<void>((resolve, reject) => {
+			image.onload = () => resolve()
+			image.onerror = () => reject(new Error('无法读取图片尺寸'))
+		})
+		image.src = objectUrl
+		await loaded
+
+		return {
+			width: image.naturalWidth,
+			height: image.naturalHeight
+		}
+	} finally {
+		URL.revokeObjectURL(objectUrl)
+	}
+}
+
+async function validatePublishInput({ form, cover, images, mode, originalSlug }: PushBlogParams): Promise<void> {
+	const slug = form.slug.trim()
+	const title = form.title.trim()
+	const markdown = form.md.trim()
+
+	if (!slug) throw new Error('需要 slug')
+	if (form.slug !== slug) throw new Error('slug 前后不能有空格')
+	if (!SLUG_PATTERN.test(slug)) throw new Error('slug 只能使用小写字母、数字和中划线，且不能以中划线开头或结尾')
+	if (!title) throw new Error('需要文章标题')
+	if (!markdown) throw new Error('需要文章正文')
+
+	ensureValidDate(form.date)
+
+	if (mode === 'edit' && originalSlug && originalSlug !== slug) {
+		throw new Error('编辑模式下不支持修改 slug，请保持原 slug 不变')
+	}
+
+	if (cover?.type === 'file') {
+		if (cover.file.size > MAX_COVER_BYTES) {
+			throw new Error(`封面图片过大：${formatBytes(cover.file.size)}，建议不超过 ${formatBytes(MAX_COVER_BYTES)}`)
+		}
+
+		const size = await readImageSize(cover.file)
+		if (!size.width || !size.height) throw new Error('无法读取封面尺寸')
+		if (size.width < 400 || size.height < 240) {
+			throw new Error(`封面尺寸过小：${size.width}x${size.height}，建议至少 400x240`)
+		}
+
+		const ratio = size.width / size.height
+		if (Math.abs(ratio - COVER_RATIO) > COVER_RATIO_TOLERANCE) {
+			throw new Error(`封面比例不合适：${size.width}x${size.height}，建议使用 5:3 比例`)
+		}
+	}
+
+	for (const image of images || []) {
+		if (image.type === 'file' && image.file.size > MAX_CONTENT_IMAGE_BYTES) {
+			throw new Error(`正文图片 ${image.file.name} 过大：${formatBytes(image.file.size)}，建议不超过 ${formatBytes(MAX_CONTENT_IMAGE_BYTES)}`)
+		}
+	}
+}
+
 export async function pushBlog(params: PushBlogParams): Promise<void> {
 	const { form, cover, images, mode = 'create', originalSlug } = params
 
-	if (!form?.slug) throw new Error('需要 slug')
-
-	if (mode === 'edit' && originalSlug && originalSlug !== form.slug) {
-		throw new Error('编辑模式下不支持修改 slug，请保持原 slug 不变')
-	}
+	await validatePublishInput(params)
 
 	// 获取认证 token（自动从全局认证状态获取）
 	const token = await getAuthToken()

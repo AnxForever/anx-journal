@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Card from '@/components/card'
 import { useCenterStore } from '@/hooks/use-center'
 import { useLatestBlog } from '@/hooks/use-blog-index'
@@ -9,7 +10,8 @@ import { HomeDraggableLayer } from './home-draggable-layer'
 
 export default function ArticleCard() {
 	const center = useCenterStore()
-	const { cardStyles, siteContent } = useConfigStore()
+	const cardStyles = useConfigStore(s => s.cardStyles)
+	const siteContent = useConfigStore(s => s.siteContent)
 	const { blog, loading } = useLatestBlog()
 	const styles = cardStyles.articleCard
 	const hiCardStyles = cardStyles.hiCard
@@ -42,7 +44,14 @@ export default function ArticleCard() {
 
 						<div className='mt-2 flex'>
 							{blog.cover ? (
-								<img src={blog.cover} alt='cover' className='mr-3 h-12 w-12 shrink-0 rounded-xl border object-cover' />
+								<Image
+									src={blog.cover}
+									alt='cover'
+									width={48}
+									height={48}
+									className='mr-3 h-12 w-12 shrink-0 rounded-xl border object-cover'
+									unoptimized
+								/>
 							) : (
 								<div className='text-secondary mr-3 grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-white/60'>+</div>
 							)}

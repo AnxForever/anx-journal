@@ -1,56 +1,54 @@
 # 部署推送备忘
 
-当前线上域名 `anxforever.cn` 仍指向 Vercel。日常更新博客时，优先使用 GitHub 推送触发 Vercel 自动部署。
+## 当前线上环境
 
-## GitHub / Vercel 自动部署
+`anxforever.cn` 当前部署在阿里云服务器，不再通过 Vercel 自动发布。
 
-仓库地址：`git@github.com:AnxForever/anx-journal.git`
+- 服务器：`59.110.91.219`
+- 应用目录：`/var/www/blog`
+- systemd 服务：`anx-journal-blog.service`
+- Next.js 监听：`0.0.0.0:3000`
+- 域名入口：Nginx HTTPS 反向代理到 `127.0.0.1:3000`
+- Nginx 配置：`/etc/nginx/conf.d/anxforever.cn.conf`
 
-本地远端 `origin` 应保持为 SSH：
+线上状态可通过以下命令检查：
 
 ```bash
-git remote set-url origin git@github.com:AnxForever/anx-journal.git
+ssh root@59.110.91.219 'systemctl status anx-journal-blog.service --no-pager'
+curl -I https://anxforever.cn
 ```
 
-确认当前 SSH 身份是个人账号 `AnxForever`：
+## 发布流程
 
-```bash
-ssh -T git@github.com
-```
-
-正常发布流程：
+项目提供 `scripts/deploy-server.sh`，默认目标与当前线上环境一致：
 
 ```bash
 pnpm build
-git status --short
-git add <需要发布的文件>
-git commit -m "Update blog content"
-git push origin main
+bash scripts/deploy-server.sh
 ```
 
-推送到 `main` 后，Vercel 会自动从 GitHub 拉取最新代码并重新部署。
+脚本会同步源码与 `.next` 构建产物，然后重启 `anx-journal-blog.service`。发布前应先检查工作区，避免把无关的未完成修改同步到服务器。
 
-## 不要提交的本地文件
+如果只发布文章，应至少同步：
 
-以下文件只属于本机工具或临时服务器部署，不应提交到 GitHub：
+- `public/blogs/<slug>/`
+- `public/blogs/index.json`
+- `public/blogs/categories.json`（分类有变化时）
+
+文章索引会参与 sitemap、RSS 和页面生成，修改后仍需重新构建并重启服务。
+
+## GitHub 仓库
+
+仓库地址：`git@github.com:AnxForever/anx-journal.git`
+
+GitHub 用于版本管理，但推送 `main` 当前不会自动更新线上服务器。发布与 Git 推送是两个独立步骤。
+
+## 不应提交的本地文件
 
 - `.claude/`
-- `.codex`
+- `.codex/`
 - `CLAUDE.md`
-- `scripts/deploy-server.sh`，除非明确决定以后维护阿里云服务器部署脚本
+- `.playwright-mcp/`
+- 本地缓存与构建临时文件
 
-## 阿里云服务器记录
-
-曾手动部署到服务器 `59.110.91.219`：
-
-- 应用目录：`/www/wwwroot/anx-journal`
-- PM2 进程：`anx-journal`
-- 本机监听：`127.0.0.1:13001`
-- Nginx 配置：`/etc/nginx/conf.d/anxforever.cn.conf`
-
-如果未来要从 Vercel 切回阿里云，需要把 DNS 改为：
-
-```text
-@      A      59.110.91.219
-www    A      59.110.91.219
-```
+如果服务器地址、目录、端口或服务名发生变化，应同时更新本文与 `scripts/deploy-server.sh`。

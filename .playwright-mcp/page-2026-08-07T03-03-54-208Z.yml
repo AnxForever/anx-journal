@@ -1,0 +1,6 @@
+- generic [active] [ref=f28e1]:
+  - region "Notifications alt+T"
+  - main [ref=f28e2]:
+    - generic [ref=f28e4]: 加载中...
+    - button "编辑" [ref=f28e7] [cursor=pointer]
+  - alert [ref=f28e8]

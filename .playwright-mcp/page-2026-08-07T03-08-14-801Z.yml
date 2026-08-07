@@ -1,0 +1,27 @@
+- generic [ref=f50e3]:
+  - generic [ref=f50e4]:
+    - link [ref=f50e5] [cursor=pointer]:
+      - /url: https://chatgpt.com
+      - img "ChatGPT" [ref=f50e6]
+    - heading "Create a password" [level=1] [ref=f50e15]
+    - generic [ref=f50e16]: You’ll use this password to log in to ChatGPT and other OpenAI products
+  - group [ref=f50e17]:
+    - form "Create a password" [ref=f50e18]:
+      - generic [ref=f50e19]:
+        - generic [ref=f50e22]:
+          - generic: Phone number
+          - textbox "Phone number" [ref=f50e23]: +86 138 0000 0000
+          - link "Edit phone number" [ref=f50e27] [cursor=pointer]:
+            - /url: /log-in-or-create-account?usernameKind=phone_number
+            - text: Edit
+        - generic [ref=f50e30]:
+          - generic: Password
+          - textbox "Password" [active] [ref=f50e31]
+          - button "Show password" [ref=f50e34] [cursor=pointer]
+      - button "Continue" [ref=f50e40] [cursor=pointer]
+  - generic [ref=f50e42]:
+    - link "Terms of Use" [ref=f50e43] [cursor=pointer]:
+      - /url: https://openai.com/policies/terms-of-use
+    - generic [ref=f50e44]: "|"
+    - link "Privacy Policy" [ref=f50e45] [cursor=pointer]:
+      - /url: https://openai.com/policies/privacy-policy

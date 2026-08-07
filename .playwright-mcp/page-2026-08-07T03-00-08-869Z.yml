@@ -1,0 +1,100 @@
+- generic [active] [ref=f20e1]:
+  - region "Notifications alt+T"
+  - main [ref=f20e2]:
+    - generic [ref=f20e4]:
+      - generic [ref=f20e6]:
+        - generic [ref=f20e7]: 2026年
+        - generic [ref=f20e9]: 19 篇文章
+      - generic [ref=f20e10]:
+        - link "08-07 Codex 零基础教程（一）：从微软商店下载 Codex 客户端[已阅读]" [ref=f20e11] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook-codex
+          - generic [ref=f20e12]: 08-07
+          - generic [ref=f20e16]: Codex 零基础教程（一）：从微软商店下载 Codex 客户端[已阅读]
+        - link "07-11 UI 设计风格大全：网页与产品界面应该怎么选" [ref=f20e17] [cursor=pointer]:
+          - /url: /blog/ui-design-styles-guide
+          - generic [ref=f20e18]: 07-11
+          - generic [ref=f20e22]: UI 设计风格大全：网页与产品界面应该怎么选
+        - link "07-11 Cursor、Claude Code、Codex 前端提示词怎么写" [ref=f20e23] [cursor=pointer]:
+          - /url: /blog/ai-coding-frontend-prompts-guide
+          - generic [ref=f20e24]: 07-11
+          - generic [ref=f20e28]: Cursor、Claude Code、Codex 前端提示词怎么写
+        - link "07-11 AI 生成的网页为什么越来越像？如何避免同质化" [ref=f20e29] [cursor=pointer]:
+          - /url: /blog/why-ai-websites-look-the-same
+          - generic [ref=f20e30]: 07-11
+          - generic [ref=f20e34]: AI 生成的网页为什么越来越像？如何避免同质化
+        - link "07-11 StyleKit、21st.dev、Mobbin、Refero 怎么选？" [ref=f20e35] [cursor=pointer]:
+          - /url: /blog/stylekit-vs-ui-design-tools
+          - generic [ref=f20e36]: 07-11
+          - generic [ref=f20e40]: StyleKit、21st.dev、Mobbin、Refero 怎么选？
+        - link "07-11 AI 前端设计指南：UI 设计风格、网页提示词与 StyleKit" [ref=f20e41] [cursor=pointer]:
+          - /url: /blog/ai-frontend-design-prompts-ui-styles
+          - generic [ref=f20e42]: 07-11
+          - generic [ref=f20e46]: AI 前端设计指南：UI 设计风格、网页提示词与 StyleKit
+        - link "07-11 前端设计基础：色彩理论与实用配色方法" [ref=f20e47] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-color-theory
+          - generic [ref=f20e48]: 07-11
+          - generic [ref=f20e52]: 前端设计基础：色彩理论与实用配色方法
+        - link "07-11 前端设计基础：字体选择、配对与排版" [ref=f20e53] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-typography
+          - generic [ref=f20e54]: 07-11
+          - generic [ref=f20e58]: 前端设计基础：字体选择、配对与排版
+        - link "07-11 前端设计基础：用字号阶梯建立文字层级" [ref=f20e59] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-type-scale
+          - generic [ref=f20e60]: 07-11
+          - generic [ref=f20e64]: 前端设计基础：用字号阶梯建立文字层级
+        - link "07-11 前端设计基础：间距系统与布局网格" [ref=f20e65] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-spacing
+          - generic [ref=f20e66]: 07-11
+          - generic [ref=f20e70]: 前端设计基础：间距系统与布局网格
+        - link "07-11 前端设计基础：对比、重复、对齐与亲密性" [ref=f20e71] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-design-principles
+          - generic [ref=f20e72]: 07-11
+          - generic [ref=f20e76]: 前端设计基础：对比、重复、对齐与亲密性
+        - link "07-11 前端设计基础：如何建立清晰的视觉层次" [ref=f20e77] [cursor=pointer]:
+          - /url: /blog/frontend-foundations-visual-hierarchy
+          - generic [ref=f20e78]: 07-11
+          - generic [ref=f20e82]: 前端设计基础：如何建立清晰的视觉层次
+        - link "05-12 AI 编程工具手册：给国内开发者的阅读路线" [ref=f20e83] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook
+          - generic [ref=f20e84]: 05-12
+          - generic [ref=f20e88]: AI 编程工具手册：给国内开发者的阅读路线
+        - link "05-12 不用订阅账号也能用 Codex：API Key、中转站与国内模型配置" [ref=f20e89] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook-codex-network
+          - generic [ref=f20e90]: 05-12
+          - generic [ref=f20e94]: 不用订阅账号也能用 Codex：API Key、中转站与国内模型配置
+        - link "05-12 Claude Code 入门：安装、登录和 CLAUDE.md" [ref=f20e95] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook-claude-code
+          - generic [ref=f20e96]: 05-12
+          - generic [ref=f20e100]: Claude Code 入门：安装、登录和 CLAUDE.md
+        - link "05-12 MCP 入门：把文件、GitHub 和数据库接给 AI" [ref=f20e101] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook-mcp
+          - generic [ref=f20e102]: 05-12
+          - generic [ref=f20e106]: MCP 入门：把文件、GitHub 和数据库接给 AI
+        - link "05-12 Skills 入门：把重复提示词沉淀成工作流" [ref=f20e107] [cursor=pointer]:
+          - /url: /blog/ai-tool-handbook-skills
+          - generic [ref=f20e108]: 05-12
+          - generic [ref=f20e112]: Skills 入门：把重复提示词沉淀成工作流
+        - link "03-18 StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统" [ref=f20e113] [cursor=pointer]:
+          - /url: /blog/stylekit-project-intro
+          - generic [ref=f20e114]: 03-18
+          - generic [ref=f20e118]: StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统
+        - link "03-18 从模板到自己的博客" [ref=f20e119] [cursor=pointer]:
+          - /url: /blog/build-my-blog-space
+          - generic [ref=f20e120]: 03-18
+          - generic [ref=f20e124]: 从模板到自己的博客
+    - generic [ref=f20e126]:
+      - link "返回主页" [ref=f20e127] [cursor=pointer]:
+        - /url: /
+        - img "avatar" [ref=f20e128]
+      - generic [ref=f20e129]:
+        - link "近期文章" [ref=f20e130] [cursor=pointer]:
+          - /url: /blog
+        - link "我的项目" [ref=f20e134] [cursor=pointer]:
+          - /url: /projects
+        - link "关于网站" [ref=f20e138] [cursor=pointer]:
+          - /url: /about
+        - link "推荐分享" [ref=f20e143] [cursor=pointer]:
+          - /url: /share
+        - link "优秀博客" [ref=f20e147] [cursor=pointer]:
+          - /url: /bloggers
+  - alert [ref=f20e151]

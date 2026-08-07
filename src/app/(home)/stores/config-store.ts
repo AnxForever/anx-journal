@@ -3,7 +3,14 @@ import siteContent from '@/config/site-content.json'
 import cardStyles from '@/config/card-styles.json'
 
 export type SiteContent = typeof siteContent
-export type CardStyles = typeof cardStyles
+export type CardKey = keyof typeof cardStyles
+type WidenConfigValue<T> = T extends number ? number : T extends boolean ? boolean : T extends null ? number | null : T
+export type CardStyle<T extends Record<string, unknown> = Record<string, unknown>> = {
+	[K in keyof T]: K extends 'offsetX' | 'offsetY' ? number | null : WidenConfigValue<T[K]>
+}
+export type CardStyles = {
+	[K in CardKey]: CardStyle<(typeof cardStyles)[K]>
+}
 
 interface ConfigStore {
 	siteContent: SiteContent
@@ -42,4 +49,3 @@ export const useConfigStore = create<ConfigStore>((set, get) => ({
 		set({ configDialogOpen: open })
 	}
 }))
-
