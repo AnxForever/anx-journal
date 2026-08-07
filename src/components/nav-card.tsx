@@ -170,7 +170,7 @@ export default function NavCard() {
 						onClick={handleNavigate('/')}
 						onMouseEnter={() => router.prefetch('/')}>
 						<Image
-							src='/images/avatar.webp'
+							src='/images/avatar.jpg'
 							alt='avatar'
 							width={40}
 							height={40}
