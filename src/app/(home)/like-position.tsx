@@ -32,7 +32,7 @@ function MusicHomeInline({ siteContent }: { siteContent: SiteContent }) {
 				type='button'
 				onClick={togglePlayPause}
 				aria-label={isPlaying ? '暂停音乐' : '播放音乐'}
-				className='relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/90 transition-opacity hover:opacity-90'>
+				className='relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/90 transition-opacity hover:opacity-90'>
 				{isPlaying ? <Pause className='text-brand h-4 w-4' /> : <Play className='text-brand h-4 w-4' />}
 			</button>
 		</div>

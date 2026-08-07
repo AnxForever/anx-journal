@@ -1,129 +1,303 @@
 [
-  {
-    "slug": "ai-tool-handbook",
-    "title": "AI 编程工具手册：给国内开发者的阅读路线",
-    "tags": [
-      "AI 编程",
-      "Codex",
-      "Claude Code",
-      "MCP",
-      "Skills"
-    ],
-    "date": "2026-05-12T22:30",
-    "summary": "把 Codex、Claude Code、MCP、Skills 和国内接入方式整理成一条可执行的学习路线，适合作为整套手册的入口。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-codex",
-    "title": "Codex 入门：App、IDE 扩展和 CLI 怎么选",
-    "tags": [
-      "Codex",
-      "AI 编程",
-      "CLI",
-      "IDE"
-    ],
-    "date": "2026-05-12T22:20",
-    "summary": "面向第一次使用 Codex 的开发者，说明桌面 App、IDE 扩展和命令行三种入口的差异、安装方式和第一个任务流程。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-codex-network",
-    "title": "不用订阅账号也能用 Codex：API Key、中转站与国内模型配置",
-    "tags": [
-      "Codex",
-      "API Key",
-      "中转站",
-      "国内模型"
-    ],
-    "date": "2026-05-12T22:10",
-    "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-claude-code",
-    "title": "Claude Code 入门：安装、登录和 CLAUDE.md",
-    "tags": [
-      "Claude Code",
-      "AI 编程",
-      "CLAUDE.md"
-    ],
-    "date": "2026-05-12T22:00",
-    "summary": "介绍 Claude Code 的定位、安装登录方式、最小练习任务，以及如何用 CLAUDE.md 固化项目规则。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-mcp",
-    "title": "MCP 入门：把文件、GitHub 和数据库接给 AI",
-    "tags": [
-      "MCP",
-      "AI Agent",
-      "工具调用",
-      "安全边界"
-    ],
-    "date": "2026-05-12T21:50",
-    "summary": "用 filesystem、GitHub 和只读数据库三个例子说明 MCP 解决什么问题、怎么配置第一个 Server，以及安全边界怎么设。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-skills",
-    "title": "Skills 入门：把重复提示词沉淀成工作流",
-    "tags": [
-      "Skills",
-      "Prompt",
-      "工作流",
-      "AI 编程"
-    ],
-    "date": "2026-05-12T21:40",
-    "summary": "说明 Skill 和 AGENTS.md、CLAUDE.md、MCP 的区别，并给出中文文档写作、代码审查和脚本型 Skill 范例。",
-    "hidden": false,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "ai-tool-handbook-deploy-cn",
-    "title": "这份手册应该部署在哪：国内访问优先的方案",
-    "tags": [
-      "部署",
-      "国内访问",
-      "博客",
-      "静态站"
-    ],
-    "date": "2026-05-12T21:30",
-    "summary": "如果手册要优先保证国内访问，不一定要做成独立网站；可以并入博客、同步到国内文档平台，或部署到国内云厂商的静态站/CDN。",
-    "hidden": true,
-    "category": "AI 工具"
-  },
-  {
-    "slug": "stylekit-project-intro",
-    "title": "StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统",
-    "tags": [
-      "StyleKit",
-      "AI 编码",
-      "UI 设计系统",
-      "设计风格",
-      "Prompt"
-    ],
-    "date": "2026-03-18T23:58",
-    "summary": "StyleKit 是一个面向 AI 编码工作流的 UI 风格设计系统，提供风格目录、设计 token、组件 recipes、Prompt 与风格规则，帮助开发者把灵感真正落进产品界面。",
-    "cover": "/blogs/stylekit-project-intro/cover.png",
-    "hidden": false,
-    "category": "产品"
-  },
-  {
-    "slug": "build-my-blog-space",
-    "title": "从模板到自己的博客",
-    "tags": [
-      "建站",
-      "博客",
-      "记录"
-    ],
-    "date": "2026-03-18T23:40",
-    "summary": "记录这次把开源博客改造成个人空间的起点，以及接下来准备写什么。",
-    "hidden": false,
-    "category": "建站"
-  }
+ {
+  "slug": "ai-tool-handbook-codex-account",
+  "title": "Codex 零基础教程（二）：注册 ChatGPT 账号与手机号验证",
+  "tags": [
+   "Codex",
+   "ChatGPT",
+   "注册教程",
+   "手机号验证"
+  ],
+  "date": "2026-08-07T11:20",
+  "summary": "Codex 系列第二篇：邮箱注册 ChatGPT 不需要手机号，验证发生在登录 Codex 时。含充值会员跳过验证、接码平台（短效卡）操作步骤和常见问题。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-codex",
+  "title": "Codex 零基础教程（一）：从微软商店下载 Codex 客户端",
+  "tags": [
+   "Codex",
+   "AI 编程",
+   "新手教程",
+   "ChatGPT"
+  ],
+  "date": "2026-08-07T10:55",
+  "summary": "面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ui-design-styles-guide",
+  "title": "UI 设计风格大全：网页与产品界面应该怎么选",
+  "tags": [
+   "UI 设计风格",
+   "网页设计",
+   "前端设计",
+   "设计系统",
+   "StyleKit"
+  ],
+  "date": "2026-07-11T12:00",
+  "summary": "系统梳理常见 UI 与网页设计风格，并从品牌、内容、产品目标和实现成本出发说明如何选择合适风格。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "ai-coding-frontend-prompts-guide",
+  "title": "Cursor、Claude Code、Codex 前端提示词怎么写",
+  "tags": [
+   "前端提示词",
+   "Cursor",
+   "Claude Code",
+   "Codex",
+   "UI Prompt"
+  ],
+  "date": "2026-07-11T11:50",
+  "summary": "面向 Cursor、Claude Code 和 Codex 的前端提示词写法，包含页面目标、UI 风格、设计规则、响应式和验收条件。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "why-ai-websites-look-the-same",
+  "title": "AI 生成的网页为什么越来越像？如何避免同质化",
+  "tags": [
+   "AI 前端",
+   "网页设计",
+   "UI 同质化",
+   "前端提示词",
+   "StyleKit"
+  ],
+  "date": "2026-07-11T11:40",
+  "summary": "分析 AI 网页常见的同质化原因，并从风格约束、内容结构、设计 token、组件状态和视觉审核给出解决方法。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "stylekit-vs-ui-design-tools",
+  "title": "StyleKit、21st.dev、Mobbin、Refero 怎么选？",
+  "tags": [
+   "StyleKit",
+   "21st.dev",
+   "Mobbin",
+   "Refero",
+   "UI 设计工具"
+  ],
+  "date": "2026-07-11T11:30",
+  "summary": "比较 StyleKit、21st.dev、Mobbin 和 Refero 的定位，说明 UI 风格规则、组件、产品截图和设计灵感分别适合什么场景。",
+  "hidden": false,
+  "category": "产品"
+ },
+ {
+  "slug": "ai-frontend-design-prompts-ui-styles",
+  "title": "AI 前端设计指南：UI 设计风格、网页提示词与 StyleKit",
+  "tags": [
+   "前端设计",
+   "UI 设计风格",
+   "AI 提示词",
+   "网页设计",
+   "StyleKit"
+  ],
+  "date": "2026-07-11T11:30",
+  "summary": "系统整理 AI 前端设计中的 UI 风格选择、网页设计提示词写法和 StyleKit 工作流，帮助 Cursor、Claude Code、Codex 生成更稳定的界面。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-color-theory",
+  "title": "前端设计基础：色彩理论与实用配色方法",
+  "tags": [
+   "前端设计",
+   "色彩理论",
+   "UI 设计",
+   "可访问性"
+  ],
+  "date": "2026-07-11T11:00",
+  "summary": "从 HSL、色彩关系、60-30-10 法则到 WCAG 对比度，建立一套能落地到界面的配色方法。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-typography",
+  "title": "前端设计基础：字体选择、配对与排版",
+  "tags": [
+   "前端设计",
+   "字体",
+   "排版",
+   "UI 设计"
+  ],
+  "date": "2026-07-11T10:50",
+  "summary": "理解字体分类、配对原则、行宽与行高，用少量规则建立清晰、稳定的界面排版。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-type-scale",
+  "title": "前端设计基础：用字号阶梯建立文字层级",
+  "tags": [
+   "前端设计",
+   "字号阶梯",
+   "Typography",
+   "响应式设计"
+  ],
+  "date": "2026-07-11T10:40",
+  "summary": "用模块化比例、语义角色和 clamp 响应式字号，建立一致而不过度膨胀的文字系统。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-spacing",
+  "title": "前端设计基础：间距系统与布局网格",
+  "tags": [
+   "前端设计",
+   "间距系统",
+   "布局网格",
+   "Design Tokens"
+  ],
+  "date": "2026-07-11T10:30",
+  "summary": "用 4/8 点间距、内容分组和响应式网格，解决页面节奏混乱与对齐不一致的问题。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-design-principles",
+  "title": "前端设计基础：对比、重复、对齐与亲密性",
+  "tags": [
+   "前端设计",
+   "设计原则",
+   "CRAP",
+   "UI 设计"
+  ],
+  "date": "2026-07-11T10:20",
+  "summary": "用 CRAP 四原则检查界面：建立主次、保持一致、形成秩序，并清晰表达内容关系。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "frontend-foundations-visual-hierarchy",
+  "title": "前端设计基础：如何建立清晰的视觉层次",
+  "tags": [
+   "前端设计",
+   "视觉层次",
+   "信息架构",
+   "UI 设计"
+  ],
+  "date": "2026-07-11T10:10",
+  "summary": "通过大小、字重、颜色、留白和位置控制阅读顺序，让用户更快找到页面重点。",
+  "hidden": false,
+  "category": "前端设计"
+ },
+ {
+  "slug": "ai-tool-handbook",
+  "title": "AI 编程工具手册：给国内开发者的阅读路线",
+  "tags": [
+   "AI 编程",
+   "Codex",
+   "Claude Code",
+   "MCP",
+   "Skills"
+  ],
+  "date": "2026-05-12T22:30",
+  "summary": "把 Codex、Claude Code、MCP、Skills 和国内接入方式整理成一条可执行的学习路线，适合作为整套手册的入口。",
+  "hidden": false,
+  "category": "AI 工具",
+  "cover": "/blogs/ai-tool-handbook/cover.png"
+ },
+ {
+  "slug": "ai-tool-handbook-codex-network",
+  "title": "不用订阅账号也能用 Codex：API Key、中转站与国内模型配置",
+  "tags": [
+   "Codex",
+   "API Key",
+   "中转站",
+   "国内模型"
+  ],
+  "date": "2026-05-12T22:10",
+  "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-claude-code",
+  "title": "Claude Code 入门：安装、登录和 CLAUDE.md",
+  "tags": [
+   "Claude Code",
+   "AI 编程",
+   "CLAUDE.md"
+  ],
+  "date": "2026-05-12T22:00",
+  "summary": "介绍 Claude Code 的定位、安装登录方式、最小练习任务，以及如何用 CLAUDE.md 固化项目规则。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-mcp",
+  "title": "MCP 入门：把文件、GitHub 和数据库接给 AI",
+  "tags": [
+   "MCP",
+   "AI Agent",
+   "工具调用",
+   "安全边界"
+  ],
+  "date": "2026-05-12T21:50",
+  "summary": "用 filesystem、GitHub 和只读数据库三个例子说明 MCP 解决什么问题、怎么配置第一个 Server，以及安全边界怎么设。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-skills",
+  "title": "Skills 入门：把重复提示词沉淀成工作流",
+  "tags": [
+   "Skills",
+   "Prompt",
+   "工作流",
+   "AI 编程"
+  ],
+  "date": "2026-05-12T21:40",
+  "summary": "说明 Skill 和 AGENTS.md、CLAUDE.md、MCP 的区别，并给出中文文档写作、代码审查和脚本型 Skill 范例。",
+  "hidden": false,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "ai-tool-handbook-deploy-cn",
+  "title": "这份手册应该部署在哪：国内访问优先的方案",
+  "tags": [
+   "部署",
+   "国内访问",
+   "博客",
+   "静态站"
+  ],
+  "date": "2026-05-12T21:30",
+  "summary": "如果手册要优先保证国内访问，不一定要做成独立网站；可以并入博客、同步到国内文档平台，或部署到国内云厂商的静态站/CDN。",
+  "hidden": true,
+  "category": "AI 工具"
+ },
+ {
+  "slug": "stylekit-project-intro",
+  "title": "StyleKit 是什么？一个面向 AI 编码的 UI 风格设计系统",
+  "tags": [
+   "StyleKit",
+   "AI 编码",
+   "UI 设计系统",
+   "设计风格",
+   "Prompt"
+  ],
+  "date": "2026-03-18T23:58",
+  "summary": "StyleKit 是一个面向 AI 编码工作流的 UI 风格设计系统，提供风格目录、设计 token、组件 recipes、Prompt 与风格规则，帮助开发者把灵感真正落进产品界面。",
+  "cover": "/blogs/stylekit-project-intro/cover.png",
+  "hidden": false,
+  "category": "产品"
+ },
+ {
+  "slug": "build-my-blog-space",
+  "title": "从模板到自己的博客",
+  "tags": [
+   "建站",
+   "博客",
+   "记录"
+  ],
+  "date": "2026-03-18T23:40",
+  "summary": "记录这次把开源博客改造成个人空间的起点，以及接下来准备写什么。",
+  "hidden": false,
+  "category": "建站"
+ }
 ]

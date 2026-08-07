@@ -1,202 +1,81 @@
-# Codex 入门：App、IDE 扩展和 CLI 怎么选
+# Codex 零基础教程（一）：从微软商店下载 Codex 客户端
 
-第一次用 Codex，先不用纠结“哪个最强”。入口选择应该看你的工作习惯：想少折腾就用 App，常驻编辑器就用 IDE 扩展，习惯终端和自动化就用 CLI。
+Codex 是 OpenAI 推出的 AI 编程助手。它和 ChatGPT 是同一个应用：**Codex 内嵌在 ChatGPT 桌面应用里**，微软商店里没有单独的「Codex App」，这一点很多人第一次都会找错，下文会详细说明。
 
-本文核对时间：2026-05-12。
+本教程面向完全没接触过的新手，从下载安装开始，一步一步来。
 
-## 三种入口对比
+本文核对时间：2026-08-07。
 
-| 入口 | 一句话描述 | 需要 Node.js | 适合谁 |
-|------|------------|--------------|--------|
-| Codex App | 图形界面，适合新手快速体验 | 否 | 新手、偏图形界面的用户 |
-| IDE 扩展 | 在 VS Code、Cursor、JetBrains 等编辑器侧边栏使用 | 否 | 习惯边看代码边修改的人 |
-| Codex CLI | 在终端里和 Codex 对话、改代码、跑命令 | npm 安装需要 Node.js 22+ | 终端党、自动化、远程服务器 |
+## 你需要准备什么
 
-我的建议：
+- 一台 **Windows 10（2004 版及以上）或 Windows 11** 电脑
+- 微软账号（登录微软商店用，Windows 自带的账号就行）
+- ChatGPT 账号（安装后用，注册方法在下一篇教程里讲）
 
-- 第一次体验：优先 App 或 IDE 扩展。
-- 真实开发：优先 CLI。
-- 国内网络环境：先读 [API Key、中转站与国内模型配置](/blog/ai-tool-handbook-codex-network)，再选入口。
+## 第一步：打开微软商店
 
-## Codex App
+有两种方式：
 
-Codex App 是官方图形界面。它适合先理解 Codex 的基本工作方式：选择项目目录、输入任务、查看 diff、确认或继续追问。
+**方式一（推荐）**：点击 Windows 任务栏左下角的开始菜单，搜索「Microsoft Store」，打开微软商店。
 
-你需要：
+**方式二**：用浏览器打开商店网页版：https://apps.microsoft.com
 
-- ChatGPT 账号，或可用的 API key / 中转站 key
-- macOS 13+ 或 Windows 10+
-- 一个练习项目目录
+## 第二步：搜索 Codex
 
-官方入口：
+在商店顶部的搜索框输入 `codex`，按回车。你会看到类似下面的结果：
 
-- 下载页：https://openai.com/codex/get-started/
-- App 文档：https://developers.openai.com/codex/app
-- Windows 应用商店：https://apps.microsoft.com/detail/9plm9xgg6vks
+![在微软商店搜索 codex 的结果](/blogs/ai-tool-handbook-codex/store-search-codex.jpg)
 
-基本流程：
+**重点来了**：搜索结果里排在第一位的是 **ChatGPT**（发布者是 OpenAI），而不是名字叫「Codex」的应用。这是正常的——Codex 是 ChatGPT 应用内置的编程功能。
 
-1. 打开 Codex App。
-2. 选择一个本地项目目录。
-3. 输入一个小任务，例如“分析这个项目结构，只输出说明，不修改文件”。
-4. 看 Codex 的分析和计划。
-5. 后续再让它生成 diff，并人工审查。
+同时要注意：商店里有一些名字带 Codex 的**无关应用**（比如 "Codex - QR Reader" 二维码工具），**不要下载**。认准两点：
 
-第一次不要直接选生产项目。先用练习目录熟悉 diff 和回滚方式。
+1. 应用名是 **ChatGPT**
+2. 发布者是 **OpenAI**
 
-## IDE 扩展
+## 第三步：点击「获取」安装
 
-IDE 扩展适合已经长期使用 VS Code、Cursor、Windsurf 或 JetBrains IDE 的人。它的优势是上下文就在编辑器里，不需要切换窗口。
+点击 ChatGPT 应用进入详情页，确认发布者是 OpenAI：
 
-安装方式通常是：
+![ChatGPT 应用详情页](/blogs/ai-tool-handbook-codex/store-detail.jpg)
 
-1. 打开扩展市场。
-2. 搜索 Codex 或 OpenAI Codex。
-3. 安装官方扩展。
-4. 在侧边栏登录。
+点击「获取」或「安装」按钮，等待下载完成。应用大小约 1.8 GB，视网速可能需要几分钟到几十分钟。
 
-IDE 扩展和 CLI 通常共用 `~/.codex/` 配置目录。也就是说，你在本地配置过中转站或 provider 后，IDE 侧一般也能复用。
+安装完成后，开始菜单里会出现 **ChatGPT** 应用。
 
-适合在 IDE 里做的任务：
+## 第四步：打开应用
 
-- 解释当前文件或一段选中代码
-- 小范围修复 bug
-- 生成测试
-- 根据报错定位文件
-- 查看 diff 后人工决定是否应用
+打开 ChatGPT 应用，会进入登录界面：
 
-## Codex CLI
-
-CLI 是最适合长期使用的入口，因为它和本地项目、Git、测试命令、脚本化流程结合最好。
-
-安装：
-
-```bash
-npm i -g @openai/codex
-```
-
-国内 npm 慢时可以临时使用镜像：
-
-```bash
-npm i -g @openai/codex --registry=https://registry.npmmirror.com
-```
-
-验证：
-
-```bash
-codex --version
-```
-
-启动：
-
-```bash
-cd my-project
-codex
-```
-
-如果你想更保守地启动，可以限制沙箱和审批：
-
-```bash
-codex --sandbox read-only --ask-for-approval on-request
-```
-
-日常开发可以允许在当前工作区写文件，同时保留关键命令确认：
-
-```bash
-codex --sandbox workspace-write --ask-for-approval on-request
-```
-
-不要随手在个人电脑上使用完全绕过审批和沙箱的模式。只有在外部环境已经隔离时才考虑。
-
-## 第一个任务怎么跑
-
-建议用一个新目录练习：
-
-```bash
-mkdir codex-todo-demo
-cd codex-todo-demo
-git init
-codex --sandbox workspace-write --ask-for-approval on-request
-```
-
-在 Codex 里输入：
-
-```text
-用 Python 写一个命令行 TODO 应用，支持添加、列出、删除任务，数据保存在 todo.json 文件中。测试使用 Python 标准库 unittest，不依赖第三方包。
-```
-
-完成后退出，验证：
-
-```bash
-ls
-git diff
-python3 -m unittest -v
-```
-
-这一步的目标不是做出完美应用，而是确认 Codex 能读写文件、运行测试、让你审查 diff。
-
-## 常用 CLI 命令
-
-交互界面里常用：
-
-| 命令 | 作用 |
-|------|------|
-| `/plan` | 先看方案，再执行 |
-| `/model` | 查看或切换模型 |
-| `/compact` | 压缩上下文 |
-| `/status` | 查看当前配置状态 |
-
-外部命令常用：
-
-| 命令 | 作用 |
-|------|------|
-| `codex login` | 登录或更新本机凭据 |
-| `codex exec "任务"` | 非交互式执行一次任务 |
-| `codex review` | 对当前改动做审查 |
-| `codex resume` | 恢复会话 |
-| `codex mcp` | 管理 MCP Server |
-
-## Windows 建议
-
-如果项目依赖 Linux 工具链，优先用 WSL 2。PowerShell 原生可以运行，但遇到 shell、路径、权限问题时，WSL 更稳定。
-
-WSL 中安装：
-
-```bash
-npm i -g @openai/codex
-codex
-```
+- **已经有 ChatGPT 账号**：直接登录，登录后左上角就能找到 Codex 入口
+- **还没有账号**：先看本系列下一篇《注册 ChatGPT 账号（含手机号验证方法）》，注册完再回来登录
 
 ## 常见问题
 
-### codex 命令找不到
+### 商店里搜不到 ChatGPT？
 
-先看 npm 全局路径：
+- 确认系统是 Windows 10 2004 或更高版本（设置 → 系统 → 关于，查看版本号）
+- 检查系统区域设置，商店服务在中国大陆可用，一般不需要改区域
+- 换用网页版：https://apps.microsoft.com/detail/9plm9xgg6vks
 
-```bash
-npm prefix -g
-```
+### 下载太慢或卡住？
 
-把输出目录加入 PATH，重开终端再试。
+- 微软商店下载依赖网络环境，可以稍后再试
+- 打开「设置 → 更新和安全 → Windows 更新」确认系统已是最新，老版本系统会导致商店异常
 
-### Node.js 版本不够
+### 我下了一个叫 "Codex" 的应用，对吗？
 
-npm 安装通常需要 Node.js 22+：
+大概率不对。商店里绝大多数叫 Codex 的应用和 OpenAI 没有关系。请确认应用名是 **ChatGPT**、发布者是 **OpenAI**，再安装。
 
-```bash
-node --version
-nvm install 22
-nvm use 22
-```
+## 下一步
 
-### 网络连接失败
+安装完成后，继续本系列：
 
-国内网络环境下，默认连接 OpenAI 服务可能超时。解决方案不是只改模型名，而是配置兼容 Responses API 的中转站或国内模型网关。下一篇文章专门讲这个。
+1. [注册 ChatGPT 账号（含手机号验证方法）](/blog/ai-tool-handbook-codex-account) —— 第二篇
+2. 登录并找到 Codex 入口
+3. 用 Codex 开始你的第一个编程任务
 
 ## 参考来源
 
-- Codex 下载页：https://openai.com/codex/get-started/
-- Codex App 文档：https://developers.openai.com/codex/app
-- Codex IDE 文档：https://developers.openai.com/codex/ide
-- Codex CLI 文档：https://developers.openai.com/codex/cli
-- Codex CLI 参数参考：https://developers.openai.com/codex/cli/reference
+- 微软商店 ChatGPT 应用页：https://apps.microsoft.com/detail/9plm9xgg6vks
+- OpenAI Codex 官网：https://openai.com/codex/

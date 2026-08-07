@@ -1,13 +1,13 @@
 {
-  "title": "Codex 入门：App、IDE 扩展和 CLI 怎么选",
+  "title": "Codex 零基础教程（一）：从微软商店下载 Codex 客户端",
   "tags": [
     "Codex",
     "AI 编程",
-    "CLI",
-    "IDE"
+    "新手教程",
+    "ChatGPT"
   ],
-  "date": "2026-05-12T22:20",
-  "summary": "面向第一次使用 Codex 的开发者，说明桌面 App、IDE 扩展和命令行三种入口的差异、安装方式和第一个任务流程。",
+  "date": "2026-08-07T10:55",
+  "summary": "面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。",
   "hidden": false,
   "category": "AI 工具"
 }
