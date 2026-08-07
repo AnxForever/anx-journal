@@ -81,7 +81,6 @@ export function BlogSeriesNav({ slug }: { slug: string }) {
 	const current = handbookSeries[currentIndex]
 	const previous = currentIndex > 0 ? handbookSeries[currentIndex - 1] : null
 	const next = currentIndex < handbookSeries.length - 1 ? handbookSeries[currentIndex + 1] : null
-	const indexItem = handbookSeries[0]
 
 	if (!next && !previous) return null
 
@@ -94,12 +93,10 @@ export function BlogSeriesNav({ slug }: { slug: string }) {
 				</div>
 			</div>
 			<div className='grid gap-3 sm:grid-cols-2'>
-				{previous ? <ChapterLink item={previous} direction={previous.slug === indexItem.slug ? 'index' : 'prev'} /> : null}
+				{previous ? <ChapterLink item={previous} direction='prev' /> : null}
 				{next ? (
 					<ChapterLink item={next} direction='next' className={previous ? undefined : 'sm:col-start-2'} />
-				) : (
-					<ChapterLink item={indexItem} direction='index' />
-				)}
+				) : null}
 			</div>
 			<ol className='mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3'>
 				{handbookSeries.map((item, index) => {
