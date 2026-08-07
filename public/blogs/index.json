@@ -11,7 +11,7 @@
   "date": "2026-08-07T14:38",
   "summary": "Codex 系列第二篇：邮箱注册 ChatGPT 不需要手机号，验证发生在登录 Codex 时。含充值会员跳过验证、接码平台（短效卡）操作步骤和常见问题。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "Codex 教程"
  },
  {
   "slug": "ai-tool-handbook-codex",
@@ -25,7 +25,7 @@
   "date": "2026-08-07T14:37",
   "summary": "面向纯新手的 Codex 入门第一步：在微软商店下载 ChatGPT 应用（Codex 内置于其中），含系统要求、安装步骤和避坑提醒。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "Codex 教程"
  },
  {
   "slug": "ui-design-styles-guide",
@@ -55,7 +55,7 @@
   "date": "2026-07-11T11:50",
   "summary": "面向 Cursor、Claude Code 和 Codex 的前端提示词写法，包含页面目标、UI 风格、设计规则、响应式和验收条件。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "AI 使用基础"
  },
  {
   "slug": "why-ai-websites-look-the-same",
@@ -85,7 +85,7 @@
   "date": "2026-07-11T11:30",
   "summary": "比较 StyleKit、21st.dev、Mobbin 和 Refero 的定位，说明 UI 风格规则、组件、产品截图和设计灵感分别适合什么场景。",
   "hidden": false,
-  "category": "产品"
+  "category": "StyleKit"
  },
  {
   "slug": "ai-frontend-design-prompts-ui-styles",
@@ -199,7 +199,7 @@
   "date": "2026-05-12T22:30",
   "summary": "把 Codex、Claude Code、MCP、Skills 和国内接入方式整理成一条可执行的学习路线，适合作为整套手册的入口。",
   "hidden": false,
-  "category": "AI 工具",
+  "category": "AI 使用基础",
   "cover": "/blogs/ai-tool-handbook/cover.png"
  },
  {
@@ -214,7 +214,7 @@
   "date": "2026-05-12T22:10",
   "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "Codex 教程"
  },
  {
   "slug": "ai-tool-handbook-claude-code",
@@ -227,7 +227,7 @@
   "date": "2026-05-12T22:00",
   "summary": "介绍 Claude Code 的定位、安装登录方式、最小练习任务，以及如何用 CLAUDE.md 固化项目规则。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "AI 使用基础"
  },
  {
   "slug": "ai-tool-handbook-mcp",
@@ -241,7 +241,7 @@
   "date": "2026-05-12T21:50",
   "summary": "用 filesystem、GitHub 和只读数据库三个例子说明 MCP 解决什么问题、怎么配置第一个 Server，以及安全边界怎么设。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "AI 使用基础"
  },
  {
   "slug": "ai-tool-handbook-skills",
@@ -255,7 +255,7 @@
   "date": "2026-05-12T21:40",
   "summary": "说明 Skill 和 AGENTS.md、CLAUDE.md、MCP 的区别，并给出中文文档写作、代码审查和脚本型 Skill 范例。",
   "hidden": false,
-  "category": "AI 工具"
+  "category": "AI 使用基础"
  },
  {
   "slug": "ai-tool-handbook-deploy-cn",
@@ -269,7 +269,7 @@
   "date": "2026-05-12T21:30",
   "summary": "如果手册要优先保证国内访问，不一定要做成独立网站；可以并入博客、同步到国内文档平台，或部署到国内云厂商的静态站/CDN。",
   "hidden": true,
-  "category": "AI 工具"
+  "category": "AI 使用基础"
  },
  {
   "slug": "stylekit-project-intro",
@@ -285,7 +285,7 @@
   "summary": "StyleKit 是一个面向 AI 编码工作流的 UI 风格设计系统，提供风格目录、设计 token、组件 recipes、Prompt 与风格规则，帮助开发者把灵感真正落进产品界面。",
   "cover": "/blogs/stylekit-project-intro/cover.png",
   "hidden": false,
-  "category": "产品"
+  "category": "StyleKit"
  },
  {
   "slug": "build-my-blog-space",
