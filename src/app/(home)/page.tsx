@@ -1,9 +1,11 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import HiCard from '@/app/(home)/hi-card'
 import ArtCard from '@/app/(home)/art-card'
 import ClockCard from '@/app/(home)/clock-card'
 import CalendarCard from '@/app/(home)/calendar-card'
+import GithubCard from '@/app/(home)/github-card'
 import SocialButtons from '@/app/(home)/social-buttons'
 import ShareCard from '@/app/(home)/share-card'
 import AritcleCard from '@/app/(home)/aritcle-card'
@@ -16,13 +18,17 @@ import { motion } from 'motion/react'
 import { useLayoutEditStore } from './stores/layout-edit-store'
 import { useConfigStore } from './stores/config-store'
 import { toast } from 'sonner'
-import ConfigDialog from './config-dialog/index'
 import { useEffect } from 'react'
-import SnowfallBackground from '@/layout/backgrounds/snowfall'
+
+const ConfigDialog = dynamic(() => import('./config-dialog/index'), { ssr: false })
+const SnowfallBackground = dynamic(() => import('@/layout/backgrounds/snowfall'), { ssr: false })
 
 export default function Home() {
 	const { maxLG } = useSize()
-	const { cardStyles, configDialogOpen, setConfigDialogOpen, siteContent } = useConfigStore()
+	const cardStyles = useConfigStore(s => s.cardStyles)
+	const configDialogOpen = useConfigStore(s => s.configDialogOpen)
+	const setConfigDialogOpen = useConfigStore(s => s.setConfigDialogOpen)
+	const siteContent = useConfigStore(s => s.siteContent)
 	const editing = useLayoutEditStore(state => state.editing)
 	const saveEditing = useLayoutEditStore(state => state.saveEditing)
 	const cancelEditing = useLayoutEditStore(state => state.cancelEditing)
@@ -80,7 +86,7 @@ export default function Home() {
 				{cardStyles.artCard?.enabled !== false && <ArtCard />}
 				{cardStyles.hiCard?.enabled !== false && <HiCard />}
 				{!maxLG && cardStyles.clockCard?.enabled !== false && <ClockCard />}
-				{!maxLG && cardStyles.calendarCard?.enabled !== false && <CalendarCard />}
+				{!maxLG && cardStyles.calendarCard?.enabled !== false && <GithubCard />}
 				{cardStyles.socialButtons?.enabled !== false && <SocialButtons />}
 				{!maxLG && cardStyles.shareCard?.enabled !== false && <ShareCard />}
 				{cardStyles.articleCard?.enabled !== false && <AritcleCard />}

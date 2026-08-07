@@ -104,5 +104,13 @@
 		"offsetX": null,
 		"offsetY": null,
 		"enabled": false
+	},
+	"githubCard": {
+		"width": 350,
+		"height": 286,
+		"order": 5,
+		"offsetX": null,
+		"offsetY": null,
+		"enabled": true
 	}
 }
