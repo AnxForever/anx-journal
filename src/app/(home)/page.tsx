@@ -5,7 +5,6 @@ import HiCard from '@/app/(home)/hi-card'
 import ArtCard from '@/app/(home)/art-card'
 import ClockCard from '@/app/(home)/clock-card'
 import CalendarCard from '@/app/(home)/calendar-card'
-import GithubCard from '@/app/(home)/github-card'
 import SocialButtons from '@/app/(home)/social-buttons'
 import ShareCard from '@/app/(home)/share-card'
 import AritcleCard from '@/app/(home)/aritcle-card'
@@ -86,7 +85,7 @@ export default function Home() {
 				{cardStyles.artCard?.enabled !== false && <ArtCard />}
 				{cardStyles.hiCard?.enabled !== false && <HiCard />}
 				{!maxLG && cardStyles.clockCard?.enabled !== false && <ClockCard />}
-				{!maxLG && cardStyles.calendarCard?.enabled !== false && <GithubCard />}
+				{!maxLG && cardStyles.calendarCard?.enabled !== false && <CalendarCard />}
 				{cardStyles.socialButtons?.enabled !== false && <SocialButtons />}
 				{!maxLG && cardStyles.shareCard?.enabled !== false && <ShareCard />}
 				{cardStyles.articleCard?.enabled !== false && <AritcleCard />}
