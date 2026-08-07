@@ -1,13 +1,13 @@
 {
-  "title": "不用订阅账号也能用 Codex：API Key、中转站与国内模型配置",
-  "tags": [
-    "Codex",
-    "API Key",
-    "中转站",
-    "国内模型"
-  ],
-  "date": "2026-05-12T22:10",
-  "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
-  "hidden": false,
-  "category": "AI 工具"
+ "title": "不用订阅账号也能用 Codex：API Key、中转站与国内模型配置",
+ "tags": [
+  "Codex",
+  "API Key",
+  "中转站",
+  "国内模型"
+ ],
+ "date": "2026-08-07T14:52",
+ "summary": "补充 ChatGPT 登录之外的用法：通过修改本地 config.toml、环境变量和 provider 配置，接入 OpenAI API、中转站或国内模型网关。",
+ "hidden": false,
+ "category": "AI 工具"
 }

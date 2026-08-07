@@ -8,53 +8,47 @@ type SeriesItem = {
 	title: string
 }
 
+const SERIES_TITLE = 'Codex 零基础教程'
+
 const handbookSeries: SeriesItem[] = [
-	{
-		slug: 'ai-tool-handbook',
-		kicker: '目录',
-		title: 'AI 编程工具手册'
-	},
 	{
 		slug: 'ai-tool-handbook-codex',
 		kicker: '第一章',
-		title: 'Codex 入口选择'
+		title: '下载 Codex 客户端'
+	},
+	{
+		slug: 'ai-tool-handbook-codex-account',
+		kicker: '第二章',
+		title: '注册 ChatGPT 账号'
 	},
 	{
 		slug: 'ai-tool-handbook-codex-network',
-		kicker: '第二章',
-		title: 'API Key、中转站与国内模型'
+		kicker: '第三章',
+		title: 'API Key 与网络配置'
 	},
 	{
 		slug: 'ai-tool-handbook-claude-code',
-		kicker: '第三章',
-		title: 'Claude Code'
+		kicker: '附',
+		title: 'Claude Code 入门'
 	},
 	{
 		slug: 'ai-tool-handbook-mcp',
-		kicker: '第四章',
-		title: 'MCP'
+		kicker: '附',
+		title: 'MCP 配置'
 	},
 	{
 		slug: 'ai-tool-handbook-skills',
-		kicker: '第五章',
-		title: 'Skills'
+		kicker: '附',
+		title: 'Skills 使用'
 	},
 	{
 		slug: 'ai-tool-handbook-deploy-cn',
-		kicker: '附录',
-		title: '国内访问与部署'
+		kicker: '附',
+		title: '部署方案'
 	}
 ]
 
-function ChapterLink({
-	item,
-	direction,
-	className
-}: {
-	item: SeriesItem
-	direction: 'prev' | 'next' | 'index'
-	className?: string
-}) {
+function ChapterLink({ item, direction, className }: { item: SeriesItem; direction: 'prev' | 'next' | 'index'; className?: string }) {
 	const isPrev = direction === 'prev'
 	const isIndex = direction === 'index'
 	const label = isIndex ? '回到目录' : isPrev ? '上一章' : '下一章'
@@ -64,7 +58,7 @@ function ChapterLink({
 		<Link
 			href={`/blog/${item.slug}`}
 			className={cn(
-				'group flex min-h-20 min-w-0 items-center gap-3 rounded-xl border bg-white/55 px-4 py-3 transition-colors hover:border-brand/40 hover:bg-white/75',
+				'group hover:border-brand/40 flex min-h-20 min-w-0 items-center gap-3 rounded-xl border bg-white/55 px-4 py-3 transition-colors hover:bg-white/75',
 				isPrev ? 'justify-start' : 'justify-between',
 				className
 			)}>
@@ -93,19 +87,42 @@ export function BlogSeriesNav({ slug }: { slug: string }) {
 
 	return (
 		<nav className='mt-12 border-t pt-6' aria-label='手册章节导航'>
-			<div className='text-secondary mb-3 text-xs'>
-				{current.kicker} · {current.title}
+			<div className='mb-3 flex flex-wrap items-center justify-between gap-2'>
+				<div className='text-secondary text-xs'>{SERIES_TITLE}</div>
+				<div className='text-secondary text-xs'>
+					{currentIndex + 1}/{handbookSeries.length} · {current.kicker}
+				</div>
 			</div>
 			<div className='grid gap-3 sm:grid-cols-2'>
-				{previous ? (
-					<ChapterLink item={previous} direction={previous.slug === indexItem.slug ? 'index' : 'prev'} />
-				) : null}
+				{previous ? <ChapterLink item={previous} direction={previous.slug === indexItem.slug ? 'index' : 'prev'} /> : null}
 				{next ? (
 					<ChapterLink item={next} direction='next' className={previous ? undefined : 'sm:col-start-2'} />
 				) : (
 					<ChapterLink item={indexItem} direction='index' />
 				)}
 			</div>
+			<ol className='mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3'>
+				{handbookSeries.map((item, index) => {
+					const isCurrent = item.slug === slug
+
+					return (
+						<li key={item.slug} className='min-w-0'>
+							<Link
+								href={`/blog/${item.slug}`}
+								aria-current={isCurrent ? 'page' : undefined}
+								className={cn(
+									'flex min-h-11 min-w-0 items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-colors',
+									isCurrent ? 'border-brand/50 text-brand bg-white/80' : 'hover:border-brand/35 bg-white/45 hover:bg-white/70'
+								)}>
+								<span className='text-secondary shrink-0 text-xs tabular-nums'>{String(index + 1).padStart(2, '0')}</span>
+								<span className='min-w-0 truncate'>
+									{item.kicker}：{item.title}
+								</span>
+							</Link>
+						</li>
+					)
+				})}
+			</ol>
 		</nav>
 	)
 }
