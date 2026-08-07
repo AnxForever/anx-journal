@@ -39,7 +39,7 @@ export default function BlogPage() {
 	const [editableItems, setEditableItems] = useState<BlogIndexItem[]>([])
 	const [selectedSlugs, setSelectedSlugs] = useState<Set<string>>(new Set())
 	const [saving, setSaving] = useState(false)
-	const [displayMode, setDisplayMode] = useState<DisplayMode>('year')
+	const [displayMode, setDisplayMode] = useState<DisplayMode>('category')
 	const [categoryModalOpen, setCategoryModalOpen] = useState(false)
 	const [categoryList, setCategoryList] = useState<string[]>([])
 	const [newCategory, setNewCategory] = useState('')
@@ -57,7 +57,13 @@ export default function BlogPage() {
 	const displayItems = editMode ? editableItems : items
 
 	const { groupedItems, groupKeys, getGroupLabel } = useMemo(() => {
-		const sorted = [...displayItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+		const CATEGORY_PRIORITY: Record<string, number> = { 'Codex 教程': 0, StyleKit: 1 }
+			const sorted = [...displayItems].sort((a, b) => {
+				const pa = CATEGORY_PRIORITY[a.category || ''] ?? 99
+				const pb = CATEGORY_PRIORITY[b.category || ''] ?? 99
+				if (pa !== pb) return pa - pb
+				return new Date(a.date).getTime() - new Date(b.date).getTime()
+			})
 
 		const grouped = sorted.reduce(
 			(acc, item) => {
