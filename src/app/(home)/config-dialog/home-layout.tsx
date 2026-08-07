@@ -9,7 +9,7 @@ const CARD_LABELS: Record<string, string> = {
 	artCard: '首图',
 	hiCard: '中心',
 	clockCard: '时钟',
-	calendarCard: '日历',
+	calendarCard: 'GitHub',
 	musicCard: '音乐',
 	socialButtons: '联系',
 	shareCard: '分享',

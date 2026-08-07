@@ -52,3 +52,23 @@ GitHub 用于版本管理，但推送 `main` 当前不会自动更新线上服�
 - 本地缓存与构建临时文件
 
 如果服务器地址、目录、端口或服务名发生变化，应同时更新本文与 `scripts/deploy-server.sh`。
+
+## 环境变量：GitHub 贡献热力图
+
+首页 GitHub 卡片（`/api/contributions`）有两种数据源：
+
+- **不配 token**：走公共 API `github-contributions-api.jogruber.de`，无需鉴权，但只含**公开**贡献，且依赖第三方爬取，偶发不稳。
+- **配 `GITHUB_CONTRIB_TOKEN`**（推荐）：走官方 GraphQL，最稳，且能统计**私有仓库**贡献。
+
+Token 生成：GitHub → Settings → Developer settings → Personal access tokens。
+- Classic token 勾选 `read:user`（要统计私有贡献再加 `repo`）。
+- 或 Fine-grained token，Account permissions 里给 read 权限即可。
+
+配置位置（当前阿里云 systemd 部署）：写进服务的 `Environment`，例如
+`/etc/systemd/system/anx-journal-blog.service` 中加一行
+`Environment=GITHUB_CONTRIB_TOKEN=ghp_xxxx`，然后
+`systemctl daemon-reload && systemctl restart anx-journal-blog.service`。
+
+Vercel / Cloudflare 部署则在各自控制台的环境变量里加 `GITHUB_CONTRIB_TOKEN`。
+
+> token 是机密，只放服务端环境变量，**切勿**写进代码或以 `NEXT_PUBLIC_` 前缀暴露给前端。接口只回传聚合计数，不泄露 token。
